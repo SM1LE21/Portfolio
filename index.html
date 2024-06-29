@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tun Keltesch - Software Engineer</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>    
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #0a0c10 0%, #1a1d21 100%);
+            color: #e0e0e0;
+            line-height: 1.6;
+            overflow-x: hidden;
+            height: 100%;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 40px;
+            min-height: 150vh;
+        }
+        .sidebar {
+            position: sticky;
+            top: 40px;
+            height: calc(100vh - 80px);
+        }
+        .name-highlight {
+            position: relative;
+        }
+        .name-highlight::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: -20px;
+            bottom: -20px;
+            background: radial-gradient(circle, rgba(74,157,154,0.2) 0%, rgba(10,12,16,0) 70%);
+            filter: blur(15px);
+            z-index: -1;
+        }
+        h1, h2, h3 {
+            color: #ffffff;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: #4a9d9a;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .description {
+            margin-bottom: 30px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            margin-bottom: 10px;
+        }
+        nav ul li a {
+            color: #808080;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #ffffff;
+        }
+        .timeline {
+            position: relative;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: -20px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #4a9d9a;
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 40px;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -24px;
+            top: 0;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #4a9d9a;
+        }
+        .job-title {
+            font-size: 1.3em;
+            margin-bottom: 5px;
+        }
+        .company {
+            color: #4a9d9a;
+            font-weight: bold;
+        }
+        .date {
+            color: #808080;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        .skill {
+            background-color: #1a1d21;
+            color: #4a9d9a;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.9em;
+        }
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        .social-icons a {
+            color: #808080;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="name-highlight">
+                <h1>Tun Keltesch</h1>
+                <div class="subtitle">Software Engineer</div>
+            </div>
+            <p class="description">I build robust, efficient, and scalable software solutions, specializing in machine learning and embedded systems.</p>
+            <nav>
+                <ul>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#experience">EXPERIENCE</a></li>
+                    <li><a href="#education">EDUCATION</a></li>
+                </ul>
+            </nav>
+            <div class="social-icons">
+                <a href="#" title="GitHub">G</a>
+                <a href="#" title="LinkedIn">L</a>
+                <a href="#" title="Email">E</a>
+            </div>
+        </aside>
+        <main>
+            <section id="about">
+                <h2>ABOUT</h2>
+                <p>In 2020, I started my journey in software engineering, diving deep into the world of coding and web development. Fast-forward to today, and I've had the privilege of working on diverse projects, from customer technical support to implementing operating systems for embedded devices.</p>
+                <p>My main focus these days is building accessible and efficient software solutions, with a particular interest in machine learning and embedded systems. I enjoy tackling complex problems and creating innovative solutions that bridge the gap between theoretical concepts and practical applications.</p>
+                <p>When I'm not at the computer, I'm usually exploring new technologies, contributing to open-source projects, or expanding my knowledge in computer science and mathematics.</p>
+            </section>
+            <section id="experience">
+                <h2>EXPERIENCE</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="date">2023-09 — 2024-01</div>
+                        <div class="job-title">Software Engineer · Agile Data Innovation GmbH</div>
+                        <div class="description">
+                            Working on a Project for Fraunhofer-Gesellschaft. Developed software solutions 
+                            for innovative data projects, collaborating with cross-functional teams to 
+                            deliver high-quality results.
+                        </div>
+                        <div class="skills">
+                            <span class="skill">Python</span>
+                            <span class="skill">JavaScript</span>
+                            <span class="skill">React</span>
+                            <span class="skill">Git/GitHub</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="date">2023-04 — 2023-07</div>
+                        <div class="job-title">Internship (System programming lab) · Chair of Embedded Software (RWTH)</div>
+                        <div class="description">
+                            Implemented an OS for an ATmega 644 using C. Gained hands-on experience in 
+                            low-level programming and embedded systems development.
+                        </div>
+                        <div class="skills">
+                            <span class="skill">C</span>
+                            <span class="skill">Embedded Systems</span>
+                            <span class="skill">OS Development</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="date">2023-03 — 2024-03</div>
+                        <div class="job-title">Software Engineer (Working Student) · dyve GMBH</div>
+                        <div class="description">
+                            Contributed to software development projects as a working student, applying 
+                            theoretical knowledge to real-world problems and gaining practical experience 
+                            in a professional environment.
+                        </div>
+                        <div class="skills">
+                            <span class="skill">Software Development</span>
+                            <span class="skill">Problem Solving</span>
+                            <span class="skill">Team Collaboration</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="education">
+                <h2>EDUCATION</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="job-title">Bachelor of Science - Computer Science</div>
+                        <div class="company">RWTH Aachen University</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="job-title">General Certificate of Secondary Education</div>
+                        <div class="company">Lycée Classique de Diekirch</div>
+                        <div class="description">Advanced level in Economics and Mathematics</div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Initial animation
+        gsap.from(".sidebar", { duration: 1, x: -50, opacity: 0, ease: "power3.out" });
+        gsap.from("main > section", { duration: 1, y: 50, opacity: 0, stagger: 0.2, ease: "power3.out" });
+
+        // Scroll animations
+        gsap.utils.toArray(".timeline-item").forEach((item, index) => {
+            gsap.from(item, {
+                scrollTrigger: {
+                    trigger: item,
+                    start: "top 80%",  // Adjust start position
+                    end: "bottom 20%", // Adjust end position
+                    toggleActions: "play none none reverse"
+                },
+                opacity: 0,
+                x: -50,
+                duration: 0.8,
+                delay: index * 0.2
+            });
+        });
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
