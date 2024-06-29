@@ -8,7 +8,6 @@ import Footer from './components/Footer';
 import './App.css';
 import { useGSAP } from '@gsap/react';
 
-
 const App: React.FC = () => {
   const sidebarRef = useRef<HTMLDivElement | null>(null);
   const sectionsRef = useRef<HTMLDivElement | null>(null);
@@ -42,21 +41,23 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <div className="container">
-      <aside className="sidebar" ref={sidebarRef}>
-        <Sidebar name={data.name} title={data.title} description={data.description} socialLinks={data.socialLinks} />
-      </aside>
-      <main ref={sectionsRef}>
-        <Section id="about" title="ABOUT">
-          {data.about.map((paragraph, index) => (
-            <p key={index}>{paragraph}</p>
-          ))}
-        </Section>
-        <Section id="experience" title="EXPERIENCE" timelineItems={data.experience} />
-        <Section id="education" title="EDUCATION" timelineItems={data.education} />
-      </main>
+    <>
+      <div className="container">
+        <aside className="sidebar" ref={sidebarRef}>
+          <Sidebar name={data.name} title={data.title} description={data.description} socialLinks={data.socialLinks} />
+        </aside>
+        <main ref={sectionsRef}>
+          <Section id="about" title="ABOUT">
+            {data.about.map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
+          </Section>
+          <Section id="experience" title="EXPERIENCE" timelineItems={data.experience} />
+          <Section id="education" title="EDUCATION" timelineItems={data.education} />
+        </main>
+      </div>
       <Footer />
-    </div>
+    </>
   );
 };
 

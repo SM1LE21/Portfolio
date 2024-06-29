@@ -159,9 +159,31 @@ footer {
   text-align: center;
   color: #808080;
   margin-top: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-footer .social-icons {
-  justify-content: center;
-  margin-top: 10px;
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .sidebar {
+    position: static;
+    height: auto;
+    order: -1;
+  }
+
+  .timeline::before {
+    left: 5px;
+  }
+  .timeline-item::before {
+    left: 1px;
+  }
 }
