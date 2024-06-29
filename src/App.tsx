@@ -1,72 +1,61 @@
-import React, { useEffect } from 'react';
-import Header from './components/Header';
-import ExperienceSection from './components/ExperienceSection';
-import EducationSection from './components/EducationSection';
-import SkillsSection from './components/SkillsSection';
-import ProjectsSection from './components/ProjectsSection';
+import React, { useRef } from 'react';
 import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import './styles/index.css';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+import data from './data.json';
+import Sidebar from './components/Sidebar';
+import Section from './components/Section';
+import Footer from './components/Footer';
+import './App.css';
+import { useGSAP } from '@gsap/react';
 
-gsap.registerPlugin(ScrollTrigger);
 
 const App: React.FC = () => {
-  useEffect(() => {
-    gsap.from('.profile-pic', {
-      duration: 1,
-      opacity: 0,
-      x: -50,
-      ease: 'power3.out'
-    });
+  const sidebarRef = useRef<HTMLDivElement | null>(null);
+  const sectionsRef = useRef<HTMLDivElement | null>(null);
 
-    gsap.from('h1, .subtitle', {
-      duration: 1,
-      opacity: 0,
-      y: 50,
-      stagger: 0.2,
-      ease: 'power3.out'
-    });
+  useGSAP(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    if (sidebarRef.current) {
+      gsap.from(sidebarRef.current, { duration: 1, x: -50, opacity: 0, ease: "power3.out" });
+    }
 
-    gsap.from('nav a', {
-      duration: 1,
-      opacity: 0,
-      y: 20,
-      stagger: 0.1,
-      ease: 'power3.out'
-    });
+    if (sectionsRef.current) {
+      const sections = sectionsRef.current.querySelectorAll('section');
+      gsap.from(sections, { duration: 1, y: 50, opacity: 0, stagger: 0.2, ease: "power3.out" });
 
-    gsap.from('.section', {
-      duration: 1,
-      opacity: 0,
-      y: 50,
-      stagger: 0.2,
-      ease: 'power3.out',
-      scrollTrigger: {
-        trigger: '.section',
-        start: 'top 80%'
-      }
-    });
-
-    gsap.from('.project-card', {
-      duration: 0.8,
-      opacity: 0,
-      y: 30,
-      stagger: 0.2,
-      ease: 'power3.out',
-      scrollTrigger: {
-        trigger: '.projects',
-        start: 'top 70%'
-      }
-    });
+      const timelineItems = sectionsRef.current.querySelectorAll('.timeline-item');
+      timelineItems.forEach((item, index) => {
+        gsap.from(item, {
+          scrollTrigger: {
+            trigger: item,
+            start: "top 80%",
+            end: "bottom 20%",
+            toggleActions: "play none none reverse"
+          },
+          opacity: 0,
+          x: -50,
+          duration: 0.8,
+          delay: index * 0.2
+        });
+      });
+    }
   }, []);
 
   return (
     <div className="container">
-      <Header />
-      <ExperienceSection />
-      <EducationSection />
-      <SkillsSection />
-      <ProjectsSection />
+      <aside className="sidebar" ref={sidebarRef}>
+        <Sidebar name={data.name} title={data.title} description={data.description} socialLinks={data.socialLinks} />
+      </aside>
+      <main ref={sectionsRef}>
+        <Section id="about" title="ABOUT">
+          {data.about.map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>
+          ))}
+        </Section>
+        <Section id="experience" title="EXPERIENCE" timelineItems={data.experience} />
+        <Section id="education" title="EDUCATION" timelineItems={data.education} />
+      </main>
+      <Footer />
     </div>
   );
 };

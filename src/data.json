@@ -1,0 +1,47 @@
+{
+    "name": "Tun Keltesch",
+    "title": "Software Engineer",
+    "description": "I build robust, efficient, and scalable software solutions, specializing in machine learning and embedded systems.",
+    "about": [
+      "In 2020, I started my journey in software engineering, diving deep into the world of coding and web development. Fast-forward to today, and I've had the privilege of working on diverse projects, from customer technical support to implementing operating systems for embedded devices.",
+      "My main focus these days is building accessible and efficient software solutions, with a particular interest in machine learning and embedded systems. I enjoy tackling complex problems and creating innovative solutions that bridge the gap between theoretical concepts and practical applications.",
+      "When I'm not at the computer, I'm usually exploring new technologies, contributing to open-source projects, or expanding my knowledge in computer science and mathematics."
+    ],
+    "experience": [
+      {
+        "date": "2023-09 — 2024-01",
+        "jobTitle": "Software Engineer · Agile Data Innovation GmbH",
+        "description": "Working on a Project for Fraunhofer-Gesellschaft. Developed software solutions for innovative data projects, collaborating with cross-functional teams to deliver high-quality results.",
+        "skills": ["Python", "JavaScript", "React", "Git/GitHub"]
+      },
+      {
+        "date": "2023-04 — 2023-07",
+        "jobTitle": "Internship (System programming lab) · Chair of Embedded Software (RWTH)",
+        "description": "Implemented an OS for an ATmega 644 using C. Gained hands-on experience in low-level programming and embedded systems development.",
+        "skills": ["C", "Embedded Systems", "OS Development"]
+      },
+      {
+        "date": "2023-03 — 2024-03",
+        "jobTitle": "Software Engineer (Working Student) · dyve GMBH",
+        "description": "Contributed to software development projects as a working student, applying theoretical knowledge to real-world problems and gaining practical experience in a professional environment.",
+        "skills": ["Software Development", "Problem Solving", "Team Collaboration"]
+      }
+    ],
+    "education": [
+      {
+        "jobTitle": "Bachelor of Science - Computer Science",
+        "company": "RWTH Aachen University"
+      },
+      {
+        "jobTitle": "General Certificate of Secondary Education",
+        "company": "Lycée Classique de Diekirch",
+        "description": "Advanced level in Economics and Mathematics"
+      }
+    ],
+    "socialLinks": [
+      { "title": "GitHub", "url": "#" },
+      { "title": "LinkedIn", "url": "#" },
+      { "title": "Email", "url": "#" }
+    ]
+  }
+  
