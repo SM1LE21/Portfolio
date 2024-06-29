@@ -38,6 +38,23 @@
         "description": "Advanced level in Economics and Mathematics"
       }
     ],
+    "projects": [
+      {
+        "title": "Project One",
+        "description": "A brief description of Project One.",
+        "link": "#"
+      },
+      {
+        "title": "Project Two",
+        "description": "A brief description of Project Two.",
+        "link": "#"
+      },
+      {
+        "title": "Project Three",
+        "description": "A brief description of Project Three.",
+        "link": "#"
+      }
+    ],
     "socialLinks": [
       { "title": "GitHub", "url": "#" },
       { "title": "LinkedIn", "url": "#" },

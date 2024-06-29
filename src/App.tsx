@@ -4,6 +4,7 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 import data from './data.json';
 import Sidebar from './components/Sidebar';
 import Section from './components/Section';
+import Projects from './components/Projects';
 import Footer from './components/Footer';
 import './App.css';
 import { useGSAP } from '@gsap/react';
@@ -33,7 +34,7 @@ const App: React.FC = () => {
           },
           opacity: 0,
           x: -50,
-          duration: 0.8,
+          duration: 1.2,
           delay: index * 0.2
         });
       });
@@ -52,6 +53,7 @@ const App: React.FC = () => {
               <p key={index}>{paragraph}</p>
             ))}
           </Section>
+          <Projects projects={data.projects} />
           <Section id="experience" title="EXPERIENCE" timelineItems={data.experience} />
           <Section id="education" title="EDUCATION" timelineItems={data.education} />
         </main>
