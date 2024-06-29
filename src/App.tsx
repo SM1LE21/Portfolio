@@ -16,12 +16,27 @@ const App: React.FC = () => {
   useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);
     if (sidebarRef.current) {
-      gsap.from(sidebarRef.current, { duration: 1, x: -50, opacity: 0, ease: "power3.out" });
+      gsap.from(sidebarRef.current, 
+        { 
+          duration: 1.5, 
+          x: -50, 
+          opacity: 0, 
+          ease: "power3.out" 
+        }
+      );
     }
 
     if (sectionsRef.current) {
       const sections = sectionsRef.current.querySelectorAll('section');
-      gsap.from(sections, { duration: 1, y: 50, opacity: 0, stagger: 0.2, ease: "power3.out" });
+      gsap.from(sections, 
+        { 
+          duration: 1.2, 
+          y: 50, 
+          opacity: 0, 
+          stagger: 0.2, 
+          ease: "power3.out" 
+        }
+      );
 
       const timelineItems = sectionsRef.current.querySelectorAll('.timeline-item');
       timelineItems.forEach((item, index) => {
@@ -34,7 +49,7 @@ const App: React.FC = () => {
           },
           opacity: 0,
           x: -50,
-          duration: 1.2,
+          duration: 0.8,
           delay: index * 0.2
         });
       });

@@ -3,17 +3,24 @@
     "title": "Software Engineer",
     "description": "I build robust, efficient, and scalable software solutions, specializing in machine learning and embedded systems.",
     "about": [
-      "In 2020, I started my journey in software engineering, diving deep into the world of coding and web development. Fast-forward to today, and I've had the privilege of working on diverse projects, from customer technical support to implementing operating systems for embedded devices.",
-      "My main focus these days is building accessible and efficient software solutions, with a particular interest in machine learning and embedded systems. I enjoy tackling complex problems and creating innovative solutions that bridge the gap between theoretical concepts and practical applications.",
-      "When I'm not at the computer, I'm usually exploring new technologies, contributing to open-source projects, or expanding my knowledge in computer science and mathematics."
+      "In 2020, I embarked on my journey as a tech enthusiast, diving deep into the world of coding and web development. Fast-forward to today, and I've had the incredible opportunity to work on a wide range of projects, from building and maintaining websites to capturing stunning aerial footage with drone technology.",
+      "Currently, I am a Junior Project Engineer at Hexagon in Vienna, Austria, where I continue to tackle new challenges and expand my expertise. I am passionate about creating unique perspectives and combining my technical skills with creativity.",
+      "I speak Luxemburgish, French, German, English, and some Portuguese, which helps me connect with a diverse range of clients and colleagues.",
+      "Contact me, and let's see how we can create something amazing together!"
     ],
     "experience": [
       {
+        "date": "2023-02 — 2024-06",
+        "jobTitle": "Software Engineer (Working Student) · dyve GMBH",
+        "description": "Developed and maintained a Shopify website and contributed to the new version of Dyve GmbH's website, working flexibly from 8 to 30 hours a week based on project needs.",
+        "skills": ["JavaScript", "CSS", "Liquid", "Next.js", "Storyblok", "TypeScript", "Tailwind CSS"]
+      },   
+      {
         "date": "2023-09 — 2024-01",
         "jobTitle": "Software Engineer · Agile Data Innovation GmbH",
-        "description": "Working on a Project for Fraunhofer-Gesellschaft. Developed software solutions for innovative data projects, collaborating with cross-functional teams to deliver high-quality results.",
-        "skills": ["Python", "JavaScript", "React", "Git/GitHub"]
-      },
+        "description": "Developed an attack tree visualization tool for the Frauenhofer Institut using Angular, TypeScript, and D3.js. Built AI chatbots, improved websites, and handled frontend/backend tasks for multiple projects.",
+        "skills": ["Python", "TypeScript", "React", "Angular", "OpenAI API", "Figma", "D3.js"]
+      },     
       {
         "date": "2023-04 — 2023-07",
         "jobTitle": "Internship (System programming lab) · Chair of Embedded Software (RWTH)",
@@ -21,10 +28,10 @@
         "skills": ["C", "Embedded Systems", "OS Development"]
       },
       {
-        "date": "2023-03 — 2024-03",
-        "jobTitle": "Software Engineer (Working Student) · dyve GMBH",
-        "description": "Contributed to software development projects as a working student, applying theoretical knowledge to real-world problems and gaining practical experience in a professional environment.",
-        "skills": ["Software Development", "Problem Solving", "Team Collaboration"]
+        "date": "2020-08 — 2023-09",
+        "jobTitle": "Technical Support Specialist · Luxembourg Online S.A.",
+        "description": "Provided first-level support to private clients and extended support to business clients, handling internet connectivity issues. Tested and provided feedback on internal tools, enhancing knowledge of web technologies and frontend development.",
+        "skills": ["Technical Support", "Troubleshooting", "Customer Service", "Web Technologies", "Frontend Development"]
       }
     ],
     "education": [
@@ -40,19 +47,25 @@
     ],
     "projects": [
       {
-        "title": "Project One",
-        "description": "A brief description of Project One.",
-        "link": "#"
+        "title": "SwiftDrones Website",
+        "description": "A website for a drone company.",
+        "link": "#",
+        "image": "/assets/swiftdrones.png",
+        "video": ""
       },
       {
-        "title": "Project Two",
-        "description": "A brief description of Project Two.",
-        "link": "#"
+        "title": "CanvasCraft",
+        "description": "AI image generation tool, with accurate color pallet and style transfer.",
+        "link": "#",
+        "image": "/assets/canvascraft.png",
+        "video": ""
       },
       {
-        "title": "Project Three",
-        "description": "A brief description of Project Three.",
-        "link": "#"
+        "title": "Text2UML",
+        "description": "VSCode extension for bidirectional navigation and conversion of text to UML diagrams",
+        "link": "#",
+        "image": "",
+        "video": "/assets/text2uml.mp4"
       }
     ],
     "socialLinks": [

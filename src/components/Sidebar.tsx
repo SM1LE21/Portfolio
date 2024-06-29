@@ -15,6 +15,7 @@ const Sidebar: React.FC<SidebarProps> = ({ name, title, description, socialLinks
         <div className="subtitle">{title}</div>
       </div>
       <p className="description">{description}</p>
+      {/*
       <nav>
         <ul>
           <li><a href="#about">ABOUT</a></li>
@@ -22,6 +23,7 @@ const Sidebar: React.FC<SidebarProps> = ({ name, title, description, socialLinks
           <li><a href="#education">EDUCATION</a></li>
         </ul>
       </nav>
+      */}
       <div className="social-icons">
         {socialLinks.map(link => (
           <a key={link.title} href={link.url} title={link.title}>{link.title.charAt(0)}</a>

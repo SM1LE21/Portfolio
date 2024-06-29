@@ -166,6 +166,7 @@ footer {
   flex-direction: column;
 }
 
+/* Projects Grid */
 .projects-grid {
   display: flex;
   flex-wrap: wrap;
@@ -173,26 +174,65 @@ footer {
 }
 
 .project-item {
+  position: relative;
   background-color: #1a1d21;
   color: #e0e0e0;
-  padding: 20px;
   border-radius: 10px;
-  text-decoration: none;
   width: calc(33.333% - 20px);
   box-sizing: border-box;
-  transition: transform 0.3s;
+  overflow: hidden;
+  min-height: 200px;
 }
 
-.project-item:hover {
-  transform: scale(1.05);
+.project-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: top left; /* Focus on the top part of the image */
+  z-index: 1; /* Ensure it is visible */
 }
 
-.project-item h3 {
-  margin-top: 0;
+.project-background video {
+  height: 100%;
+  object-fit: cover;
+  background-position: top left; /* Focus on the top part of the image */
 }
 
-.project-item p {
-  margin-bottom: 0;
+.project-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: opacity 0.3s;
+  z-index: 2; /* Ensure content is above the background */
+}
+
+.project-item:hover .project-content {
+  opacity: 1;
+}
+
+.project-content h3, .project-content p {
+  margin: 0;
+}
+
+.project-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
 }
 
 /* Media queries for responsiveness */
