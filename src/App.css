@@ -16,7 +16,7 @@ body, html {
   display: grid;
   grid-template-columns: 250px 1fr;
   gap: 40px;
-  min-height: 150vh;
+  min-height: 100vh;
 }
 
 .sidebar {
@@ -254,6 +254,116 @@ footer {
   right: 0;
   bottom: 0;
   z-index: 2;
+}
+
+/* Project Info Container */
+.project-info-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #1a1d21;
+  color: #e0e0e0;
+  border-radius: 10px;
+}
+
+.project-info-container h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.big-description {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.project-github-link {
+  margin-bottom: 20px;
+}
+
+.project-github-link a {
+  color: #7FACD6;
+  text-decoration: none;
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+}
+
+.project-github-link a:hover {
+  text-decoration: underline;
+}
+
+.project-github-link .icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.project-link {
+  margin-bottom: 20px;
+}
+
+.project-link a {
+  color: #7FACD6;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.project-link a:hover {
+  text-decoration: underline;
+}
+
+.project-info-container .skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.project-info-container .skill {
+  background-color: #7FACD6;
+  color: #1a1d21;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 1em;
+}
+
+.project-info-container .main-media {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.project-info-container .content {
+  margin-top: 20px;
+}
+
+.content-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.content-section .content-media {
+  max-width: 50%;
+  border-radius: 10px;
+}
+
+.content-section .content-description {
+  flex: 1;
+  font-size: 1.2em;
+}
+
+.content-section .content-title {
+  width: 100%;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.content-description.full-width {
+  flex: 1 1 100%;
+  max-width: 100%;
 }
 
 /* Media queries for responsiveness */

@@ -22,7 +22,7 @@
         "company": "dyve GMBH",
         "company_link": "https://dyve.agency",
         "description": "Developed and maintained a Shopify website and contributed to the new version of Dyve GmbH's website, working flexibly from 8 to 30 hours a week based on project needs.",
-        "skills": ["JavaScript", "CSS", "Liquid", "Next.js", "Storyblok", "TypeScript", "Tailwind CSS"]
+        "skills": ["JavaScript", "TypeScript", "Tailwind CSS", "Next.js", "GSAP", "Liquid", "Storyblok", "Shopify"]
       },
       {
         "date": "2023-09 — 2024-01",
@@ -79,35 +79,121 @@
       }
     ],
     "projects": [
-      {
-        "title": "SwiftDrones Website",
-        "description": "A website for a drone company.",
-        "link": "#",
-        "image": "/assets/swiftdrones.png",
-        "video": ""
-      },
-      {
-        "title": "CanvasCraft",
-        "description": "AI image generation tool, with accurate color pallet and style transfer.",
-        "link": "#",
-        "image": "/assets/canvascraft.png",
-        "video": ""
-      },
-      {
-        "title": "Text2UML",
-        "description": "VSCode extension for bidirectional navigation and conversion of text to UML diagrams",
-        "link": "#",
-        "image": "",
-        "video": "/assets/text2uml.mp4"
-      },
-      {
-        "title": "Gemini Competition Participation",
-        "description": "Personalized language learning through news and generated exercises.",
-        "link": "#",
-        "image": "/assets/gemini.jpg",
-        "video": ""
-      }
+        {
+            "title": "SwiftDrones Website",
+            "description": "A website for a drone company.",
+            "big_description": [
+              "The SwiftDrones Website project involved creating a comprehensive online presence for SwiftDrones, a company specializing in drone technology and services.",
+              "Our team of drone enthusiasts, based in Luxembourg, is dedicated to providing clients with high-quality imagery for various applications. We leverage cutting-edge drone technology to deliver compelling visual content that meets the unique requirements of each client.",
+              "The website is built with React and styled using TailwindCSS. We utilize Google Cloud to host our images and videos, ensuring high availability and performance.",
+              "This project is a labor of love, reflecting our passion for drones and our commitment to excellence in aerial photography and videography."
+            ],
+            "github_link": "github.com/SM1LE21/swiftdrones-website",
+            "link": "swiftdrones.net",
+            "link_text": "Visit swiftdrones.net for more information.",
+            "image": "/assets/swiftdrones.png",
+            "video": "",
+            "showMainMedia": true,
+            "skills": ["React", "JavaScript", "TailwindCSS", "Google Cloud"],
+            "content": [
+              
+            ]
+          },
+        {
+            "title": "CanvasCraft",
+            "description": "AI image generation tool, with accurate color pallet and style transfer.",
+            "big_description": [
+                "CanvasCraft is an AI image generation tool that allows users to create unique and visually stunning images using a combination of style transfer and color palette generation.",
+                "Users can upload an image and select a style to apply to the image, resulting in a beautifully crafted piece of art. The color palette generation feature allows users to extract the color palette from an image and apply it to another image, creating a cohesive and visually appealing design."
+            ],
+            "link": "#",
+            "image": "/assets/canvascraft.png",
+            "video": "",
+            "showMainMedia": true,
+            "skills": ["Python", "Machine Learning", "React"],
+            "content": [
+              {
+                "image": "/assets/canvascraft1.png",
+                "description": "The AI image generation tool allows users to create unique and visually stunning images using a combination of style transfer and color palette generation.",
+                "video": ""
+              },
+              {
+                "image": "/assets/canvascraft2.png",
+                "description": "Users can upload an image and select a style to apply to the image, resulting in a beautifully crafted piece of art.",
+                "video": ""
+              },
+              {
+                "image": "/assets/canvascraft3.png",
+                "description": "The color palette generation feature allows users to extract the color palette from an image and apply it to another image, creating a cohesive and visually appealing design.",
+                "video": ""
+              }
+            ]
+        },
+        {
+            "title": "Text2UML",
+            "description": "VSCode extension for bidirectional navigation and conversion of text to UML diagrams",
+            "big_description": [
+                "Text2UML is a VSCode extension that allows users to convert text descriptions into UML diagrams and navigate between the text and diagram representations.",
+                "Users can create UML diagrams by writing text descriptions of the diagram elements, such as classes, attributes, and relationships.",
+                "The extension provides bidirectional navigation between the text and diagram representations, allowing users to easily switch between the two views."
+            
+            ],
+            "link": "#",
+            "image": "",
+            "video": "/assets/text2uml.mp4",
+            "showMainMedia": false,
+            "skills": ["TypeScript", "VSCode API", "UML"],
+            "content": [
+              {
+                "image": "",
+                "description": "Text2UML is a VSCode extension that allows users to convert text descriptions into UML diagrams and navigate between the text and diagram representations.",
+                "video": ""
+              },
+              {
+                "image": "",
+                "description": "Users can create UML diagrams by writing text descriptions of the diagram elements, such as classes, attributes, and relationships.",
+                "video": ""
+              },
+              {
+                "image": "",
+                "description": "The extension provides bidirectional navigation between the text and diagram representations, allowing users to easily switch between the two views.",
+                "video": ""
+              }
+            ]
+        },
+        {
+            "title": "Gemini Competition Participation",
+            "description": "Personalized language learning through news and generated exercises.",
+            "big_description": [
+                "The Gemini Competition Participation project aimed to create a personalized language learning platform that uses news articles and generated exercises to help users improve their language skills.",
+                "Users can select their target language and proficiency level, and the platform will provide them with news articles in the target language.",
+                "The platform generates exercises based on the news articles, such as vocabulary quizzes, grammar exercises, and comprehension questions, to help users practice and improve their language skills."
+            ],
+            "link": "#",
+            "image": "/assets/gemini.jpg",
+            "video": "",
+            "showMainMedia": false,
+            "skills": ["JavaScript", "Node.js", "Express"],
+            "content": [
+              {
+                "image": "/assets/gemini1.png",
+                "description": "The Gemini Competition Participation project aimed to create a personalized language learning platform that uses news articles and generated exercises to help users improve their language skills.",
+                "video": ""
+              },
+              {
+                "image": "/assets/gemini2.png",
+                "description": "Users can select their target language and proficiency level, and the platform will provide them with news articles in the target language.",
+                "video": ""
+              },
+              {
+                "image": "/assets/gemini3.png",
+                "description": "The platform generates exercises based on the news articles, such as vocabulary quizzes, grammar exercises, and comprehension questions, to help users practice and improve their language skills.",
+                "video": ""
+              }
+            ]
+        }
     ],
+      
     "socialLinks": [
         {
             "title": "GitHub",
