@@ -88,7 +88,7 @@
               "The website is built with React and styled using TailwindCSS. We utilize Google Cloud to host our images and videos, ensuring high availability and performance.",
               "This project is a labor of love, reflecting our passion for drones and our commitment to excellence in aerial photography and videography."
             ],
-            "github_link": "github.com/SM1LE21",
+            "github_link": "github.com/SM1LE21/drone-services",
             "link": "swiftdrones.net",
             "link_text": "Visit swiftdrones.net for more information.",
             "image": "/assets/swiftdrones.png",
@@ -98,37 +98,25 @@
             "content": [
               
             ]
-          },
+        },
         {
             "title": "CanvasCraft",
-            "description": "AI image generation tool, with accurate color pallet and style transfer.",
+            "description": "AI image generation tool, with accurate color palette and style transfer.",
             "big_description": [
-                "CanvasCraft is an AI image generation tool that allows users to create unique and visually stunning images using a combination of style transfer and color palette generation.",
-                "Users can upload an image and select a style to apply to the image, resulting in a beautifully crafted piece of art. The color palette generation feature allows users to extract the color palette from an image and apply it to another image, creating a cohesive and visually appealing design."
+                "CanvasCraft is an AI-powered image generation tool designed to create stunning visuals. By leveraging OpenAI's DALL-E 3, CanvasCraft transforms text prompts into detailed images, accurately replicating color palettes and applying various art styles.",
+                "Users start by entering simple information. Through the help of GPT, the system refines this initial input by internally communicating with itself, ensuring a highly precise and detailed prompt is constructed. This refined prompt is then sent to DALL-E 3 to generate the final image.",
+                "The backend, built with Python and Flask, implements OpenAI's API to ensure high-quality image outputs. Users can specify color palettes, themes, moods, and custom prompts to guide the image generation process.",
+                "On the frontend, CanvasCraft utilizes React and TailwindCSS to provide an intuitive user interface. The application offers a range of options for users to select their desired artistic elements and see their visions come to life."
             ],
-            "link": "#",
+            "link": "",
+            "link_text": "",
             "image": "/assets/canvascraft.png",
             "video": "",
             "showMainMedia": true,
-            "skills": ["Python", "Machine Learning", "React"],
+            "skills": ["Python", "Flask", "OpenAI API", "React", "TailwindCSS"],
             "content": [
-              {
-                "image": "/assets/canvascraft1.png",
-                "description": "The AI image generation tool allows users to create unique and visually stunning images using a combination of style transfer and color palette generation.",
-                "video": ""
-              },
-              {
-                "image": "/assets/canvascraft2.png",
-                "description": "Users can upload an image and select a style to apply to the image, resulting in a beautifully crafted piece of art.",
-                "video": ""
-              },
-              {
-                "image": "/assets/canvascraft3.png",
-                "description": "The color palette generation feature allows users to extract the color palette from an image and apply it to another image, creating a cohesive and visually appealing design.",
-                "video": ""
-              }
             ]
-        },
+        },        
         {
             "title": "Text2UML",
             "description": "VSCode extension for bidirectional navigation and conversion of text to UML diagrams",
@@ -162,36 +150,22 @@
             ]
         },
         {
-            "title": "Gemini Competition Participation",
+            "title": "Gemini Competition - Language Learning Platform",
             "description": "Personalized language learning through news and generated exercises.",
             "big_description": [
-                "The Gemini Competition Participation project aimed to create a personalized language learning platform that uses news articles and generated exercises to help users improve their language skills.",
+                "The language learning platform uses news articles and generated exercises to help users improve their language skills. This is an ongoing project and will likely continue even after the competition deadline of August 12, 2024.",
                 "Users can select their target language and proficiency level, and the platform will provide them with news articles in the target language.",
-                "The platform generates exercises based on the news articles, such as vocabulary quizzes, grammar exercises, and comprehension questions, to help users practice and improve their language skills."
+                "The platform generates exercises based on the news articles, such as vocabulary quizzes, grammar exercises, and comprehension questions, to help users practice and improve their language skills.",
+                "We use Flutter for the frontend, Google Cloud for infrastructure, Firebase for real-time data and authentication, Google Functions for serverless operations, and Python to communicate with the Gemini API, which is at the core of our language processing and exercise generation."
             ],
-            "link": "#",
+            "link": "https://ai.google.dev/competition?authuser=1",
+            "link_text": "Checkout the Gemini API Developer Competition",
             "image": "/assets/gemini.jpg",
             "video": "",
-            "showMainMedia": false,
-            "skills": ["JavaScript", "Node.js", "Express"],
-            "content": [
-              {
-                "image": "/assets/gemini1.png",
-                "description": "The Gemini Competition Participation project aimed to create a personalized language learning platform that uses news articles and generated exercises to help users improve their language skills.",
-                "video": ""
-              },
-              {
-                "image": "/assets/gemini2.png",
-                "description": "Users can select their target language and proficiency level, and the platform will provide them with news articles in the target language.",
-                "video": ""
-              },
-              {
-                "image": "/assets/gemini3.png",
-                "description": "The platform generates exercises based on the news articles, such as vocabulary quizzes, grammar exercises, and comprehension questions, to help users practice and improve their language skills.",
-                "video": ""
-              }
-            ]
-        }
+            "showMainMedia": true,
+            "skills": ["Dart", "Flutter", "Google Cloud", "Firebase", "Google Functions", "Python", "Gemini API"],
+            "content": []
+        }        
     ],
       
     "socialLinks": [

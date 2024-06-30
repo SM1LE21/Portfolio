@@ -193,7 +193,7 @@ footer {
 }
 
 .spacer {
-  margin-top: 120px;
+  margin-top: 60px;
 }
 
 /* Projects Grid */
@@ -250,10 +250,22 @@ footer {
 
 .project-item:hover .project-content {
   opacity: 1;
+  cursor: pointer;
 }
 
 .project-content h3, .project-content p {
   margin: 0;
+}
+
+.landingpage-project-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  display: block;
+  text-decoration: none;
 }
 
 .project-link {
@@ -405,7 +417,7 @@ footer {
   }
 
   .spacer {
-    margin-top: 80px;
+    margin-top: 40px;
   }
 
   .projects-grid {

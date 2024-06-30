@@ -38,6 +38,13 @@ const ProjectInformation: React.FC = () => {
     <div className="project-info-container">
       <Link to="/" className="back-to-home title-link">← Back to Home</Link>
       <h1>{project.title}</h1>
+      {project.skills && (
+        <div className="skills">
+          {project.skills.map((skill, index) => (
+            <span key={index} className="skill">{skill}</span>
+          ))}
+        </div>
+      )}
       {project.big_description.map((paragraph, index) => (
         <p key={index} className="big-description">{paragraph}</p>
       ))}
@@ -52,13 +59,6 @@ const ProjectInformation: React.FC = () => {
         <p className="project-link">
           <a href={`https://${project.link}`} target="_blank" rel="noopener noreferrer" className="title-link">{project.link_text}</a>
         </p>
-      )}
-      {project.skills && (
-        <div className="skills">
-          {project.skills.map((skill, index) => (
-            <span key={index} className="skill">{skill}</span>
-          ))}
-        </div>
       )}
       {project.showMainMedia && (
         project.video ? (

@@ -35,7 +35,7 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
               <h3>{project.title}</h3>
               <p>{project.description}</p>
             </div>
-            <Link to={`/project/${project.title.toLowerCase().replace(/\s+/g, '-')}`} className="project-link"></Link>
+            <Link to={`/project/${project.title.toLowerCase().replace(/\s+/g, '-')}`} className="landingpage-project-link" />
           </div>
         ))}
       </div>
