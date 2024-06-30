@@ -48,7 +48,7 @@ const ProjectInformation: React.FC = () => {
         </p>
       )}
       {project.link && project.link_text && (
-        <p className="project-link">
+        <p className="">
           <a href={project.link} target="_blank" rel="noopener noreferrer">{project.link_text}</a>
         </p>
       )}
