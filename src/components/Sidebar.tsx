@@ -4,7 +4,7 @@ interface SidebarProps {
   name: string;
   title: string;
   description: string;
-  socialLinks: { title: string; url: string }[];
+  socialLinks: { title: string; url: string; icon: string }[];
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ name, title, description, socialLinks }) => {
@@ -26,7 +26,9 @@ const Sidebar: React.FC<SidebarProps> = ({ name, title, description, socialLinks
       */}
       <div className="social-icons">
         {socialLinks.map(link => (
-          <a key={link.title} href={link.url} title={link.title}>{link.title.charAt(0)}</a>
+          <a key={link.title} href={link.url} title={link.title} target="_blank" rel="noopener noreferrer">
+            <img src={link.icon} alt={link.title} />
+          </a>
         ))}
       </div>
     </aside>

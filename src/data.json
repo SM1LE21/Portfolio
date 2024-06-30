@@ -101,17 +101,29 @@
         "video": "/assets/text2uml.mp4"
       },
       {
-        "title": "CanvasCraft",
-        "description": "AI image generation tool, with accurate color pallet and style transfer.",
+        "title": "Gemini Competition Participation",
+        "description": "Personalized language learning through news and generated exercises.",
         "link": "#",
-        "image": "/assets/canvascraft.png",
+        "image": "/assets/gemini.jpg",
         "video": ""
       }
     ],
     "socialLinks": [
-      { "title": "GitHub", "url": "#" },
-      { "title": "LinkedIn", "url": "#" },
-      { "title": "Email", "url": "#" }
-    ]
+        {
+            "title": "GitHub",
+            "url": "https://github.com/SM1LE21",
+            "icon": "/icons/github.svg"
+        },
+        {
+            "title": "Email",
+            "url": "mailto:tun.keltesch@gmail.com",
+            "icon": "/icons/email.svg"
+        },
+        {
+          "title": "LinkedIn",
+          "url": "https://www.linkedin.com/in/tun-keltesch-830294250/",
+          "icon": "/icons/linkedin.svg"
+        }
+      ]      
   }
   
