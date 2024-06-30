@@ -6,6 +6,7 @@ import Sidebar from './components/Sidebar';
 import Section from './components/Section';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
+import Spacer from './components/Spacer';
 import './App.css';
 import { useGSAP } from '@gsap/react';
 
@@ -68,9 +69,15 @@ const App: React.FC = () => {
               <p key={index}>{paragraph}</p>
             ))}
           </Section>
+          <Spacer />
           <Projects projects={data.projects} />
+          <Spacer />
           <Section id="experience" title="EXPERIENCE" timelineItems={data.experience} />
+          <Spacer />
+          <Section id="certificates" title="CERTIFICATES" timelineItems={data.certificates} />
+          <Spacer />
           <Section id="education" title="EDUCATION" timelineItems={data.education} />
+          <Spacer />
         </main>
       </div>
       <Footer />

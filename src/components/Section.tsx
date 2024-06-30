@@ -3,7 +3,9 @@ import React from 'react';
 interface TimelineItem {
   date?: string;
   jobTitle: string;
+  title_link?: string;
   company?: string;
+  company_link?: string;
   description?: string;
   skills?: string[];
 }
@@ -25,8 +27,24 @@ const Section: React.FC<SectionProps> = ({ id, title, children, timelineItems })
           {timelineItems.map((item, index) => (
             <div key={index} className="timeline-item">
               {item.date && <div className="date">{item.date}</div>}
-              <div className="job-title">{item.jobTitle}</div>
-              {item.company && <div className="company">{item.company}</div>}
+              {item.title_link ? (
+                <div className="job-title">
+                  <a href={item.title_link} className="title-link" target="_blank" rel="noopener noreferrer">
+                    {item.jobTitle}
+                  </a>
+                </div>
+              ) : (
+                <div className="job-title">{item.jobTitle}</div>
+              )}
+              {item.company && item.company_link ? (
+                <div className="company">
+                  <a href={item.company_link} className="company-link" target="_blank" rel="noopener noreferrer">
+                    {item.company}
+                  </a>
+                </div>
+              ) : (
+                item.company && <div className="company">{item.company}</div>
+              )}
               {item.description && <div className="description">{item.description}</div>}
               {item.skills && (
                 <div className="skills">

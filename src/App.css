@@ -51,7 +51,7 @@ h1 {
 }
 
 .subtitle {
-  color: #4a9d9a;
+  color: #7FACD6;
   font-size: 1.2em;
   margin-bottom: 20px;
 }
@@ -90,7 +90,7 @@ nav ul li a:hover {
   top: 0;
   bottom: 0;
   width: 2px;
-  background-color: #4a9d9a;
+  background-color: #7FACD6;
 }
 
 .timeline-item {
@@ -107,7 +107,7 @@ nav ul li a:hover {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: #4a9d9a;
+  background-color: #7FACD6;
 }
 
 .job-title {
@@ -116,8 +116,19 @@ nav ul li a:hover {
 }
 
 .company {
-  color: #4a9d9a;
+  color: #7FACD6;
   font-weight: bold;
+}
+
+.title-link, .company-link {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.title-link:hover, .company-link:hover {
+  cursor: pointer;
+  color: #377299;
 }
 
 .date {
@@ -135,7 +146,7 @@ nav ul li a:hover {
 
 .skill {
   background-color: #1a1d21;
-  color: #4a9d9a;
+  color: #7FACD6;
   padding: 5px 10px;
   border-radius: 15px;
   font-size: 0.9em;
@@ -166,6 +177,10 @@ footer {
   flex-direction: column;
 }
 
+.spacer {
+  margin-top: 120px;
+}
+
 /* Projects Grid */
 .projects-grid {
   display: flex;
@@ -178,10 +193,10 @@ footer {
   background-color: #1a1d21;
   color: #e0e0e0;
   border-radius: 10px;
-  width: calc(33.333% - 20px);
+  width: calc(50% - 20px);
   box-sizing: border-box;
   overflow: hidden;
-  min-height: 200px;
+  min-height: 250px;
 }
 
 .project-background {
@@ -254,6 +269,10 @@ footer {
   }
   .timeline-item::before {
     left: 1px;
+  }
+
+  .spacer {
+    margin-top: 80px;
   }
 
   .projects-grid {
