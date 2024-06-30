@@ -257,12 +257,20 @@ footer {
 }
 
 .project-link {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 2;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.project-link a {
+  color: #7FACD6;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.project-link a:hover {
+  cursor: pointer;
+  color: #377299;
 }
 
 /* Project Info Container */
@@ -273,6 +281,15 @@ footer {
   background-color: #1a1d21;
   color: #e0e0e0;
   border-radius: 10px;
+}
+
+.back-to-home {
+  display: block;
+  margin-bottom: 20px;
+  color: #7FACD6;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .project-info-container h1 {
@@ -286,39 +303,28 @@ footer {
 }
 
 .project-github-link {
+  display: block;
   margin-bottom: 20px;
 }
 
 .project-github-link a {
   color: #7FACD6;
-  text-decoration: none;
-  font-size: 1.2em;
+  font-weight: bold;
   display: flex;
   align-items: center;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .project-github-link a:hover {
-  text-decoration: underline;
+  cursor: pointer;
+  color: #377299;
 }
 
 .project-github-link .icon {
   width: 20px;
   height: 20px;
   margin-right: 10px;
-}
-
-.project-link {
-  margin-bottom: 20px;
-}
-
-.project-link a {
-  color: #7FACD6;
-  text-decoration: none;
-  font-size: 1.2em;
-}
-
-.project-link a:hover {
-  text-decoration: underline;
 }
 
 .project-info-container .skills {

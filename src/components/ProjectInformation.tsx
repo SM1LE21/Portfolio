@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import data from '../data.json';
 import ContentSection from './ContentSection';
 
@@ -36,20 +36,21 @@ const ProjectInformation: React.FC = () => {
 
   return (
     <div className="project-info-container">
+      <Link to="/" className="back-to-home title-link">← Back to Home</Link>
       <h1>{project.title}</h1>
       {project.big_description.map((paragraph, index) => (
         <p key={index} className="big-description">{paragraph}</p>
       ))}
       {project.github_link && (
         <p className="project-github-link">
-          <a href={project.github_link} target="_blank" rel="noopener noreferrer">
+          <a href={`https://${project.github_link}`} target="_blank" rel="noopener noreferrer" className="title-link">
             <img src={githubIcon} alt="GitHub" className="icon" /> Check out the project on GitHub
           </a>
         </p>
       )}
       {project.link && project.link_text && (
-        <p className="">
-          <a href={project.link} target="_blank" rel="noopener noreferrer">{project.link_text}</a>
+        <p className="project-link">
+          <a href={`https://${project.link}`} target="_blank" rel="noopener noreferrer" className="title-link">{project.link_text}</a>
         </p>
       )}
       {project.skills && (
