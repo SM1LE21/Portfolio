@@ -5,9 +5,11 @@ interface SidebarProps {
   title: string;
   description: string;
   socialLinks: { title: string; url: string; icon: string }[];
+  isLightMode: boolean;
+  toggleLightMode: () => void;
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ name, title, description, socialLinks }) => {
+const Sidebar: React.FC<SidebarProps> = ({ name, title, description, socialLinks, isLightMode, toggleLightMode }) => {
   return (
     <aside className="sidebar">
       <div className="name-highlight">
@@ -15,15 +17,6 @@ const Sidebar: React.FC<SidebarProps> = ({ name, title, description, socialLinks
         <div className="subtitle">{title}</div>
       </div>
       <p className="description">{description}</p>
-      {/*
-      <nav>
-        <ul>
-          <li><a href="#about">ABOUT</a></li>
-          <li><a href="#experience">EXPERIENCE</a></li>
-          <li><a href="#education">EDUCATION</a></li>
-        </ul>
-      </nav>
-      */}
       <div className="social-icons">
         {socialLinks.map(link => (
           <a key={link.title} href={link.url} title={link.title} target="_blank" rel="noopener noreferrer">
@@ -31,6 +24,19 @@ const Sidebar: React.FC<SidebarProps> = ({ name, title, description, socialLinks
           </a>
         ))}
       </div>
+      <button 
+        onClick={toggleLightMode} 
+        style={{ 
+          background: 'none', 
+          border: 'none', 
+          cursor: 'pointer',
+          fontSize: '24px',
+          marginTop: '20px',
+          padding: '0',
+        }}
+      >
+        {isLightMode ? '🌒' : '☀️'}
+      </button>
     </aside>
   );
 };

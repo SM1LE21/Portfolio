@@ -1,13 +1,70 @@
-/* General Styles */
+:root {
+  /* General Colors */
+  --background-gradient-start: #0a0c10;
+  --background-gradient-end: #1a1d21;
+  --text-color: #e0e0e0;
+  --heading-color: #ffffff;
+  --subtitle-color: #7FACD6;
+  --link-color: #808080;
+  --link-hover-color: #ffffff;
+  --timeline-color: #7FACD6;
+  --highlight-color: rgba(74,157,154,0.2);
+  --highlight-background: linear-gradient(135deg, rgba(74,157,154,0.2) 0%, rgba(10,12,16,0) 70%);
+  --project-bg-color: #1a1d21;
+  --project-hover-color: #377299;
+  --footer-bg-color: #1a1d21;
+
+  /* Light Mode Colors */
+  --light-background-gradient-start: #c3cfe2;
+  --light-background-gradient-end: #f5f7fa;
+  --light-text-color: #333333;
+  --light-heading-color: #000000;
+  --light-subtitle-color: #005b99;
+  --light-link-color: #555555;
+  --light-link-hover-color: #000000;
+  --light-timeline-color: #005b99;
+  --light-highlight-color: rgba(0,123,255,0.2);
+  --light-highlight-background: linear-gradient(135deg, rgba(0,123,255,0.2) 0%, rgba(255, 255, 255, 0) 70%);
+  --light-project-bg-color: #ffffff;
+  --light-project-hover-color: #003366;
+  --light-footer-bg-color: #f0f0f0;
+}
+
 body, html {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #0a0c10 0%, #1a1d21 100%);
-  color: #e0e0e0;
+  background: linear-gradient(135deg, var(--background-gradient-start) 0%, var(--background-gradient-end) 100%);
+  color: var(--text-color);
   line-height: 1.6;
   overflow-x: hidden;
   min-height: 100%;
+}
+
+.light-mode {
+  --background-gradient-start: var(--light-background-gradient-start);
+  --background-gradient-end: var(--light-background-gradient-end);
+  --text-color: var(--light-text-color);
+  --heading-color: var(--light-heading-color);
+  --subtitle-color: var(--light-subtitle-color);
+  --link-color: var(--light-link-color);
+  --link-hover-color: var(--light-link-hover-color);
+  --timeline-color: var(--light-timeline-color);
+  --highlight-color: var(--light-highlight-color);
+  --highlight-background: var(--light-highlight-background);
+  --project-bg-color: var(--light-project-bg-color);
+  --project-hover-color: var(--light-project-hover-color);
+  --footer-bg-color: var(--light-footer-bg-color);
+}
+
+.sidebar .social-icons img {
+  width: 30px;
+  height: 30px;
+  transition: filter 0.3s;
+}
+
+.light-mode .sidebar .social-icons img {
+  filter: invert(1); /* Inverts colors for SVGs to make them black */
 }
 
 /* Container */
@@ -40,13 +97,13 @@ body, html {
   left: -20px;
   right: -20px;
   bottom: -20px;
-  background: radial-gradient(circle, rgba(74,157,154,0.2) 0%, rgba(10,12,16,0) 70%);
+  background: radial-gradient(circle, var(--highlight-color) 0%, rgba(10,12,16,0) 70%);
   filter: blur(15px);
   z-index: -1;
 }
 
 h1, h2, h3 {
-  color: #ffffff;
+  color: var(--heading-color);
 }
 
 h1 {
@@ -55,7 +112,7 @@ h1 {
 }
 
 .subtitle {
-  color: #7FACD6;
+  color: var(--subtitle-color);
   font-size: 1.2em;
   margin-bottom: 20px;
 }
@@ -75,13 +132,13 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #808080;
+  color: var(--link-color);
   text-decoration: none;
   transition: color 0.3s;
 }
 
 nav ul li a:hover {
-  color: #ffffff;
+  color: var(--link-hover-color);
 }
 
 /* Timeline */
@@ -96,7 +153,7 @@ nav ul li a:hover {
   top: 0;
   bottom: 0;
   width: 2px;
-  background-color: #7FACD6;
+  background-color: var(--timeline-color);
 }
 
 .timeline-item {
@@ -113,7 +170,7 @@ nav ul li a:hover {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: #7FACD6;
+  background-color: var(--timeline-color);
 }
 
 .job-title {
@@ -122,7 +179,7 @@ nav ul li a:hover {
 }
 
 .company {
-  color: #7FACD6;
+  color: var(--timeline-color);
   font-weight: bold;
 }
 
@@ -134,11 +191,11 @@ nav ul li a:hover {
 
 .title-link:hover, .company-link:hover {
   cursor: pointer;
-  color: #377299;
+  color: var(--project-hover-color);
 }
 
 .date {
-  color: #808080;
+  color: var(--link-color);
   font-size: 0.9em;
   margin-bottom: 10px;
 }
@@ -152,8 +209,8 @@ nav ul li a:hover {
 }
 
 .skill {
-  background-color: #1a1d21;
-  color: #7FACD6;
+  background-color: var(--project-bg-color);
+  color: var(--subtitle-color);
   padding: 5px 10px;
   border-radius: 15px;
   font-size: 0.9em;
@@ -180,10 +237,10 @@ nav ul li a:hover {
 
 /* Footer */
 footer {
-  background-color: #1a1d21;
+  background-color: var(--footer-bg-color);
   padding: 20px 0;
   text-align: center;
-  color: #808080;
+  color: var(--link-color);
   margin-top: 40px;
   width: 100%;
   display: flex;
@@ -205,8 +262,8 @@ footer {
 
 .project-item {
   position: relative;
-  background-color: #1a1d21;
-  color: #e0e0e0;
+  background-color: var(--project-bg-color);
+  color: var(--text-color);
   border-radius: 10px;
   width: calc(50% - 20px);
   box-sizing: border-box;
@@ -245,7 +302,12 @@ footer {
   align-items: center;
   text-align: center;
   transition: opacity 0.3s;
+  color: #e0e0e0;
   z-index: 2; /* Ensure content is above the background */
+}
+
+.project-content h3 {
+  color: #ffffff;
 }
 
 .project-item:hover .project-content {
@@ -274,7 +336,7 @@ footer {
 }
 
 .project-link a {
-  color: #7FACD6;
+  color: var(--subtitle-color);
   font-weight: bold;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -282,7 +344,7 @@ footer {
 
 .project-link a:hover {
   cursor: pointer;
-  color: #377299;
+  color: var(--project-hover-color);
 }
 
 /* Project Info Container */
@@ -290,15 +352,15 @@ footer {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #1a1d21;
-  color: #e0e0e0;
+  background-color: var(--project-bg-color);
+  color: var(--text-color);
   border-radius: 10px;
 }
 
 .back-to-home {
   display: block;
   margin-bottom: 20px;
-  color: #7FACD6;
+  color: var(--subtitle-color);
   font-weight: bold;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -320,7 +382,7 @@ footer {
 }
 
 .project-github-link a {
-  color: #7FACD6;
+  color: var(--subtitle-color);
   font-weight: bold;
   display: flex;
   align-items: center;
@@ -330,13 +392,17 @@ footer {
 
 .project-github-link a:hover {
   cursor: pointer;
-  color: #377299;
+  color: var(--project-hover-color);
 }
 
 .project-github-link .icon {
   width: 20px;
   height: 20px;
   margin-right: 10px;
+}
+
+.light-mode .icon {
+  filter: invert(1);
 }
 
 .project-info-container .skills {
@@ -347,8 +413,8 @@ footer {
 }
 
 .project-info-container .skill {
-  background-color: #7FACD6;
-  color: #1a1d21;
+  background-color: var(--subtitle-color);
+  color: var(--project-bg-color);
   padding: 5px 10px;
   border-radius: 15px;
   font-size: 1em;

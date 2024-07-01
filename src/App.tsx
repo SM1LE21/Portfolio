@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
@@ -15,6 +15,7 @@ import { useGSAP } from '@gsap/react';
 const App: React.FC = () => {
   const sidebarRef = useRef<HTMLDivElement | null>(null);
   const sectionsRef = useRef<HTMLDivElement | null>(null);
+  const [isLightMode, setIsLightMode] = useState(false);
 
   useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -59,11 +60,26 @@ const App: React.FC = () => {
     }
   }, []);
 
+  useEffect(() => {
+    document.body.classList.toggle('light-mode', isLightMode);
+  }, [isLightMode]);
+
+  const toggleLightMode = () => {
+    setIsLightMode(!isLightMode);
+  };
+
   return (
     <Router>
       <div className="container">
         <aside className="sidebar" ref={sidebarRef}>
-          <Sidebar name={data.name} title={data.title} description={data.description} socialLinks={data.socialLinks} />
+          <Sidebar 
+            name={data.name} 
+            title={data.title} 
+            description={data.description} 
+            socialLinks={data.socialLinks} 
+            isLightMode={isLightMode} 
+            toggleLightMode={toggleLightMode} 
+          />
         </aside>
         <main ref={sectionsRef}>
           <Routes>
