@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import data from '../data.json';
 import ContentSection from './ContentSection';
+import EmbeddedWebsite from './EmbeddedWebsite';  // Import the new component
 
 interface Content {
   title?: string;
@@ -22,6 +23,8 @@ interface Project {
   skills?: string[];
   showMainMedia: boolean;
   content: Content[];
+  embedWebsite?: boolean;
+  embedLink?: string;
 }
 
 const ProjectInformation: React.FC = () => {
@@ -81,6 +84,9 @@ const ProjectInformation: React.FC = () => {
           />
         ))}
       </div>
+      {project.embedWebsite && project.embedLink && (
+        <EmbeddedWebsite url={`https://${project.embedLink}`} />
+      )}
     </div>
   );
 };

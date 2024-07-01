@@ -90,13 +90,17 @@
             ],
             "github_link": "github.com/SM1LE21/drone-services",
             "link": "swiftdrones.net",
-            "link_text": "Visit swiftdrones.net for more information.",
+            "link_text": "swiftdrones.net",
             "image": "/assets/swiftdrones.png",
             "video": "",
-            "showMainMedia": true,
+            "showMainMedia": false,
+            "embedWebsite": true,
+            "embedLink": "swiftdrones.net",
             "skills": ["React", "JavaScript", "TailwindCSS", "Google Cloud"],
             "content": [
-              
+                {   
+                    "title": "Here an embedded version of the website:"
+                }
             ]
         },
         {
@@ -112,9 +116,14 @@
             "link_text": "",
             "image": "/assets/canvascraft.png",
             "video": "",
-            "showMainMedia": true,
+            "showMainMedia": false,
+            "embedWebsite": true,
+            "embedLink": "widgethoster.sytes.net/canvascraft/",
             "skills": ["Python", "Flask", "OpenAI API", "React", "TailwindCSS"],
             "content": [
+                {   
+                    "title": "Feel free to test the tool:"
+                }
             ]
         },        
         {
