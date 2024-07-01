@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState, useLayoutEffect, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
@@ -49,15 +49,22 @@ const App: React.FC = () => {
             trigger: item,
             start: "top 80%",
             end: "bottom 20%",
-            toggleActions: "play none none reverse"
+            toggleActions: "play none none reverse",
           },
           opacity: 0,
           x: -50,
           duration: 0.8,
-          delay: index * 0.2
         });
       });
+
+      setTimeout(() => {
+        ScrollTrigger.refresh();
+      }, 0);
     }
+  }, []);
+
+  useLayoutEffect(() => {
+    ScrollTrigger.refresh();
   }, []);
 
   useEffect(() => {
