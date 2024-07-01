@@ -70,43 +70,45 @@ const App: React.FC = () => {
 
   return (
     <Router>
-      <div className="container">
-        <aside className="sidebar" ref={sidebarRef}>
-          <Sidebar 
-            name={data.name} 
-            title={data.title} 
-            description={data.description} 
-            socialLinks={data.socialLinks} 
-            isLightMode={isLightMode} 
-            toggleLightMode={toggleLightMode} 
-          />
-        </aside>
-        <main ref={sectionsRef}>
-          <Routes>
-            <Route 
-              path="/" 
-              element={
-                <>
-                  <Section id="about" title="ABOUT">
-                    {data.about.map((paragraph, index) => (
-                      <p key={index}>{paragraph}</p>
-                    ))}
-                  </Section>
-                  <Spacer />
-                  <Projects projects={data.projects} />
-                  <Spacer />
-                  <Section id="experience" title="EXPERIENCE" timelineItems={data.experience} />
-                  <Spacer />
-                  <Section id="certificates" title="CERTIFICATES" timelineItems={data.certificates} />
-                  <Spacer />
-                  <Section id="education" title="EDUCATION" timelineItems={data.education} />
-                  <Spacer />
-                </>
-              } 
+      <div className="wrapper">
+        <div className="container">
+          <aside className="sidebar" ref={sidebarRef}>
+            <Sidebar 
+              name={data.name} 
+              title={data.title} 
+              description={data.description} 
+              socialLinks={data.socialLinks} 
+              isLightMode={isLightMode} 
+              toggleLightMode={toggleLightMode} 
             />
-            <Route path="/project/:projectId" element={<ProjectInformation />} />
-          </Routes>
-        </main>
+          </aside>
+          <main ref={sectionsRef}>
+            <Routes>
+              <Route 
+                path="/" 
+                element={
+                  <>
+                    <Section id="about" title="ABOUT">
+                      {data.about.map((paragraph, index) => (
+                        <p key={index}>{paragraph}</p>
+                      ))}
+                    </Section>
+                    <Spacer />
+                    <Projects projects={data.projects} />
+                    <Spacer />
+                    <Section id="experience" title="EXPERIENCE" timelineItems={data.experience} />
+                    <Spacer />
+                    <Section id="certificates" title="CERTIFICATES" timelineItems={data.certificates} />
+                    <Spacer />
+                    <Section id="education" title="EDUCATION" timelineItems={data.education} />
+                    <Spacer />
+                  </>
+                } 
+              />
+              <Route path="/project/:projectId" element={<ProjectInformation />} />
+            </Routes>
+          </main>
+        </div>
       </div>
       <Footer />
     </Router>

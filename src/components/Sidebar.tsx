@@ -30,7 +30,7 @@ const Sidebar: React.FC<SidebarProps> = ({ name, title, description, socialLinks
           });
         };
     
-        const timer = setTimeout(glowAnimation, 2000);
+        const timer = setTimeout(glowAnimation, 3000);
     
         return () => clearTimeout(timer);
     }, [isLightMode]);

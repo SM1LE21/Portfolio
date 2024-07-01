@@ -67,6 +67,11 @@ body, html {
   filter: invert(1); /* Inverts colors for SVGs to make them black */
 }
 
+.wrapper {
+  overflow-x: hidden; /* Prevent horizontal overflow */
+  padding: 0 20px; /* Add some padding to the sides */
+}
+
 /* Container */
 .container {
   max-width: 1200px;
@@ -76,7 +81,6 @@ body, html {
   grid-template-columns: 250px 1fr;
   gap: 40px;
   min-height: 100vh;
-  overflow: hidden;
   width: 100%;
 }
 
@@ -473,6 +477,7 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    padding: 20px 5px;
   }
 
   .sidebar {
