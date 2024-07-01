@@ -22,7 +22,7 @@ const Sidebar: React.FC<SidebarProps> = ({ name, title, description, socialLinks
             : '0px 0px 8px rgba(255,255,255,0.8)';
     
           gsap.to(nameRef.current, {
-            duration: 1.5,
+            duration: 5,
             textShadow: textShadow,
             repeat: -1,
             yoyo: true,
@@ -30,7 +30,7 @@ const Sidebar: React.FC<SidebarProps> = ({ name, title, description, socialLinks
           });
         };
     
-        const timer = setTimeout(glowAnimation, 3000);
+        const timer = setTimeout(glowAnimation, 7000);
     
         return () => clearTimeout(timer);
     }, [isLightMode]);
