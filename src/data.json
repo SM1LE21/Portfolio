@@ -119,36 +119,51 @@
         },        
         {
             "title": "Text2UML",
-            "description": "VSCode extension for bidirectional navigation and conversion of text to UML diagrams",
+            "description": "A VS Code extension for automated generation of graphical representations from textual UML diagrams.",
             "big_description": [
-                "Text2UML is a VSCode extension that allows users to convert text descriptions into UML diagrams and navigate between the text and diagram representations.",
-                "Users can create UML diagrams by writing text descriptions of the diagram elements, such as classes, attributes, and relationships.",
-                "The extension provides bidirectional navigation between the text and diagram representations, allowing users to easily switch between the two views."
-            
+                "I developed the Text2UML tool for my bachelor's thesis titled 'Generating Graphical Representations for UML Sequence and Activity Diagrams from Textual Variants'. This thesis presents a tool that automates the generation of graphical representations from textual variants of UML sequence diagrams (SDs) and activity diagrams (ADs), utilizing the MontiCore language workbench. Designed to enhance model-driven software engineering (MDSE) methodologies, this tool is integrated into the Visual Studio Code (VS Code) environment through an extension.",
+                "The tool employs the Language Server Protocol (LSP) to extract diagram data from MontiCore DSLs, enabling synchronized visualization alongside the textual model. A key feature of this tool is the bidirectional navigation between textual and visual representations, allowing users to transition from code to diagram and vice versa. This functionality improves the accessibility and utility of MDSE visualizations and facilitates a deeper understanding of UML diagrams.",
+                "The main goal of the tool is to provide direct visualization inside VS Code, allowing for a side-by-side view with the textual model on one side and the visualization on the other. The extension dynamically generates and updates visualizations based on any modifications within the text document.",
+                "The tool uses Java for the backend (LSP server) and TypeScript for the VS Code extension backend and frontend. React and D3.js are used for rendering the diagrams. The visualization process is separated into layout algorithms and rendering logic. We use ELKJS for the AD renderer and developed a custom layout algorithm for SDs.",
+                "This project not only showcases advanced integration techniques and synchronized data visualization but also contributes to the broader MDSE field by improving the interaction between textual and graphical models."
             ],
-            "link": "#",
+            "link": "",
+            "link_text": "",
             "image": "",
             "video": "/assets/text2uml.mp4",
             "showMainMedia": false,
-            "skills": ["TypeScript", "VSCode API", "UML"],
+            "skills": ["Java", "TypeScript", "React", "D3.js", "ELKJS", "MontiCore", "LSP", "VS-Code Extension"],
             "content": [
-              {
-                "image": "",
-                "description": "Text2UML is a VSCode extension that allows users to convert text descriptions into UML diagrams and navigate between the text and diagram representations.",
-                "video": ""
-              },
-              {
-                "image": "",
-                "description": "Users can create UML diagrams by writing text descriptions of the diagram elements, such as classes, attributes, and relationships.",
-                "video": ""
-              },
-              {
-                "image": "",
-                "description": "The extension provides bidirectional navigation between the text and diagram representations, allowing users to easily switch between the two views.",
-                "video": ""
-              }
+                {   
+                    "title": "Architectural Overview of Text2UML Tool Communication Flow",
+                    "image": "/assets/text2uml_frontendBackendCommunication.png",
+                    "description": "",
+                    "video": ""
+                },
+                {
+                    "title": "Visualization Workflow",
+                    "image": "/assets/text2uml_visualizationWorkflow.png",
+                    "description": "",
+                    "video": ""
+                },
+                {
+                    "title": "Example Videos of the Tool in Action",
+                    "image": "",
+                    "description": "",
+                    "video": "/assets/text2uml_AD.mov"
+                },
+                {
+                    "image": "",
+                    "description": "",
+                    "video": "/assets/text2uml_SD.mp4"
+                },
+                {
+                    "image": "",
+                    "description": "",
+                    "video": "/assets/text2uml_usage.mov"
+                }
             ]
-        },
+        },        
         {
             "title": "Gemini Competition - Language Learning Platform",
             "description": "Personalized language learning through news and generated exercises.",

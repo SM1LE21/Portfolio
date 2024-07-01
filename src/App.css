@@ -441,6 +441,7 @@ footer {
 
 .content-section .content-media {
   max-width: 50%;
+  width: 100%; /* Ensure it can take the full width if needed */
   border-radius: 10px;
 }
 
@@ -453,6 +454,10 @@ footer {
   width: 100%;
   font-size: 1.5em;
   margin-bottom: 10px;
+}
+
+.content-section.no-description .content-media {
+  max-width: 100%;
 }
 
 .content-description.full-width {
