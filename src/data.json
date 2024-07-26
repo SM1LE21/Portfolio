@@ -78,6 +78,13 @@
           "title_link": "https://www.udemy.com/certificate/UC-00433bd6-c8d0-4ffb-88fb-b33823ce0b22/",
           "company": "Udemy",
           "description": "Learned the fundamentals of C# and .NET Framework, working with primitive and non-primitive types, controlling program flow with conditional statements, using arrays and lists, and working with files, directories, text, and date and time. Also gained skills in debugging C# applications effectively."
+        },
+        {
+          "date": "2024-07-26",
+          "jobTitle": "C# Intermediate: Classes, Interfaces and OOP",
+          "title_link": "https://www.udemy.com/certificate/UC-326c8ea5-bc10-4628-99d2-5c5d4860456c/",
+          "company": "Udemy",
+          "description": "Gained skills in working with classes, interfaces, and object-oriented programming principles with C#. Learned to utilize encapsulation, inheritance, and composition to enhance code robustness and reusability. Developed expertise in building extensible, loosely-coupled, and testable applications using polymorphism and interfaces."
         }
     ],      
     "education": [
@@ -180,11 +187,6 @@
                     "image": "",
                     "description": "",
                     "video": "/assets/text2uml_SD.mp4"
-                },
-                {
-                    "image": "",
-                    "description": "",
-                    "video": "/assets/text2uml_usage.mov"
                 }
             ]
         },        
