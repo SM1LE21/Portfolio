@@ -63,6 +63,20 @@
           "title_link": "https://www.coursera.org/account/accomplishments/specialization/certificate/CX4GYR2C4FPH",
           "company": "Google",
           "description": "Completed multiple courses including Crash Course on Python, Troubleshooting and Debugging Techniques, Introduction to Git and GitHub, Configuration Management and the Cloud. Gained skills in automating tasks with Python, using Git and GitHub for version control, managing IT resources at scale, and analyzing real-world IT problems to implement appropriate solutions."
+        },
+        {
+          "date": "2024-07-26",
+          "jobTitle": "The Complete SQL Bootcamp: Go from Zero to Hero",
+          "title_link": "https://www.udemy.com/certificate/UC-9f6b9847-ecdf-44af-89d3-7b6590eef0d8/",
+          "company": "Udemy",
+          "description": "Gained skills in reading and writing complex SQL queries, utilizing PostgreSQL, and applying these techniques across various major SQL databases. Learned to analyze data with aggregate functions, execute advanced queries, use logical operators, and manage databases efficiently."
+        },
+        {
+          "date": "2024-07-26",
+          "jobTitle": "C# Basics for Beginners: Learn C# Fundamentals by Coding",
+          "title_link": "https://www.udemy.com/certificate/UC-00433bd6-c8d0-4ffb-88fb-b33823ce0b22/",
+          "company": "Udemy",
+          "description": "Learned the fundamentals of C# and .NET Framework, working with primitive and non-primitive types, controlling program flow with conditional statements, using arrays and lists, and working with files, directories, text, and date and time. Also gained skills in debugging C# applications effectively."
         }
     ],      
     "education": [
