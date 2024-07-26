@@ -14,7 +14,8 @@
         "jobTitle": "Junior Project Engineer",
         "company": "Hexagon",
         "company_link": "https://www.hexagon.com",
-        "description": "As a Junior Project Engineer at Hexagon in Vienna, Austria, I support the planning, implementation, and management of engineering projects."
+        "description": "As a Junior Project Engineer at Hexagon in Vienna, Austria, I support the planning, implementation, and management of engineering projects.",
+        "skills": ["SQL", "C#", "SQL Server", "Azure DevOps"]
       },
       {
         "date": "2023-02 — 2024-06",
