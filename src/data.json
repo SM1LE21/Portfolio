@@ -1,6 +1,6 @@
 {
     "name": "Tun Keltesch",
-    "title": "Software Engineer",
+    "title": "Junior Product Engineer | Software Engineer",
     "description": "I build robust, user-friendly, and visually appealing web solutions, with a passion for continuous technical innovation.",
     "about": [
       "In the past 5 years, I embarked on my journey as a tech enthusiast, diving deep into the world of coding and web development. Fast-forward to today, and I've had the incredible opportunity to work on a wide range of projects, from building and maintaining websites to capturing stunning aerial footage with drone technology.",
@@ -15,7 +15,7 @@
         "company": "Hexagon",
         "company_link": "https://www.hexagon.com",
         "description": "As a Junior Project Engineer at Hexagon in Vienna, Austria, I support the planning, implementation, and management of engineering projects.",
-        "skills": ["SQL", "C#", "SQL Server", "Azure DevOps"]
+        "skills": ["SQL", "C#", "SQL Server", "Azure DevOps", "VBA"]
       },
       {
         "date": "2023-02 — 2024-06",
@@ -191,22 +191,24 @@
             ]
         },        
         {
-            "title": "Gemini Competition - Language Learning Platform",
+            "title": "LLInvoker",
             "description": "Personalized language learning through news and generated exercises.",
             "big_description": [
-                "The language learning platform uses news articles and generated exercises to help users improve their language skills. This is an ongoing project and will likely continue even after the competition deadline of August 12, 2024.",
-                "Users can select their target language and proficiency level, and the platform will provide them with news articles in the target language.",
-                "The platform generates exercises based on the news articles, such as vocabulary quizzes, grammar exercises, and comprehension questions, to help users practice and improve their language skills.",
-                "We use Flutter for the frontend, Google Cloud for infrastructure, Firebase for real-time data and authentication, Google Functions for serverless operations, and Python to communicate with the Gemini API, which is at the core of our language processing and exercise generation."
+                "The project we're presenting, LLInvoker, is a language learning platform that uses the power of AI to offer personalized and dynamic language exercises. Our goal is to make language learning accessible, engaging, and flexible for modern learners by leveraging advanced natural language processing.",
+                "Initially, our ideas focused on using news articles and generated exercises to help users improve their language skills. The platform was designed to allow users to select their target language and proficiency level, after which it would provide relevant news articles in the target language. Exercises based on these articles, such as vocabulary quizzes, grammar exercises, and comprehension questions, were also part of the plan. We intended to continue developing the platform beyond the competition deadline of August 12, 2024.",
+                "For the competition, we delivered a platform called LLInvoker that integrates the Gemini API to generate A1-level exercises in both German and French. Users can request customized exercises based on their language level and topics of interest. We also included a feature where Gemini corrects and verifies users' answers, offering a more interactive learning experience. Additionally, users can generate custom exercises through a chat feature, allowing them to select exercise types and incorporate images or descriptions to create personalized learning activities. While the platform is in its alpha stage and some features from our initial plans are still under development, we believe LLInvoker demonstrates significant potential.",
+                "Looking forward, we plan to collaborate with educational institutions and introduce more advanced exercises, such as those initially planned with news articles, reading exercises, and conversational practice that offers pronunciation feedback. We're also considering a rework of the frontend to make it more playful and user-friendly, likely switching to React Native due to our team's experience with similar frameworks. To get a better idea of our project, you can check out the video we submitted for the competition."
             ],
             "link": "https://ai.google.dev/competition?authuser=1",
             "link_text": "Checkout the Gemini API Developer Competition",
             "image": "/assets/gemini.jpg",
-            "video": "",
+            "video": "https://www.youtube.com/watch?v=DG44aGDvXmo",
             "showMainMedia": true,
             "skills": ["Dart", "Flutter", "Google Cloud", "Firebase", "Google Functions", "Python", "Gemini API"],
-            "content": []
-        }        
+            "content": [
+  
+            ]
+        }
     ],
       
     "socialLinks": [

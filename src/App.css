@@ -295,6 +295,17 @@ footer {
   background-position: top left; /* Focus on the top part of the image */
 }
 
+.youtube-video iframe {
+  border: none;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.youtube-video {
+  background-color: #000; /* Optional: to show a background while the iframe loads */
+}
+
 .project-content {
   position: absolute;
   top: 0;
