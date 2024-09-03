@@ -1,3 +1,10 @@
+/*
+ * EmbeddedWebsite.tsx
+ * For projects with an embedded website
+ * This component is used in the Project component
+ * It takes a url prop and renders an iframe with the website embedded
+ */
+
 import React from 'react';
 
 const EmbeddedWebsite: React.FC<{ url: string }> = ({ url }) => {

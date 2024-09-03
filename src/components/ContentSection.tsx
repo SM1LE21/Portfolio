@@ -1,3 +1,8 @@
+/*
+ * ContentSection.tsx
+ * For projects with a title, image, and description or video
+ */
+
 import React from 'react';
 
 interface ContentProps {

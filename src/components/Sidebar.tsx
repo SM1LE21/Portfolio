@@ -1,3 +1,9 @@
+/*
+ * Sidebar.tsx
+ * The component for the sidebar with the name, title, description, and social links
+ * It also contains a button to toggle light/dark mode
+ */
+
 import React, { useRef } from 'react';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';

@@ -1,3 +1,10 @@
+/*
+ * ProjectInformation.tsx
+ * The component for displaying information about a project
+ * It takes the project ID from the URL and displays the project information
+ * The component uses the data from the data.json file
+ */
+
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import data from '../data.json';

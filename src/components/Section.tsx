@@ -1,3 +1,10 @@
+/*
+ * Section.tsx
+ * The component for displaying a section with a title and content
+ * It can also display a timeline of items
+ * The component is used in About and Experience
+ */
+
 import React from 'react';
 
 interface TimelineItem {
