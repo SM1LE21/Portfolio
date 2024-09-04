@@ -1,3 +1,9 @@
+/*
+ * App.tsxs
+ * Entry point of the application.
+ * It uses the data.json file to get the data to display.
+ */
+
 import React, { useRef, useState, useLayoutEffect, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import gsap from 'gsap';
