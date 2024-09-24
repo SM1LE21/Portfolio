@@ -18,6 +18,9 @@ import Spacer from './components/Spacer';
 import './App.css';
 import { useGSAP } from '@gsap/react';
 
+// TK CHAT INTEGRATION
+import ChatInterface from './components/ChatInterface';
+
 const App: React.FC = () => {
   const sidebarRef = useRef<HTMLDivElement | null>(null);
   const sectionsRef = useRef<HTMLDivElement | null>(null);
@@ -123,9 +126,10 @@ const App: React.FC = () => {
           </main>
         </div>
       </div>
+      <ChatInterface /> {/* TK CHAT INTEGRATION */}
       <Footer />
     </Router>
-  );
+  );  
 };
 
 export default App;

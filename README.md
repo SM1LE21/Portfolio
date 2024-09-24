@@ -33,7 +33,7 @@ The entire website's content is driven by a single data.json file. This design c
 ```
 
 ## Current Status and Future Plans
-The project is still in development. Some features, such as mobile navigation, are not yet perfect, and not all of my projects are displayed. I have chosen not to include projects done for clients or employers to avoid detailing work that is not my intellectual property.
+The project is still in development. Some features, such as mobile navigation, are not perfect yet, and not all of my projects are displayed. I have chosen not to include projects done for clients or employers to avoid detailing work that is not my intellectual property.
 
 
 Future updates will include:
