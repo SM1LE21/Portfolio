@@ -34,3 +34,36 @@
   background-color: var(--subtitle-color);
   background-color: var(--project-hover-color);
 }
+
+/* Glow Component */
+.chat-glow {
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  width: 100px; /* Slightly larger than the icon */
+  height: 100px;
+  border-radius: 50%;
+  z-index: 999; /* Ensure it is behind the chat icon */
+  background-color: var(--timeline-color); /* Default color for dark mode */
+  box-shadow: 0 0 15px var( --timeline-color), 0 0 30px var( --timeline-color), 0 0 45px var(--timeline-color);
+  filter: blur(8px);
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  animation: glowPulse 10s infinite;
+  pointer-events: none; /* Ensure clicks go through */
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5; /* Adjust this to control the brightness of the glow */
+  }
+}
+
+/* Light Mode Glow */
+.light-mode .chat-glow {
+  background-color: var(--light-subtitle-color);
+  box-shadow: 0 0 15px var(--light-subtitle-color), 0 0 30px var(--light-subtitle-color), 0 0 45px var(--light-subtitle-color);
+}
