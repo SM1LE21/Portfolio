@@ -1,12 +1,12 @@
 /* TK CHAT INTEGRATION */
 .chat-icon {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 25px;
+  right: 25px;
   background-color: var(--subtitle-color);
   color: var(--heading-color);
-  width: 60px;
-  height: 60px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -21,7 +21,7 @@
 }
 
 .chat-icon-symbol {
-  font-size: 30px;
+  font-size: 25px;
 }
 
 /* Light Mode Adjustments */

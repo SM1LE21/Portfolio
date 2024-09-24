@@ -10,9 +10,9 @@ const CookieConsent: React.FC<CookieConsentProps> = ({ onAccept }) => {
   return (
     <div className="cookie-consent">
       <p>
-        We use cookies to enhance your experience. By continuing to use this site, you agree to our use of cookies.
+        This site offers the TK Chat feature, which allows you to interact with an AI system. If you choose to use this feature, it will store conversation data, session IDs, and other relevant information. While the AI is designed to provide helpful responses, I cannot fully control its output.
       </p>
-      <button onClick={onAccept}>Accept</button>
+      <button onClick={onAccept}>Accept & Enable Chat</button>
     </div>
   );
 };

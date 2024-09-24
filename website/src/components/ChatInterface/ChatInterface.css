@@ -7,7 +7,7 @@ body {
 /* Positioning the chat interface */
 .chat-interface {
   position: fixed;
-  bottom: 80px;
+  bottom: 40px;
   right: 20px;
   width: 350px;
   max-height: 500px;
