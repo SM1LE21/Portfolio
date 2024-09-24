@@ -139,7 +139,7 @@
 
 .light-mode .feedback-form button {
   background-color: var(--light-subtitle-color);
-  color: var(--light-heading-color);
+  color: var(--project-bg-color);
 }
 
 .light-mode .feedback-form .cancel-button {

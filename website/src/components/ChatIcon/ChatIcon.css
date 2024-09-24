@@ -26,10 +26,11 @@
 
 /* Light Mode Adjustments */
 .light-mode .chat-icon {
-  background-color: var(--light-subtitle-color);
-  color: var(--light-heading-color);
+  background-color: var(--subtitle-color);
+  color: var(--project-bg-color);
 }
 
 .light-mode .chat-icon:hover {
-  background-color: var(--light-project-hover-color);
+  background-color: var(--subtitle-color);
+  background-color: var(--project-hover-color);
 }

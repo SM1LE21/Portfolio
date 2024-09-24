@@ -6,9 +6,10 @@ import './FeedbackForm.css';
 interface FeedbackFormProps {
   sessionId: string;
   onClose: () => void;
+  handleFeedback: () => void;
 }
 
-const FeedbackForm: React.FC<FeedbackFormProps> = ({ sessionId, onClose }) => {
+const FeedbackForm: React.FC<FeedbackFormProps> = ({ sessionId, onClose, handleFeedback }) => {
   const [feedback, setFeedback] = useState<string>('');
   const [submitted, setSubmitted] = useState<boolean>(false);
 
@@ -17,9 +18,7 @@ const FeedbackForm: React.FC<FeedbackFormProps> = ({ sessionId, onClose }) => {
     try {
       await submitFeedback(sessionId, feedback);
       setSubmitted(true);
-      
-      // Optionally close the dialog here or keep it open to show a thank you message
-      // onClose();
+      handleFeedback();
     } catch (error) {
       console.error('Error submitting feedback:', error);
     }
@@ -28,7 +27,7 @@ const FeedbackForm: React.FC<FeedbackFormProps> = ({ sessionId, onClose }) => {
   return (
     <form onSubmit={handleSubmit} className="feedback-form">
       <h2>Feedback</h2>
-      <p>We appreciate your feedback on the chat tool.</p>
+      <p>I appreciate your feedback on the chat tool.</p>
       {!submitted ? (
         <>
           <textarea

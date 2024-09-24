@@ -202,8 +202,8 @@ const ChatInterface: React.FC = () => {
 
   const handleFeedbackSubmitted = () => {
     setFeedbackSubmitted(true);
-    closeFeedback();
   };
+
 
   return (
     <div>
@@ -216,7 +216,7 @@ const ChatInterface: React.FC = () => {
           {isChatOpen && (
             <div className="chat-interface" ref={chatRef}>
               <div className="chat-header">
-                <span>Chat with AI</span>
+                <span>TK Chat: Curious about me? Ask away!</span>
                 <button className="close-button" onClick={toggleChat} aria-label="Close Chat">
                   ✖
                 </button>
@@ -263,7 +263,7 @@ const ChatInterface: React.FC = () => {
                       ✖
                     </button>
                     {sessionId && (
-                      <FeedbackForm sessionId={sessionId} onClose={handleFeedbackSubmitted} />
+                      <FeedbackForm sessionId={sessionId} onClose={closeFeedback} handleFeedback={handleFeedbackSubmitted} />
                     )}
                   </div>
                 </div>

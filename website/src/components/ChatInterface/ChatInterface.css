@@ -104,8 +104,13 @@ body {
 }
 
 .message.system .message-content {
-  background-color: var(--highlight-background);
+  background-color: var(--system-message-bg);
   color: var(--text-color);
+  border-radius: 10px;
+}
+
+.message.system {
+  justify-content: center;
 }
 
 /* Loading indicator */
@@ -263,7 +268,7 @@ body {
 }
 
 .light-mode .message.system .message-content {
-  background-color: var(--light-highlight-background);
+  background-color: var(--system-message-bg); /* Same as dark mode */
   color: var(--light-text-color);
 }
 
