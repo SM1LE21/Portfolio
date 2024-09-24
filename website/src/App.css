@@ -28,6 +28,17 @@
   --light-project-bg-color: #ffffff;
   --light-project-hover-color: #003366;
   --light-footer-bg-color: #f0f0f0;
+
+  /* TK CHAT INTEGRATION */
+  /* Error Color (used for error messages and buttons) */
+  --error-color: #dc3545; 
+
+   /* System Message Background Color */
+   --system-message-bg: #ffeeba;
+
+   /* Light Mode Variables */
+   --light-error-color: #dc3545; 
+   --light-system-message-bg: #fff3cd;
 }
 
 body, html {
@@ -55,6 +66,9 @@ body, html {
   --project-bg-color: var(--light-project-bg-color);
   --project-hover-color: var(--light-project-hover-color);
   --footer-bg-color: var(--light-footer-bg-color);
+  /* TK CHAT INTEGRATION */
+  --error-color: var(--light-error-color);
+  --system-message-bg: var(--light-system-message-bg);
 }
 
 .sidebar .social-icons img {
