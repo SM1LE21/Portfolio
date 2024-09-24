@@ -1,32 +1,60 @@
 // TK CHAT INTEGRATION
-import React, { useEffect, useState } from 'react';
+import React, { useRef, useEffect } from 'react';
+import { gsap } from 'gsap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faComment } from '@fortawesome/free-solid-svg-icons';
 import './ChatIcon.css';
+import { useGSAP } from '@gsap/react';
 
 interface ChatIconProps {
   onClick: () => void;
 }
 
 const ChatIcon: React.FC<ChatIconProps> = ({ onClick }) => {
-  const [showGlow, setShowGlow] = useState(false);
+  const iconRef = useRef<HTMLDivElement>(null);
 
-  // Toggle glow effect every 10 seconds
-  useEffect(() => {
-    const glowInterval = setInterval(() => {
-      setShowGlow((prev) => !prev);
-    }, 10000);
-
-    return () => clearInterval(glowInterval);
+  useGSAP(() => {
+    if (iconRef.current) {
+      const timeline = gsap.timeline({ repeat: -1, repeatDelay: 25, delay: 10 });
+  
+      // Jump up and rotate 360-degree animation
+      timeline
+        .to(iconRef.current, {
+          duration: 0.6,  
+          y: -40,         
+          rotation: 360,  
+          ease: 'power1.out',
+        })
+        .to(iconRef.current, {
+          duration: 0.3, 
+          y: 0,       
+          ease: 'bounce.out',
+          
+        })
+        .to(iconRef.current, {
+          duration: 2,
+          rotation: 360,
+        })
+        .to(iconRef.current, {
+          duration: 0.6,  
+          y: -40,         
+          rotation: -0,  
+          ease: 'power1.out',
+        })
+        .to(iconRef.current, {
+          duration: 0.3, 
+          y: 0,       
+          ease: 'bounce.out',
+        });
+      
+    }
   }, []);
+  
 
   return (
-    <>
-      {showGlow && <div className="chat-glow"></div>}
-      <div className="chat-icon" onClick={onClick}>
-        <FontAwesomeIcon icon={faComment} className="chat-icon-symbol" />
-      </div>
-    </>
+    <div className="chat-icon" onClick={onClick} ref={iconRef}>
+      <FontAwesomeIcon icon={faComment} className="chat-icon-symbol" />
+    </div>
   );
 };
 
