@@ -105,7 +105,7 @@ body {
 
 .message.system .message-content {
   background-color: var(--system-message-bg);
-  color: var(--text-color);
+  color: var(--light-text-color);
   border-radius: 10px;
 }
 
@@ -268,7 +268,7 @@ body {
 }
 
 .light-mode .message.system .message-content {
-  background-color: var(--system-message-bg); /* Same as dark mode */
+  background-color: var(--system-message-bg);
   color: var(--light-text-color);
 }
 

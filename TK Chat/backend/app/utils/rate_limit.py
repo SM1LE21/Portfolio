@@ -2,8 +2,8 @@ from fastapi import HTTPException
 from sqlalchemy.orm import Session
 from app import models
 import datetime
+from app.config import MAX_MESSAGES_PER_MINUTE
 
-MAX_MESSAGES_PER_MINUTE = 5
 
 def is_rate_limited(session_id: str, db: Session):
     one_minute_ago = datetime.datetime.utcnow() - datetime.timedelta(minutes=1)

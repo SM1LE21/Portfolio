@@ -3,11 +3,11 @@ from sqlalchemy.orm import Session
 from app.database import SessionLocal
 from app import models, schemas, utils
 import openai
-from app.config import OPENAI_API_KEY
+from app.config import OPENAI_API_KEY, MODEL
 from app.utils import rate_limit
 from app.utils.logger import logger
 
-openai.api_key = OPENAI_API_KEY
+openai.api_key = OPENAI_API_KEY 
 
 router = APIRouter(
     prefix="/chat",
@@ -23,15 +23,18 @@ def get_db():
 
 @router.post("/", response_model=schemas.Message)
 def chat(message: schemas.Message, db: Session = Depends(get_db)):
+    # Log the current model being used
+    logger.debug(f"Using OpenAI model: {MODEL}")
+
     # Check if session is active
     if not utils.auth.is_session_active(message.session_id, db):
         logger.warning(f"Session {message.session_id}: Invalid or expired session.")
         raise HTTPException(status_code=401, detail="Session expired or invalid")
     
-     # Rate limiting
+    # Rate limiting
     if rate_limit.is_rate_limited(message.session_id, db):
         logger.warning(f"Session {message.session_id}: Rate limit exceeded.")
-        raise HTTPException(status_code=429, detail="Too many requests. Please try again later.")
+        raise HTTPException(status_code=429, detail="Too many requests. Please try again in a minute.")
 
     # Save user message
     user_message = models.Message(
@@ -52,9 +55,9 @@ def chat(message: schemas.Message, db: Session = Depends(get_db)):
 
     # Call OpenAI API
     try:
-        logger.info(f"Session {message.session_id}: Sending request to OpenAI API.")
+        logger.info(f"Session {message.session_id}: Sending request to OpenAI API using model '{MODEL}'.")
         response = openai.ChatCompletion.create(
-            model="gpt-3.5-turbo",
+            model=MODEL,
             messages=conversation
         )
 
@@ -79,4 +82,5 @@ def chat(message: schemas.Message, db: Session = Depends(get_db)):
             content=ai_content
         )
     except Exception as e:
+        logger.error(f"Session {message.session_id}: Error communicating with OpenAI API - {e}")
         raise HTTPException(status_code=500, detail=str(e))

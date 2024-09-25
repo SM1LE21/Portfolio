@@ -9,6 +9,7 @@ import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import axios from 'axios';
 
 interface Message {
   role: 'user' | 'assistant' | 'system';
@@ -119,17 +120,27 @@ const ChatInterface: React.FC = () => {
     setLoading(true);
 
     try {
+
       if (!sessionId) throw new Error('Session ID is not set.');
       const response = await sendMessage(sessionId, input);
       const aiMessage: Message = { role: 'assistant', content: response.content };
       setMessages((prevMessages) => [...prevMessages, aiMessage]);
+      
       // Update session timestamp on successful interaction
       const now = new Date().getTime();
       localStorage.setItem('sessionTimestamp', now.toString());
       setError(null);
+
     } catch (error) {
-      console.error('Error sending message:', error);
-      setError('An error occurred. Please try again later.');
+
+      if (axios.isAxiosError(error)) {
+          console.error('Error sending message:', error);
+          setError(error.response?.data?.detail || 'Failed to send message. Please try again later.');
+      } else {
+          console.error('Unexpected error:', error);
+          setError('An unexpected error occurred. Please try again.');
+      }
+
     } finally {
       setLoading(false);
     }
