@@ -4,7 +4,6 @@ from app.database import SessionLocal
 from app import models, schemas
 import uuid
 from app.utils.logger import logger
-import datetime
 
 router = APIRouter(
     prefix="/session",
