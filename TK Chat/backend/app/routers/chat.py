@@ -46,8 +46,9 @@ def chat(message: schemas.Message, db: Session = Depends(get_db)):
 
     # Retrieve conversation history
     messages = db.query(models.Message).filter(models.Message.session_id == message.session_id).order_by(models.Message.timestamp).all()
-    logger.info(f"Session {message.session_id}: Saving user message to database.")
+    logger.debug(f"Session {message.session_id}: Saving user message to database.")
     conversation = [{"role": msg.role, "content": msg.content} for msg in messages]
+    logger.debug(f"Session {message.session_id}: Conversation history retrieved from database. Conversation - {conversation}")
 
     # Call OpenAI API
     try:
@@ -56,11 +57,10 @@ def chat(message: schemas.Message, db: Session = Depends(get_db)):
             model="gpt-3.5-turbo",
             messages=conversation
         )
-        logger.info(f"Session {message.session_id}: Received AI response.")
 
         ai_content = response.choices[0].message.content
         
-        logger.info(f"Session {message.session_id}: Saving AI response to database.")
+        logger.info(f"Session {message.session_id}: OpenAI response received. AI response - '{ai_content}'")
 
         # Save AI response
         ai_message = models.Message(
@@ -71,7 +71,7 @@ def chat(message: schemas.Message, db: Session = Depends(get_db)):
         db.add(ai_message)
         db.commit()
 
-        logger.info(f"Session {message.session_id}: AI response generated")
+        logger.debug(f"Session {message.session_id}: AI response stored in database.")
 
         return schemas.Message(
             session_id=message.session_id,
