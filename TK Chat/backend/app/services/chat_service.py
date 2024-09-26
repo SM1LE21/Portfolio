@@ -1,26 +1,42 @@
-import openai
 import json
-from app.config import OPENAI_API_KEY, MODEL
-from app.utils.logger import logger
-from app.data.prompt import SYSTEM_PROMPT_TEMPLATE
-from pydantic import ValidationError
 from app.schemas.personal_data import PersonalData
+from app.data.prompt import SYSTEM_PROMPT_TEMPLATE
+from app.utils.logger import logger
+from pydantic import ValidationError
+from fastapi import HTTPException
+import openai
+from app.config import OPENAI_API_KEY, MODEL
 
 openai.api_key = OPENAI_API_KEY 
 
 def load_personal_data() -> PersonalData:
-    with open('app/data/personal_data.json') as f:
-        data = json.load(f)
+    try:
+        with open('app/data/personal_data.json') as f:
+            data = json.load(f)
+        logger.debug(f"Loaded personal_data.json content: {data}")
+    except FileNotFoundError:
+        logger.error("personal_data.json file not found at 'app/data/personal_data.json'")
+        raise
+    except json.JSONDecodeError as e:
+        logger.error(f"JSON decode error: {e}")
+        raise
+
     try:
         personal_data = PersonalData(**data)
+        logger.debug("Personal data successfully validated and loaded.")
         return personal_data
     except ValidationError as e:
-        logger.error(f"Validation error while loading personal data: {e}")
+        logger.error(f"Pydantic Validation Error: {e}")
         raise e
+
 
 def create_system_prompt() -> str:
     logger.debug("Creating system prompt.")
-    personal_data: PersonalData = load_personal_data()
+    try:
+        personal_data: PersonalData = load_personal_data()
+    except Exception as e:
+        logger.error(f"Failed to load personal data: {e}")
+        raise
 
     # Personal Information
     personal_info = (
@@ -68,16 +84,17 @@ def create_system_prompt() -> str:
         projects_section += (
             f"- **{proj.title}**: {proj.description}\n"
             f"  - **Technologies:** {', '.join(proj.skills)}\n"
-            f"  - **GitHub:** [{proj.github_link}]({proj.github_link})" if proj.github_link else ""
         )
-        if proj.link:
-            projects_section += f" - **Live Link:** [{proj.link_text}]({proj.link})\n"
-        else:
-            projects_section += "\n"
+        if proj.github_link:
+            projects_section += f"  - **GitHub:** [{proj.github_link}]({proj.github_link})\n"
+        if proj.link and proj.link_text:
+            projects_section += f"  - **Live Link:** [{proj.link_text}]({proj.link})\n"
+        projects_section += "\n"
     projects_section += "\n"
 
     # Compile all sections into the system prompt
     system_prompt = SYSTEM_PROMPT_TEMPLATE.format(
+        name=personal_data.name,
         personal_info=personal_info,
         about=about_section,
         experience=experience_section,
@@ -86,7 +103,11 @@ def create_system_prompt() -> str:
         projects=projects_section
     )
 
+    logger.debug("System prompt created.")
+
     return system_prompt
+
+
 
 def get_ai_response(conversation: list) -> str:
     try:
@@ -98,6 +119,9 @@ def get_ai_response(conversation: list) -> str:
         ai_content = response.choices[0].message.content.strip()
         logger.info(f"OpenAI response received. AI response - '{ai_content}'")
         return ai_content
+    except openai.error.OpenAIError as e:
+        logger.error(f"OpenAI API error: {e}")
+        raise HTTPException(status_code=502, detail="Error communicating with AI service.")
     except Exception as e:
-        logger.error(f"Error communicating with OpenAI API - {e}")
-        raise e
+        logger.error(f"Unexpected error: {e}")
+        raise HTTPException(status_code=500, detail="Internal Server Error.")
