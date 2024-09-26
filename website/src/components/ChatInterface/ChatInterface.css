@@ -1,3 +1,5 @@
+/* ChatInterface.css */
+
 /* TK CHAT INTEGRATION */
 /* Global styles */
 body {
@@ -101,16 +103,71 @@ body {
   color: var(--text-color);
   border-bottom-left-radius: 0;
   border: 1px solid var(--link-color);
+  padding: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
 }
 
-.message.system .message-content {
-  background-color: var(--system-message-bg);
-  color: var(--light-text-color);
-  border-radius: 10px;
+/* Markdown Styling */
+.message.assistant .message-content h1,
+.message.assistant .message-content h2,
+.message.assistant .message-content h3,
+.message.assistant .message-content h4,
+.message.assistant .message-content h5,
+.message.assistant .message-content h6 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
 }
 
-.message.system {
-  justify-content: center;
+.message.assistant .message-content a {
+  color: #6054e5;
+  text-decoration: none;
+}
+
+.message.assistant .message-content a:hover {
+  text-decoration: underline;
+}
+
+.message.assistant .message-content pre {
+  background-color: #f5f5f5;
+  padding: 10px;
+  overflow: auto;
+  border-radius: 4px;
+}
+
+.message.assistant .message-content code {
+  background-color: #f5f5f5;
+  color: #666;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.message.assistant .message-content blockquote {
+  border-left: 4px solid #ccc;
+  padding-left: 10px;
+  color: #666;
+  margin: 1em 0;
+}
+
+.message.assistant .message-content ul,
+.message.assistant .message-content ol {
+  padding-left: 20px;
+}
+
+.message.assistant .message-content table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.message.assistant .message-content th,
+.message.assistant .message-content td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.message.assistant .message-content th {
+  background-color: #f2f2f2;
+  text-align: left;
 }
 
 /* Loading indicator */
@@ -265,11 +322,69 @@ body {
   background-color: var(--light-project-bg-color);
   color: var(--light-text-color);
   border: 1px solid var(--light-link-color);
+  padding: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
 }
 
-.light-mode .message.system .message-content {
-  background-color: var(--system-message-bg);
-  color: var(--light-text-color);
+.light-mode .message.assistant .message-content h1,
+.light-mode .message.assistant .message-content h2,
+.light-mode .message.assistant .message-content h3,
+.light-mode .message.assistant .message-content h4,
+.light-mode .message.assistant .message-content h5,
+.light-mode .message.assistant .message-content h6 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+.light-mode .message.assistant .message-content a {
+  color: #1a0dab;
+  text-decoration: none;
+}
+
+.light-mode .message.assistant .message-content a:hover {
+  text-decoration: underline;
+}
+
+.light-mode .message.assistant .message-content pre {
+  background-color: #f5f5f5;
+  padding: 10px;
+  overflow: auto;
+  border-radius: 4px;
+}
+
+.light-mode .message.assistant .message-content code {
+  background-color: #f5f5f5;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.light-mode .message.assistant .message-content blockquote {
+  border-left: 4px solid #ccc;
+  padding-left: 10px;
+  color: #666;
+  margin: 1em 0;
+}
+
+.light-mode .message.assistant .message-content ul,
+.light-mode .message.assistant .message-content ol {
+  padding-left: 20px;
+}
+
+.light-mode .message.assistant .message-content table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.light-mode .message.assistant .message-content th,
+.light-mode .message.assistant .message-content td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.light-mode .message.assistant .message-content th {
+  background-color: #f2f2f2;
+  text-align: left;
 }
 
 .light-mode .input-area {

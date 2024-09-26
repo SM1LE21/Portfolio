@@ -10,6 +10,8 @@ import { useGSAP } from '@gsap/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
+import ReactMarkdown from 'react-markdown'; // <-- Import react-markdown
+import remarkGfm from 'remark-gfm'; // Optional: For GitHub Flavored Markdown (tables, strikethrough, etc.)
 
 interface Message {
   role: 'user' | 'assistant' | 'system';
@@ -215,7 +217,6 @@ const ChatInterface: React.FC = () => {
     setFeedbackSubmitted(true);
   };
 
-
   return (
     <div>
       {!consentGiven && <CookieConsent onAccept={handleAcceptCookies} />}
@@ -235,7 +236,16 @@ const ChatInterface: React.FC = () => {
               <div className="messages">
                 {messages.map((msg, index) => (
                   <div key={index} className={`message ${msg.role}`}>
-                    <div className="message-content">{msg.content}</div>
+                    <div className="message-content">
+                      {/* Render message content as Markdown */}
+                      {msg.role === 'assistant' ? (
+                        <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                          {msg.content}
+                        </ReactMarkdown>
+                      ) : (
+                        msg.content
+                      )}
+                    </div>
                   </div>
                 ))}
                 {loading && <div className="loading">AI is typing...</div>}
