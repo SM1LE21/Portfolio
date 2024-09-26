@@ -2,12 +2,10 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from app.database import SessionLocal
 from app import models, schemas, utils
-import openai
-from app.config import OPENAI_API_KEY, MODEL
 from app.utils import rate_limit
 from app.utils.logger import logger
-
-openai.api_key = OPENAI_API_KEY 
+from app.services.chat_service import create_system_prompt, get_ai_response
+from app.config import MODEL
 
 router = APIRouter(
     prefix="/chat",
@@ -23,14 +21,13 @@ def get_db():
 
 @router.post("/", response_model=schemas.Message)
 def chat(message: schemas.Message, db: Session = Depends(get_db)):
-    # Log the current model being used
     logger.debug(f"Using OpenAI model: {MODEL}")
 
     # Check if session is active
     if not utils.auth.is_session_active(message.session_id, db):
         logger.warning(f"Session {message.session_id}: Invalid or expired session.")
         raise HTTPException(status_code=401, detail="Session expired or invalid")
-    
+
     # Rate limiting
     if rate_limit.is_rate_limited(message.session_id, db):
         logger.warning(f"Session {message.session_id}: Rate limit exceeded.")
@@ -49,21 +46,18 @@ def chat(message: schemas.Message, db: Session = Depends(get_db)):
 
     # Retrieve conversation history
     messages = db.query(models.Message).filter(models.Message.session_id == message.session_id).order_by(models.Message.timestamp).all()
-    logger.debug(f"Session {message.session_id}: Saving user message to database.")
+    logger.debug(f"Session {message.session_id}: Conversation history retrieved from database.")
     conversation = [{"role": msg.role, "content": msg.content} for msg in messages]
-    logger.debug(f"Session {message.session_id}: Conversation history retrieved from database. Conversation - {conversation}")
 
-    # Call OpenAI API
+    # Prepend system prompt for AI customization
+    system_prompt = {"role": "system", "content": create_system_prompt()}
+    conversation = [system_prompt] + conversation
+
+    logger.debug(f"Session {message.session_id}: Conversation history prepared for OpenAI API.")
+
+    # Call OpenAI API via service layer
     try:
-        logger.info(f"Session {message.session_id}: Sending request to OpenAI API using model '{MODEL}'.")
-        response = openai.ChatCompletion.create(
-            model=MODEL,
-            messages=conversation
-        )
-
-        ai_content = response.choices[0].message.content
-        
-        logger.info(f"Session {message.session_id}: OpenAI response received. AI response - '{ai_content}'")
+        ai_content = get_ai_response(conversation)
 
         # Save AI response
         ai_message = models.Message(
@@ -82,5 +76,5 @@ def chat(message: schemas.Message, db: Session = Depends(get_db)):
             content=ai_content
         )
     except Exception as e:
-        logger.error(f"Session {message.session_id}: Error communicating with OpenAI API - {e}")
-        raise HTTPException(status_code=500, detail=str(e))
+        logger.error(f"Session {message.session_id}: Error processing chat - {e}")
+        raise HTTPException(status_code=500, detail="Internal Server Error")
