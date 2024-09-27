@@ -6,6 +6,7 @@ from pydantic import ValidationError
 from fastapi import HTTPException
 import openai
 from app.config import OPENAI_API_KEY, MODEL
+from app.services.chat_function_definitions import function_definitions 
 
 openai.api_key = OPENAI_API_KEY 
 
@@ -110,28 +111,6 @@ def create_system_prompt() -> str:
 
 
 def get_ai_response(conversation: list) -> str:
-
-    function_definitions = [
-        {
-            "name": "provide_info_and_navigate",
-            "description": "Provides information and suggests navigating to a specific section of the website.",
-            "parameters": {
-                "type": "object",
-                "properties": {
-                    "section_name": {
-                        "type": "string",
-                        "description": "The name of the section to navigate to (e.g., 'about', 'projects', 'experience', 'certificates', 'education')."
-                    },
-                    "info": {
-                        "type": "string",
-                        "description": "The information to provide to the user."
-                    }
-                },
-                "required": ["section_name", "info"]
-            }
-        }
-    ]
-
 
     try:
         while True:
