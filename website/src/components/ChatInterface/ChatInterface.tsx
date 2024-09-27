@@ -1,4 +1,5 @@
-// TK CHAT INTEGRATION
+// src/components/ChatInterface/ChatInterface.tsx
+
 import React, { useState, useEffect, ChangeEvent, KeyboardEvent, useRef } from 'react';
 import { initializeSession, sendMessage, getConfig, Message as ApiMessage } from '../../utils/api';
 import FeedbackForm from '../FeedbackForm';
@@ -10,12 +11,17 @@ import { useGSAP } from '@gsap/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
-import ReactMarkdown from 'react-markdown'; // <-- Import react-markdown
-import remarkGfm from 'remark-gfm'; // Optional: For GitHub Flavored Markdown (tables, strikethrough, etc.)
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 interface Message {
   role: 'user' | 'assistant' | 'system';
-  content: string;
+  content?: string;
+  function_call?: {
+    name: string;
+    arguments: any;
+  };
 }
 
 const ChatInterface: React.FC = () => {
@@ -31,12 +37,15 @@ const ChatInterface: React.FC = () => {
   const [feedbackSubmitted, setFeedbackSubmitted] = useState<boolean>(false);
   const chatRef = useRef<HTMLDivElement>(null);
 
+  const navigate = useNavigate();
+  const location = useLocation();
+
   useGSAP(() => {
     if (isChatOpen && chatRef.current) {
       const screenHeight = window.innerHeight;
       const isSmallScreen = window.innerWidth <= 600;
       const targetHeight = isSmallScreen ? `${screenHeight}px` : '500px';
-  
+
       gsap.fromTo(
         chatRef.current,
         { height: 0, opacity: 0 },
@@ -122,30 +131,98 @@ const ChatInterface: React.FC = () => {
     setLoading(true);
 
     try {
-
       if (!sessionId) throw new Error('Session ID is not set.');
       const response = await sendMessage(sessionId, input);
-      const aiMessage: Message = { role: 'assistant', content: response.content };
-      setMessages((prevMessages) => [...prevMessages, aiMessage]);
-      
+
+      // Create the assistant message
+      const aiMessage: Message = {
+        role: 'assistant',
+        content: response.content,
+        function_call: response.function_call,
+      };
+
+      // Handle function call if present
+      if (!response.function_call) {
+        setMessages((prevMessages) => [...prevMessages, aiMessage]);
+      } else {
+        aiMessage.content = "Navigating to " + response.function_call.arguments.section_name + " section...";
+        setMessages((prevMessages) => [...prevMessages, aiMessage]);
+        handleFunctionCall(response.function_call);
+      }
+
       // Update session timestamp on successful interaction
       const now = new Date().getTime();
       localStorage.setItem('sessionTimestamp', now.toString());
       setError(null);
-
     } catch (error) {
-
       if (axios.isAxiosError(error)) {
-          console.error('Error sending message:', error);
-          setError(error.response?.data?.detail || 'Failed to send message. Please try again later.');
+        console.error('Error sending message:', error);
+        setError(error.response?.data?.detail || 'Failed to send message. Please try again later.');
       } else {
-          console.error('Unexpected error:', error);
-          setError('An unexpected error occurred. Please try again.');
+        console.error('Unexpected error:', error);
+        setError('An unexpected error occurred. Please try again.');
       }
-
     } finally {
       setLoading(false);
     }
+  };
+
+  const handleFunctionCall = (functionCall: { name: string; arguments: any }) => {
+    switch (functionCall.name) {
+      case 'provide_info_and_navigate':
+        // Display the info as an assistant message
+        if (functionCall.arguments.info) {
+          const infoMessage: Message = {
+            role: 'assistant',
+            content: functionCall.arguments.info,
+          };
+          setMessages((prevMessages) => [...prevMessages, infoMessage]);
+        }
+        // Navigate to the section
+        if (functionCall.arguments.section_name) {
+          navigateToSection(functionCall.arguments.section_name);
+        }
+        break;
+      // Add cases for other functions in the future
+      default:
+        console.warn(`Unhandled function: ${functionCall.name}`);
+    }
+  };
+
+  const navigateToSection = (sectionName: string) => {
+    const sectionId = getSectionIdFromName(sectionName);
+  
+    // If the user is not on the home page, navigate to home first
+    if (location.pathname !== '/') {
+      navigate('/');
+      // Wait for the navigation to complete before scrolling
+      setTimeout(() => {
+        scrollToSection(sectionId);
+      }, 100);
+    } else {
+      scrollToSection(sectionId);
+    }
+  };
+
+  const scrollToSection = (sectionId: string) => {
+    const sectionElement = document.getElementById(sectionId);
+    if (sectionElement) {
+      sectionElement.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      console.warn(`Section with ID '${sectionId}' not found`);
+    }
+  };
+
+  const getSectionIdFromName = (sectionName: string): string => {
+    const mapping: { [key: string]: string } = {
+      about: 'about',
+      projects: 'projects',
+      experience: 'experience',
+      certificates: 'certificates',
+      education: 'education',
+      // Add more sections here when adding them to the website
+    };
+    return mapping[sectionName.toLowerCase()] || '';
   };
 
   const handleInputChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
@@ -240,7 +317,7 @@ const ChatInterface: React.FC = () => {
                       {/* Render message content as Markdown */}
                       {msg.role === 'assistant' ? (
                         <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                          {msg.content}
+                          {msg.content || ''}
                         </ReactMarkdown>
                       ) : (
                         msg.content

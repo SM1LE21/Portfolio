@@ -10,15 +10,22 @@ export interface SessionData {
   is_active: number;
 }
 
+export interface FunctionCall {
+  name: string;
+  arguments: any;
+}
+
 export interface Message {
-  session_id: string;
-  role: 'user' | 'assistant';
-  content: string;
+  role: 'user' | 'assistant' | 'system';
+  content?: string;
+  function_call?: {
+    name: string;
+    arguments: any;
+  };
 }
 
 export interface Config {
-  showFeedback: boolean;
-  // Add other configuration options as needed
+  showFeedback: boolean; // TODO: currently unused
 }
 
 export const initializeSession = async (): Promise<SessionData> => {
