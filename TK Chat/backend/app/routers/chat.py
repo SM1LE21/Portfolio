@@ -6,6 +6,7 @@ from app.utils import rate_limit
 from app.utils.logger import logger
 from app.services.chat_service import create_system_prompt, get_ai_response
 from app.config import MODEL
+import json
 
 router = APIRouter(
     prefix="/chat",
@@ -19,7 +20,7 @@ def get_db():
     finally:
         db.close()
 
-@router.post("/", response_model=schemas.Message)
+@router.post("/", response_model=schemas.ChatResponse)
 def chat(message: schemas.Message, db: Session = Depends(get_db)):
     logger.debug(f"Using OpenAI model: {MODEL}")
 
@@ -47,7 +48,21 @@ def chat(message: schemas.Message, db: Session = Depends(get_db)):
     # Retrieve conversation history
     messages = db.query(models.Message).filter(models.Message.session_id == message.session_id).order_by(models.Message.timestamp).all()
     logger.debug(f"Session {message.session_id}: Conversation history retrieved from database.")
-    conversation = [{"role": msg.role, "content": msg.content} for msg in messages]
+    conversation = []
+    for msg in messages:
+        if msg.role == "assistant" and msg.function_call:
+            # If the assistant's message is a function call, include it appropriately
+            function_call = json.loads(msg.function_call)
+            conversation.append({
+                "role": "assistant",
+                "content": None,
+                "function_call": function_call
+            })
+        else:
+            conversation.append({
+                "role": msg.role,
+                "content": msg.content
+            })
 
     # Prepend system prompt for AI customization
     system_prompt = {"role": "system", "content": create_system_prompt()}
@@ -57,24 +72,53 @@ def chat(message: schemas.Message, db: Session = Depends(get_db)):
 
     # Call OpenAI API via service layer
     try:
-        ai_content = get_ai_response(conversation)
+        ai_response = get_ai_response(conversation)
 
-        # Save AI response
+        # Save assistant's message
         ai_message = models.Message(
             session_id=message.session_id,
             role="assistant",
-            content=ai_content
+            content=ai_response.get('content', None),
+            function_call=json.dumps(ai_response.get('function_call')) if ai_response.get('function_call') else None
         )
         db.add(ai_message)
         db.commit()
 
-        logger.debug(f"Session {message.session_id}: AI response stored in database.")
+        if ai_response.get('function_call'):
+            # The assistant is requesting a function call
+            function_call = ai_response['function_call']
+            function_name = function_call['name']
+            function_args_str = function_call.get('arguments', '{}')
+            try:
+                function_args = json.loads(function_args_str)
+            except json.JSONDecodeError as e:
+                logger.error(f"JSON decode error in function arguments: {e}")
+                raise HTTPException(status_code=400, detail="Invalid function arguments.")
 
-        return schemas.Message(
-            session_id=message.session_id,
-            role="assistant",
-            content=ai_content
-        )
+            logger.info(f"Session {message.session_id}: AI requested function '{function_name}' with arguments {function_args}")
+
+            # Return the function call information to the frontend
+            return schemas.ChatResponse(
+                session_id=message.session_id,
+                role="assistant",
+                content=None,
+                function_call=schemas.FunctionCall(
+                    name=function_name,
+                    arguments=function_args
+                )
+            )
+        else:
+            # Regular assistant message
+            ai_content = ai_response.get("content", "").strip()
+
+            logger.info(f"Session {message.session_id}: AI response - '{ai_content}'")
+
+            return schemas.ChatResponse(
+                session_id=message.session_id,
+                role="assistant",
+                content=ai_content,
+                function_call=None
+            )
     except Exception as e:
         logger.error(f"Session {message.session_id}: Error processing chat - {e}")
         raise HTTPException(status_code=500, detail="Internal Server Error")

@@ -16,6 +16,7 @@ class Message(Base):
     session_id = Column(String, index=True)
     role = Column(String)  # 'user' or 'assistant'
     content = Column(Text)
+    function_call = Column(Text, nullable=True) 
     timestamp = Column(DateTime, default=datetime.datetime.utcnow)
 
 class Feedback(Base):

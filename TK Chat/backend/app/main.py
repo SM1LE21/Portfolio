@@ -2,15 +2,18 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from app.routers import chat, session, feedback, config
 import uvicorn
-from app.database import engine
+from app.database import engine, create_tables
 from app import models
 from fastapi.responses import JSONResponse
 
 from app.utils.logger import logger
 
-models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
+
+@app.on_event("startup")
+def on_startup():
+    create_tables()
 
 # Add CORS middleware
 origins = [

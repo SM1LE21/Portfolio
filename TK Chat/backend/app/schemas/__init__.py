@@ -1,6 +1,6 @@
 from pydantic import BaseModel
 from datetime import datetime
-from typing import Optional
+from typing import Optional, Dict, Any
 
 class SessionCreate(BaseModel):
     pass  # No data needed to create a session
@@ -16,11 +16,18 @@ class Session(BaseModel):
 
 class Message(BaseModel):
     session_id: str
-    role: str  # 'user' or 'assistant'
+    role: str
     content: str
 
-    class Config:
-        orm_mode = True
+class FunctionCall(BaseModel):
+    name: str
+    arguments: Dict[str, Any]
+
+class ChatResponse(BaseModel):
+    session_id: str
+    role: str
+    content: Optional[str] = None
+    function_call: Optional[FunctionCall] = None
 
 class FeedbackCreate(BaseModel):
     session_id: str

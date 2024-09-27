@@ -110,15 +110,79 @@ def create_system_prompt() -> str:
 
 
 def get_ai_response(conversation: list) -> str:
+
+    function_definitions = [
+        {
+            "name": "provide_info_and_navigate",
+            "description": "Provides information and suggests navigating to a specific section of the website.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "section_name": {
+                        "type": "string",
+                        "description": "The name of the section to navigate to (e.g., 'about', 'projects', 'experience', 'certificates', 'education')."
+                    },
+                    "info": {
+                        "type": "string",
+                        "description": "The information to provide to the user."
+                    }
+                },
+                "required": ["section_name", "info"]
+            }
+        }
+    ]
+
+
     try:
-        logger.info(f"Sending request to OpenAI API using model '{MODEL}'.")
-        response = openai.ChatCompletion.create(
-            model=MODEL,
-            messages=conversation
-        )
-        ai_content = response.choices[0].message.content.strip()
-        logger.info(f"OpenAI response received. AI response - '{ai_content}'")
-        return ai_content
+        while True:
+            logger.info(f"Sending request to OpenAI API using model '{MODEL}'.")
+            response = openai.ChatCompletion.create(
+                model=MODEL,
+                messages=conversation,
+                functions=function_definitions,
+                function_call="auto"
+            )
+            message = response['choices'][0]['message']
+            logger.info(f"OpenAI response received. Message: {message}")
+
+            role = message.get('role')
+            content = message.get('content', '')
+            function_call = message.get('function_call')
+
+            if function_call:
+                # Handle the function call
+                function_name = function_call['name']
+                function_args_str = function_call.get('arguments', '{}')
+                try:
+                    function_args = json.loads(function_args_str)
+                except json.JSONDecodeError as e:
+                    logger.error(f"JSON decode error in function arguments: {e}")
+                    raise HTTPException(status_code=400, detail="Invalid function arguments.")
+
+                logger.info(f"Assistant is requesting function '{function_name}' with arguments {function_args}")
+
+                # Save the assistant's function call message
+                conversation.append({
+                    "role": role,
+                    "content": None,
+                    "function_call": function_call
+                })
+
+                # Since we're handing over the function call to the frontend, we return here
+                return message
+            else:
+                # Assistant has provided a content response
+                logger.info(f"Assistant response: {content}")
+
+                # Save the assistant's message
+                conversation.append({
+                    "role": role,
+                    "content": content
+                })
+
+                # Optionally, check if the assistant wants to continue the conversation
+                # For simplicity, we'll return the message here
+                return message
     except openai.error.OpenAIError as e:
         logger.error(f"OpenAI API error: {e}")
         raise HTTPException(status_code=502, detail="Error communicating with AI service.")
