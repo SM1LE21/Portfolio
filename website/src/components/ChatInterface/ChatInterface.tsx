@@ -1,7 +1,7 @@
 // src/components/ChatInterface/ChatInterface.tsx
 
 import React, { useState, useEffect, ChangeEvent, KeyboardEvent, useRef } from 'react';
-import { initializeSession, sendMessage, getConfig, Message as ApiMessage } from '../../utils/api';
+import { initializeSession, sendMessage, getConfig, Message } from '../../utils/api';
 import FeedbackForm from '../FeedbackForm';
 import CookieConsent from '../CookieConsent';
 import ChatIcon from '../ChatIcon';
@@ -14,15 +14,7 @@ import axios from 'axios';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { useNavigate, useLocation } from 'react-router-dom';
-
-interface Message {
-  role: 'user' | 'assistant' | 'system';
-  content?: string;
-  function_call?: {
-    name: string;
-    arguments: any;
-  };
-}
+import { functionCallHandlers } from '../../utils/chatFunctions';
 
 const ChatInterface: React.FC = () => {
   const [sessionId, setSessionId] = useState<string | null>(null);
@@ -134,20 +126,16 @@ const ChatInterface: React.FC = () => {
       if (!sessionId) throw new Error('Session ID is not set.');
       const response = await sendMessage(sessionId, input);
 
-      // Create the assistant message
-      const aiMessage: Message = {
-        role: 'assistant',
-        content: response.content,
-        function_call: response.function_call,
-      };
-
-      // Handle function call if present
-      if (!response.function_call) {
-        setMessages((prevMessages) => [...prevMessages, aiMessage]);
+      if (response.function_call) {
+        // Handle function call
+        await handleFunctionCall(response.function_call, response.content);
       } else {
-        aiMessage.content = "Navigating to " + response.function_call.arguments.section_name + " section...";
+        // Add the assistant message to messages
+        const aiMessage: Message = {
+          role: 'assistant',
+          content: response.content,
+        };
         setMessages((prevMessages) => [...prevMessages, aiMessage]);
-        handleFunctionCall(response.function_call);
       }
 
       // Update session timestamp on successful interaction
@@ -167,62 +155,41 @@ const ChatInterface: React.FC = () => {
     }
   };
 
-  const handleFunctionCall = (functionCall: { name: string; arguments: any }) => {
-    switch (functionCall.name) {
-      case 'provide_info_and_navigate':
-        // Display the info as an assistant message
-        if (functionCall.arguments.info) {
-          const infoMessage: Message = {
+  const handleFunctionCall = async (
+    functionCall: { name: string; arguments: any },
+    assistantMessageContent: string | null | undefined
+  ) => {
+    const handler = functionCallHandlers[functionCall.name];
+    if (handler) {
+      try {
+        const messagesFromHandler = await handler(functionCall.arguments, {
+          navigate,
+          location,
+        });
+        // If the assistant's initial message has content, add it first
+        if (assistantMessageContent) {
+          const aiMessage: Message = {
             role: 'assistant',
-            content: functionCall.arguments.info,
+            content: assistantMessageContent,
           };
-          setMessages((prevMessages) => [...prevMessages, infoMessage]);
+          setMessages((prevMessages) => [...prevMessages, aiMessage, ...messagesFromHandler]);
+        } else {
+          setMessages((prevMessages) => [...prevMessages, ...messagesFromHandler]);
         }
-        // Navigate to the section
-        if (functionCall.arguments.section_name) {
-          navigateToSection(functionCall.arguments.section_name);
-        }
-        break;
-      // Add cases for other functions in the future
-      default:
-        console.warn(`Unhandled function: ${functionCall.name}`);
-    }
-  };
-
-  const navigateToSection = (sectionName: string) => {
-    const sectionId = getSectionIdFromName(sectionName);
-  
-    // If the user is not on the home page, navigate to home first
-    if (location.pathname !== '/') {
-      navigate('/');
-      // Wait for the navigation to complete before scrolling
-      setTimeout(() => {
-        scrollToSection(sectionId);
-      }, 100);
+      } catch (error) {
+        console.error(`Error handling function call ${functionCall.name}:`, error);
+      }
     } else {
-      scrollToSection(sectionId);
+      console.warn(`Unhandled function: ${functionCall.name}`);
+      // Optionally, add the assistant message if there's content
+      if (assistantMessageContent) {
+        const aiMessage: Message = {
+          role: 'assistant',
+          content: assistantMessageContent,
+        };
+        setMessages((prevMessages) => [...prevMessages, aiMessage]);
+      }
     }
-  };
-
-  const scrollToSection = (sectionId: string) => {
-    const sectionElement = document.getElementById(sectionId);
-    if (sectionElement) {
-      sectionElement.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      console.warn(`Section with ID '${sectionId}' not found`);
-    }
-  };
-
-  const getSectionIdFromName = (sectionName: string): string => {
-    const mapping: { [key: string]: string } = {
-      about: 'about',
-      projects: 'projects',
-      experience: 'experience',
-      certificates: 'certificates',
-      education: 'education',
-      // Add more sections here when adding them to the website
-    };
-    return mapping[sectionName.toLowerCase()] || '';
   };
 
   const handleInputChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
@@ -361,7 +328,11 @@ const ChatInterface: React.FC = () => {
                       ✖
                     </button>
                     {sessionId && (
-                      <FeedbackForm sessionId={sessionId} onClose={closeFeedback} handleFeedback={handleFeedbackSubmitted} />
+                      <FeedbackForm
+                        sessionId={sessionId}
+                        onClose={closeFeedback}
+                        handleFeedback={handleFeedbackSubmitted}
+                      />
                     )}
                   </div>
                 </div>
