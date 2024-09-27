@@ -28,7 +28,8 @@ const ChatInterface: React.FC = () => {
   const [isFeedbackOpen, setIsFeedbackOpen] = useState<boolean>(false);
   const [feedbackSubmitted, setFeedbackSubmitted] = useState<boolean>(false);
   const chatRef = useRef<HTMLDivElement>(null);
-
+  const messagesRef = useRef<HTMLDivElement>(null);
+  
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -88,6 +89,13 @@ const ChatInterface: React.FC = () => {
       localStorage.setItem('messages', JSON.stringify(messages));
     }
   }, [messages, consentGiven]);
+
+  // Scroll to bottom whenever messages change
+  useEffect(() => {
+    if (messagesRef.current) {
+      messagesRef.current.scrollTop = messagesRef.current.scrollHeight;
+    }
+  }, [messages]);
 
   // Fetch configuration from backend
   useEffect(() => {
@@ -242,8 +250,8 @@ const ChatInterface: React.FC = () => {
       setIsChatOpen(true);
       // Scroll to bottom when chat opens
       setTimeout(() => {
-        if (chatRef.current) {
-          chatRef.current.scrollTop = chatRef.current.scrollHeight;
+        if (messagesRef.current) {
+          messagesRef.current.scrollTop = messagesRef.current.scrollHeight;
         }
       }, 100);
     }
@@ -277,7 +285,7 @@ const ChatInterface: React.FC = () => {
                   ✖
                 </button>
               </div>
-              <div className="messages">
+              <div className="messages" ref={messagesRef}>
                 {messages.map((msg, index) => (
                   <div key={index} className={`message ${msg.role}`}>
                     <div className="message-content">

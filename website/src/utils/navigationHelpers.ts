@@ -9,24 +9,22 @@ export const navigateToSection = (
 ) => {
   const sectionId = getSectionIdFromName(sectionName);
 
-  // If the user is not on the home page, navigate to home first
-  if (location.pathname !== '/') {
-    navigate('/');
-    // Wait for the navigation to complete before scrolling
-    setTimeout(() => {
-      scrollToSection(sectionId);
+  // Function to scroll to section after navigation
+  const scrollAfterNavigation = () => {
+    const checkIfSectionExists = setInterval(() => {
+      const sectionElement = document.getElementById(sectionId);
+      if (sectionElement) {
+        clearInterval(checkIfSectionExists);
+        sectionElement.scrollIntoView({ behavior: 'smooth' });
+      }
     }, 100);
-  } else {
-    scrollToSection(sectionId);
-  }
-};
+  };
 
-export const scrollToSection = (sectionId: string) => {
-  const sectionElement = document.getElementById(sectionId);
-  if (sectionElement) {
-    sectionElement.scrollIntoView({ behavior: 'smooth' });
+  if (location.pathname !== '/') {
+    navigate('/', { replace: true });
+    scrollAfterNavigation();
   } else {
-    console.warn(`Section with ID '${sectionId}' not found`);
+    scrollAfterNavigation();
   }
 };
 
