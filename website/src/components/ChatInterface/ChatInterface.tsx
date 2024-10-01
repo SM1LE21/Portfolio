@@ -1,4 +1,10 @@
 // src/components/ChatInterface/ChatInterface.tsx
+/*
+  * ChatInterface.tsx
+  * The chat interface component
+  * It contains the chat UI and handles chat interactions
+  * Communicates with the TK Chat API (Backend)
+  */
 
 import React, { useState, useEffect, ChangeEvent, KeyboardEvent, useRef } from 'react';
 import { initializeSession, sendMessage, getConfig, Message } from '../../utils/api';

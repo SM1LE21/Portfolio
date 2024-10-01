@@ -1,4 +1,10 @@
 // TK CHAT INTEGRATION
+/*
+ *  CookieConsent.tsx
+ *  Component for displaying a cookie consent message
+ *  TK Chat is only enabled if the user accepts the cookie consent
+ */
+
 import React from 'react';
 import './CookieConsent.css';
 

@@ -1,4 +1,9 @@
 // TK CHAT INTEGRATION
+/*
+ * FeedbackForm.tsx
+ * Component for submitting feedback on the chat tool
+ */
+
 import React, { useState, FormEvent } from 'react';
 import { submitFeedback } from '../../utils/api';
 import './FeedbackForm.css';

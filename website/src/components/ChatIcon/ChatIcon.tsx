@@ -1,4 +1,9 @@
 // TK CHAT INTEGRATION
+/*
+ * ChatIcon.tsx
+ * When clicked, the chat icon opens the chat interface
+ */
+
 import React, { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
