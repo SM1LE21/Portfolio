@@ -1,3 +1,4 @@
+# Models for the database
 from sqlalchemy import Column, Integer, String, DateTime, Text
 from app.database import Base
 import datetime

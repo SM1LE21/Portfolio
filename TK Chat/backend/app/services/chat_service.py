@@ -1,3 +1,4 @@
+# This file contains the main logic for interacting with the OpenAI API.
 import json
 from app.schemas.personal_data import PersonalData
 from app.data.prompt import SYSTEM_PROMPT_TEMPLATE

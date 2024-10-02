@@ -1,3 +1,4 @@
+# Entry point for the TK Chat backend
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from app.routers import chat, session, feedback, config
