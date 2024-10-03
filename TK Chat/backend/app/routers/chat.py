@@ -1,3 +1,5 @@
+# This file contains the main logic for the chat endpoint. 
+# It handles the user's messages, calls the OpenAI API, and saves the conversation history in the database.
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from app.database import SessionLocal

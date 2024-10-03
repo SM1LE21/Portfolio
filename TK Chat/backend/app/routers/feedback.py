@@ -1,3 +1,4 @@
+# This file contains the API endpoints for submitting feedback and saving it to the database.
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from app.database import SessionLocal

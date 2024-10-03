@@ -1,4 +1,6 @@
 # app/schemas/personal_data.py
+# This file contains the Pydantic models for the personal data of the user.
+# Pydantic is a data validation library in Python that provides data validation and parsing using Python type annotations.
 
 from pydantic import BaseModel, AnyUrl, Field, validator
 from typing import List, Optional

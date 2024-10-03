@@ -1,3 +1,5 @@
+# This file contains the API endpoints for session management.
+# Sessions are used to keep track of the user's conversation history and rate limiting.
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 from app.database import SessionLocal
