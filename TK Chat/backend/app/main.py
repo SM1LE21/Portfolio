@@ -20,6 +20,7 @@ def on_startup():
 origins = [
     "http://localhost:3000",  # React frontend
     # Add other origins if needed
+    # TODO change this to the frontend URL - probably sm1le.github.io at the beginning
 ]
 
 app.add_middleware(
