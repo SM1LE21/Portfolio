@@ -19,7 +19,7 @@ def on_startup():
 # Add CORS middleware
 origins = [
     "http://localhost:3000",  # React frontend
-    # Add other origins if needed
+    "https://widgethoster.sytes.net", # Currently hosting TK Chat for the Protfolio here
     # TODO change this to the frontend URL - probably sm1le.github.io at the beginning
 ]
 
