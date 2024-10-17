@@ -18,7 +18,9 @@ def on_startup():
 
 # Add CORS middleware
 origins = [
-    "http://localhost:3000",  # React frontend
+    "http://localhost:3000",
+    "https://sm1le21.github.io",
+    "https://widgethoster.sytes.net",
     # Add other origins if needed
     # TODO change this to the frontend URL - probably sm1le.github.io at the beginning
 ]
