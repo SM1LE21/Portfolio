@@ -56,17 +56,17 @@ This backend service provides API endpoints for the AI chat application using Fa
 
 ### **Environment Variables**
 Create a .env file in the backend/ directory with the following content:
-```bash
-OPENAI_API_KEY=your-openai-api-key
-SECRET_KEY=your-secret-key
-```
+  ```bash
+  OPENAI_API_KEY=your-openai-api-key
+  SECRET_KEY=your-secret-key
+  ```
 
 ### **Running the Application**
 To run the FastAPI application locally:
 
-```
-uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
-```
+  ```bash
+  uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+  ```
 
 - The application will be accessible at http://localhost:8000.
 - The --reload flag enables hot-reloading during development.
