@@ -1,4 +1,7 @@
 // TK CHAT INTEGRATION
+/* 
+ * This file contains the functions to interact with the chat server
+ */
 import axios from 'axios';
 
 // const API_BASE_URL = 'http://localhost:8000'; // for development
