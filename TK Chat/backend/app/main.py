@@ -1,4 +1,4 @@
-# Entry point for the TK Chat backend
+# app/main.py
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from app.routers import chat, session, feedback, config
@@ -9,12 +9,31 @@ from fastapi.responses import JSONResponse
 
 from app.utils.logger import logger
 
+# Import APScheduler
+from apscheduler.schedulers.background import BackgroundScheduler
+from app.utils.session_manager import send_daily_conversations_email  # Import the new function
 
 app = FastAPI()
+
+# Initialize the scheduler
+scheduler = BackgroundScheduler()
 
 @app.on_event("startup")
 def on_startup():
     create_tables()
+    # Start the scheduler
+    scheduler.start()
+    # Schedule the daily email job at 9 PM
+    scheduler.add_job(
+        func=send_daily_conversations_email,
+        trigger='cron',
+        hour=21,  # 9 PM
+        minute=0,
+    )
+
+@app.on_event("shutdown")
+def on_shutdown():
+    scheduler.shutdown()
 
 # Add CORS middleware
 origins = [
@@ -37,8 +56,9 @@ app.add_middleware(
 app.include_router(chat.router)
 app.include_router(session.router)
 app.include_router(feedback.router)
-app.include_router(config.router) 
+app.include_router(config.router)
 
+# Exception handlers
 @app.exception_handler(HTTPException)
 async def http_exception_handler(request, exc):
     return JSONResponse(
