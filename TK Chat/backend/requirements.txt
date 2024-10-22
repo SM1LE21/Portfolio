@@ -6,4 +6,4 @@ pydantic
 python-dotenv
 aiofiles
 requests
-snedgrid
+sendgrid
