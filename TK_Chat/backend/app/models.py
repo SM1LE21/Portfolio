@@ -20,7 +20,7 @@ class Message(Base):
     role = Column(String, nullable=False)
     content = Column(Text, nullable=True)
     function_call = Column(Text, nullable=True)
-    description = Column(Text, nullable=True)
+    description = Column(Text, nullable=True) # TODO remove description, doesnt exist!
     timestamp = Column(DateTime, default=datetime.datetime.utcnow)
 
 class Feedback(Base):
