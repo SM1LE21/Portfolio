@@ -4,6 +4,7 @@
  */
 
 import React from 'react';
+import ReactMarkdown from 'react-markdown';
 
 interface ContentProps {
   title?: string;
@@ -26,7 +27,11 @@ const ContentSection: React.FC<ContentProps> = ({ title, image, description, vid
       ) : (
         image && <img src={image} alt="Project content" className="content-media" />
       )}
-      {description && <p className={`content-description ${!image && !video ? 'full-width' : ''}`}>{description}</p>}
+      {description && (
+        <ReactMarkdown className={`content-description ${!image && !video ? 'full-width' : ''}`}>
+          {Array.isArray(description) ? description.join('\n\n') : description}
+        </ReactMarkdown>
+      )}
     </div>
   );
 };

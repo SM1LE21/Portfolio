@@ -132,6 +132,48 @@
             ]
         },
         {
+          "title": "Text2UML",
+          "description": "A VS Code extension for automated generation of graphical representations from textual UML diagrams.",
+          "big_description": [
+              "I developed the Text2UML tool for my bachelor's thesis titled 'Generating Graphical Representations for UML Sequence and Activity Diagrams from Textual Variants'. This thesis presents a tool that automates the generation of graphical representations from textual variants of UML sequence diagrams (SDs) and activity diagrams (ADs), utilizing the MontiCore language workbench. Designed to enhance model-driven software engineering (MDSE) methodologies, this tool is integrated into the Visual Studio Code (VS Code) environment through an extension.",
+              "The tool employs the Language Server Protocol (LSP) to extract diagram data from MontiCore DSLs, enabling synchronized visualization alongside the textual model. A key feature of this tool is the bidirectional navigation between textual and visual representations, allowing users to transition from code to diagram and vice versa. This functionality improves the accessibility and utility of MDSE visualizations and facilitates a deeper understanding of UML diagrams.",
+              "The main goal of the tool is to provide direct visualization inside VS Code, allowing for a side-by-side view with the textual model on one side and the visualization on the other. The extension dynamically generates and updates visualizations based on any modifications within the text document.",
+              "The tool uses Java for the backend (LSP server) and TypeScript for the VS Code extension backend and frontend. React and D3.js are used for rendering the diagrams. The visualization process is separated into layout algorithms and rendering logic. We use ELKJS for the AD renderer and developed a custom layout algorithm for SDs.",
+              "This project not only showcases advanced integration techniques and synchronized data visualization but also contributes to the broader MDSE field by improving the interaction between textual and graphical models."
+          ],
+          "link": "",
+          "link_text": "",
+          "image": "",
+          "video": "/assets/text2uml.mp4",
+          "showMainMedia": false,
+          "skills": ["Java", "TypeScript", "React", "D3.js", "ELKJS", "MontiCore", "LSP", "VS-Code Extension"],
+          "content": [
+              {   
+                  "title": "Architectural Overview of Text2UML Tool Communication Flow",
+                  "image": "/assets/text2uml_frontendBackendCommunication.png",
+                  "description": "",
+                  "video": ""
+              },
+              {
+                  "title": "Visualization Workflow",
+                  "image": "/assets/text2uml_visualizationWorkflow.png",
+                  "description": "",
+                  "video": ""
+              },
+              {
+                  "title": "Example Videos of the Tool in Action",
+                  "image": "",
+                  "description": "",
+                  "video": "/assets/text2uml_AD.mov"
+              },
+              {
+                  "image": "",
+                  "description": "",
+                  "video": "/assets/text2uml_SD.mp4"
+              }
+          ]
+        },
+        {
           "title": "TK CHAT",
           "description": "AI-powered chat widget for websites, offering direct interaction with a customizable AI assistant.",
           "big_description": [
@@ -141,7 +183,7 @@
             "This project represents my approach to implement an AI enhanced chat functionality. I tried to use advanced frontend and backend technologies to create a smooth user experience. As I continue to implement TK CHAT on websites and expand its functionality, I plan to update this project with new (optional) features and improvements from time to time.",
             "This implementation serves as a starting block for any AI chat functionality on websites. It is easily customizable and can be expanded to include additional features, such as website navigation by asking the AI assistant for help. An Example of this can be on this website, and a description can be found in the 'Portfolio Website' project."
           ],
-          "github_link": "https://github.com/SM1LE21/TK_CHAT/tree/main",
+          "github_link": "github.com/SM1LE21/TK_CHAT/tree/main",
           "link": "",
           "link_text": "",
           "image": "",
@@ -152,8 +194,8 @@
           "skills": [ "React", "TypeScript", "GSAP", "Python", "FastAPI", "SQLite", "OpenAI API", "GPT"],
           "content": [
             {   
-                "title": "Feel free to test the tool on this website:",
-                "image": "/assets/TKCHAT.png"
+              "title": "Feel free to test the tool on this website:",
+              "image": "/assets/TKCHAT.png"
             },
             {
               "title": "Example Video of TK CHAT in Action",
@@ -162,49 +204,53 @@
               "video": "/assets/TKCHAT_VIDEO.mp4"
             }
           ]
-        },     
-        {
-            "title": "Text2UML",
-            "description": "A VS Code extension for automated generation of graphical representations from textual UML diagrams.",
-            "big_description": [
-                "I developed the Text2UML tool for my bachelor's thesis titled 'Generating Graphical Representations for UML Sequence and Activity Diagrams from Textual Variants'. This thesis presents a tool that automates the generation of graphical representations from textual variants of UML sequence diagrams (SDs) and activity diagrams (ADs), utilizing the MontiCore language workbench. Designed to enhance model-driven software engineering (MDSE) methodologies, this tool is integrated into the Visual Studio Code (VS Code) environment through an extension.",
-                "The tool employs the Language Server Protocol (LSP) to extract diagram data from MontiCore DSLs, enabling synchronized visualization alongside the textual model. A key feature of this tool is the bidirectional navigation between textual and visual representations, allowing users to transition from code to diagram and vice versa. This functionality improves the accessibility and utility of MDSE visualizations and facilitates a deeper understanding of UML diagrams.",
-                "The main goal of the tool is to provide direct visualization inside VS Code, allowing for a side-by-side view with the textual model on one side and the visualization on the other. The extension dynamically generates and updates visualizations based on any modifications within the text document.",
-                "The tool uses Java for the backend (LSP server) and TypeScript for the VS Code extension backend and frontend. React and D3.js are used for rendering the diagrams. The visualization process is separated into layout algorithms and rendering logic. We use ELKJS for the AD renderer and developed a custom layout algorithm for SDs.",
-                "This project not only showcases advanced integration techniques and synchronized data visualization but also contributes to the broader MDSE field by improving the interaction between textual and graphical models."
-            ],
-            "link": "",
-            "link_text": "",
-            "image": "",
-            "video": "/assets/text2uml.mp4",
-            "showMainMedia": false,
-            "skills": ["Java", "TypeScript", "React", "D3.js", "ELKJS", "MontiCore", "LSP", "VS-Code Extension"],
-            "content": [
-                {   
-                    "title": "Architectural Overview of Text2UML Tool Communication Flow",
-                    "image": "/assets/text2uml_frontendBackendCommunication.png",
-                    "description": "",
-                    "video": ""
-                },
-                {
-                    "title": "Visualization Workflow",
-                    "image": "/assets/text2uml_visualizationWorkflow.png",
-                    "description": "",
-                    "video": ""
-                },
-                {
-                    "title": "Example Videos of the Tool in Action",
-                    "image": "",
-                    "description": "",
-                    "video": "/assets/text2uml_AD.mov"
-                },
-                {
-                    "image": "",
-                    "description": "",
-                    "video": "/assets/text2uml_SD.mp4"
-                }
-            ]
         },
+        {
+          "title": "Portfolio Website",
+          "description": "This portfolio website showcasing my work, skills, and projects.",
+          "big_description": [
+            "This project is my personal portfolio website, designed to present an interactive and visually appealing overview of my professional journey, skills, and completed projects. The website features sections like About Me, Projects, and Contact, all managed via a central data.json file for easy content updates.",
+            "The frontend is built with React and TypeScript, utilizing GSAP for smooth animations and enhanced user experience. The project is deployed on GitHub Pages, making it easily accessible and fast to load.",
+            "I have integrated **TK CHAT**, my AI-powered chatbot, to assist with navigation and provide information about various sections of the website. The chatbot uses OpenAI’s function-calling capabilities to interpret user requests and navigate directly to relevant sections, offering a more interactive user experience.",
+            "This website not only showcases my portfolio but also serves as a reusable template for anyone looking to create a similar online presence. It includes a structured data management approach, making content updates straightforward and efficient."
+          ],
+          "github_link": "github.com/SM1LE21/Portfolio",
+          "link": "",
+          "link_text": "",
+          "image": "/assets/TK_Logo.png",
+          "video": "",
+          "showMainMedia": true,
+          "embedWebsite": true,
+          "embedLink": "",
+          "skills": [
+            "React",
+            "TypeScript",
+            "GSAP",
+            "GitHub Pages",
+            "JSON Data Management"
+          ],
+          "content": [
+            {   
+              "title": "Feel free to test TK CHAT to navigate this Website:",
+              "image": "/assets/TKCHAT.png"
+            },
+            {
+              "title": "Example Video of TK CHAT in Action",
+              "image": "",
+              "description": "",
+              "video": "/assets/TKCHAT_VIDEO.mp4"
+            },
+            {
+              "title": "Planned Improvements",
+              "description": [
+                "1. **Database Integration**: Transition from using a central data.json file to a database solution for more scalable data management. This change will allow for dynamic content updates and more flexibility in displaying information.",
+                "2. **Improved Hosting**: Currently, the website is hosted on GitHub Pages, and the backend service for TK CHAT is hosted on a private server (an old PC). While this setup works well for now, it is not a long-term solution. I plan to migrate the backend to a cloud provider for better performance and reliability.",
+                "3. **Enhanced TK CHAT Features**: I am continuously working on improving the features of TK CHAT. Currently, the chatbot can navigate to general sections of the website but struggles with navigating to specific project pages. Additionally, the mobile chat experience needs improvement, as users may not notice background navigation changes while the full-screen chat is open.",
+                "4. **Expanded AI Functionality**: Future updates will include more advanced function-calling capabilities in TK CHAT, allowing the AI to perform actions beyond navigation, such as providing detailed project explanations or answering specific questions about my skills and experience."
+              ]
+            }
+          ]
+        },           
         {
           "title": "SwiftDrones Website",
           "description": "A website for a drone company.",

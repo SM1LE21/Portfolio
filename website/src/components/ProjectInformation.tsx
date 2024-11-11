@@ -10,6 +10,7 @@ import { useParams, Link } from 'react-router-dom';
 import data from '../data.json';
 import ContentSection from './ContentSection';
 import EmbeddedWebsite from './EmbeddedWebsite';  // Import the new component
+import ReactMarkdown from 'react-markdown';
 
 interface Content {
   title?: string;
@@ -62,9 +63,9 @@ const ProjectInformation: React.FC = () => {
           ))}
         </div>
       )}
-      {project.big_description.map((paragraph, index) => (
-        <p key={index} className="big-description">{paragraph}</p>
-      ))}
+      <ReactMarkdown className="big-description">
+        {project.big_description.join('\n\n')}
+      </ReactMarkdown>
       {project.github_link && (
         <p className="project-github-link">
           <a href={`https://${project.github_link}`} target="_blank" rel="noopener noreferrer" className="title-link">
