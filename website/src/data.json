@@ -15,7 +15,7 @@
         "company": "Hexagon",
         "company_link": "https://www.hexagon.com",
         "description": "As a Junior Project Engineer at Hexagon in Vienna, Austria, I support the planning, implementation, and management of engineering projects.",
-        "skills": ["SQL", "C#", "SQL Server", "Azure DevOps", "VBA"]
+        "skills": ["SQL", "C#", "SQL Server", "RabbitMQ", "Azure DevOps", "VBA"]
       },
       {
         "date": "2023-02 — 2024-06",
@@ -51,41 +51,48 @@
       }
     ],  
     "certificates": [
-        {
-          "date": "2022-11-22",
-          "jobTitle": "Specialization Certificate - Google UX Design",
-          "title_link": "https://www.coursera.org/account/accomplishments/specialization/certificate/SQD9Z8VSSXN2",
-          "company": "Google",
-          "description": "Completed seven courses that cover the entire UX design process, including empathizing with users, defining pain points, ideating design solutions, creating wireframes and prototypes, and testing designs for feedback."
-        },
-        {
-          "date": "2022-09-11",
-          "jobTitle": "Specialization Certificate - Google IT Automation with Python",
-          "title_link": "https://www.coursera.org/account/accomplishments/specialization/certificate/CX4GYR2C4FPH",
-          "company": "Google",
-          "description": "Completed multiple courses including Crash Course on Python, Troubleshooting and Debugging Techniques, Introduction to Git and GitHub, Configuration Management and the Cloud. Gained skills in automating tasks with Python, using Git and GitHub for version control, managing IT resources at scale, and analyzing real-world IT problems to implement appropriate solutions."
-        },
-        {
-          "date": "2024-07-26",
-          "jobTitle": "The Complete SQL Bootcamp: Go from Zero to Hero",
-          "title_link": "https://www.udemy.com/certificate/UC-9f6b9847-ecdf-44af-89d3-7b6590eef0d8/",
-          "company": "Udemy",
-          "description": "Gained skills in reading and writing complex SQL queries, utilizing PostgreSQL, and applying these techniques across various major SQL databases. Learned to analyze data with aggregate functions, execute advanced queries, use logical operators, and manage databases efficiently."
-        },
-        {
-          "date": "2024-07-26",
-          "jobTitle": "C# Basics for Beginners: Learn C# Fundamentals by Coding",
-          "title_link": "https://www.udemy.com/certificate/UC-00433bd6-c8d0-4ffb-88fb-b33823ce0b22/",
-          "company": "Udemy",
-          "description": "Learned the fundamentals of C# and .NET Framework, working with primitive and non-primitive types, controlling program flow with conditional statements, using arrays and lists, and working with files, directories, text, and date and time. Also gained skills in debugging C# applications effectively."
-        },
-        {
-          "date": "2024-07-26",
-          "jobTitle": "C# Intermediate: Classes, Interfaces and OOP",
-          "title_link": "https://www.udemy.com/certificate/UC-326c8ea5-bc10-4628-99d2-5c5d4860456c/",
-          "company": "Udemy",
-          "description": "Gained skills in working with classes, interfaces, and object-oriented programming principles with C#. Learned to utilize encapsulation, inheritance, and composition to enhance code robustness and reusability. Developed expertise in building extensible, loosely-coupled, and testable applications using polymorphism and interfaces."
-        }
+      {
+        "date": "2024-11-11",
+        "jobTitle": "RabbitMQ and Messaging Concepts",
+        "title_link": "https://www.udemy.com/certificate/UC-f22e44a7-f1ef-4540-8bb5-922972071b8c/",
+        "company": "Udemy",
+        "description": "Learned the basics of messaging systems and RabbitMQ. Gained hands-on experience configuring RabbitMQ, using the management web interface, and integrating it with C# and Java client libraries to implement common messaging scenarios."
+      },
+      {
+        "date": "2024-07-26",
+        "jobTitle": "C# Intermediate: Classes, Interfaces and OOP",
+        "title_link": "https://www.udemy.com/certificate/UC-326c8ea5-bc10-4628-99d2-5c5d4860456c/",
+        "company": "Udemy",
+        "description": "Gained skills in working with classes, interfaces, and object-oriented programming principles with C#. Learned to utilize encapsulation, inheritance, and composition to enhance code robustness and reusability. Developed expertise in building extensible, loosely-coupled, and testable applications using polymorphism and interfaces."
+      },
+      {
+        "date": "2024-07-26",
+        "jobTitle": "C# Basics for Beginners: Learn C# Fundamentals by Coding",
+        "title_link": "https://www.udemy.com/certificate/UC-00433bd6-c8d0-4ffb-88fb-b33823ce0b22/",
+        "company": "Udemy",
+        "description": "Learned the fundamentals of C# and .NET Framework, working with primitive and non-primitive types, controlling program flow with conditional statements, using arrays and lists, and working with files, directories, text, and date and time. Also gained skills in debugging C# applications effectively."
+      },
+      {
+        "date": "2024-07-26",
+        "jobTitle": "The Complete SQL Bootcamp: Go from Zero to Hero",
+        "title_link": "https://www.udemy.com/certificate/UC-9f6b9847-ecdf-44af-89d3-7b6590eef0d8/",
+        "company": "Udemy",
+        "description": "Gained skills in reading and writing complex SQL queries, utilizing PostgreSQL, and applying these techniques across various major SQL databases. Learned to analyze data with aggregate functions, execute advanced queries, use logical operators, and manage databases efficiently."
+      },
+      {
+        "date": "2022-11-22",
+        "jobTitle": "Specialization Certificate - Google UX Design",
+        "title_link": "https://www.coursera.org/account/accomplishments/specialization/certificate/SQD9Z8VSSXN2",
+        "company": "Google",
+        "description": "Completed seven courses that cover the entire UX design process, including empathizing with users, defining pain points, ideating design solutions, creating wireframes and prototypes, and testing designs for feedback."
+      },
+      {
+        "date": "2022-09-11",
+        "jobTitle": "Specialization Certificate - Google IT Automation with Python",
+        "title_link": "https://www.coursera.org/account/accomplishments/specialization/certificate/CX4GYR2C4FPH",
+        "company": "Google",
+        "description": "Completed multiple courses including Crash Course on Python, Troubleshooting and Debugging Techniques, Introduction to Git and GitHub, Configuration Management and the Cloud. Gained skills in automating tasks with Python, using Git and GitHub for version control, managing IT resources at scale, and analyzing real-world IT problems to implement appropriate solutions."
+      }
     ],      
     "education": [
       {
@@ -101,30 +108,6 @@
       }
     ],
     "projects": [
-        {
-            "title": "SwiftDrones Website",
-            "description": "A website for a drone company.",
-            "big_description": [
-              "The SwiftDrones Website project involved creating a comprehensive online presence for SwiftDrones, a company specializing in drone technology and services.",
-              "Our team of drone enthusiasts, based in Luxembourg, is dedicated to providing clients with high-quality imagery for various applications. We leverage cutting-edge drone technology to deliver compelling visual content that meets the unique requirements of each client.",
-              "The website is built with React and styled using TailwindCSS. We utilize Google Cloud to host our images and videos, ensuring high availability and performance.",
-              "This project is a labor of love, reflecting our passion for drones and our commitment to excellence in aerial photography and videography."
-            ],
-            "github_link": "github.com/SM1LE21/drone-services",
-            "link": "swiftdrones.net",
-            "link_text": "swiftdrones.net",
-            "image": "/assets/swiftdrones.png",
-            "video": "",
-            "showMainMedia": false,
-            "embedWebsite": true,
-            "embedLink": "swiftdrones.net",
-            "skills": ["React", "JavaScript", "TailwindCSS", "Google Cloud"],
-            "content": [
-                {   
-                    "title": "Here an embedded version of the website:"
-                }
-            ]
-        },
         {
             "title": "CanvasCraft",
             "description": "AI image generation tool, with accurate color palette and style transfer.",
@@ -189,7 +172,31 @@
                     "video": "/assets/text2uml_SD.mp4"
                 }
             ]
-        },        
+        },
+        {
+          "title": "SwiftDrones Website",
+          "description": "A website for a drone company.",
+          "big_description": [
+            "The SwiftDrones Website project involved creating a comprehensive online presence for SwiftDrones, a company specializing in drone technology and services.",
+            "Our team of drone enthusiasts, based in Luxembourg, is dedicated to providing clients with high-quality imagery for various applications. We leverage cutting-edge drone technology to deliver compelling visual content that meets the unique requirements of each client.",
+            "The website is built with React and styled using TailwindCSS. We utilize Google Cloud to host our images and videos, ensuring high availability and performance.",
+            "This project is a labor of love, reflecting our passion for drones and our commitment to excellence in aerial photography and videography."
+          ],
+          "github_link": "github.com/SM1LE21/drone-services",
+          "link": "swiftdrones.net",
+          "link_text": "swiftdrones.net",
+          "image": "/assets/swiftdrones.png",
+          "video": "",
+          "showMainMedia": false,
+          "embedWebsite": true,
+          "embedLink": "swiftdrones.net",
+          "skills": ["React", "JavaScript", "TailwindCSS", "Google Cloud"],
+          "content": [
+              {   
+                  "title": "Here an embedded version of the website:"
+              }
+          ]
+      },    
         {
             "title": "LLInvoker",
             "description": "Personalized language learning through news and generated exercises.",

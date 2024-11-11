@@ -7,7 +7,7 @@
   */
 
 import React, { useState, useEffect, ChangeEvent, KeyboardEvent, useRef } from 'react';
-import { initializeSession, sendMessage, getConfig, Message } from '../../utils/api';
+import { initializeSession, sendMessage/*, getConfig*/, Message } from '../../utils/api';
 import FeedbackForm from '../FeedbackForm';
 import CookieConsent from '../CookieConsent';
 import ChatIcon from '../ChatIcon';
@@ -104,15 +104,17 @@ const ChatInterface: React.FC = () => {
   }, [messages]);
 
   // Fetch configuration from backend
+  // TODO getConfig not configured in the backend
   useEffect(() => {
-    getConfig()
+    setShowFeedback(true);// this has to be removed when getConfig is implemented correctly
+    /*getConfig()
       .then((config) => {
         setShowFeedback(config.showFeedback);
       })
       .catch((error) => {
         console.error('Error fetching configuration:', error);
         // Handle error if needed
-      });
+      });*/
   }, []);
 
   const isSessionValid = () => {

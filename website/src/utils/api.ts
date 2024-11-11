@@ -54,7 +54,9 @@ export const submitFeedback = async (sessionId: string, feedback: string): Promi
   });
 };
 
-export const getConfig = async (): Promise<Config> => {
+// Currently unused need to be correctly implemented in the Backend
+// Also needs to be implemented in ChatInterface.tsx to be used
+/* export const getConfig = async (): Promise<Config> => {
   const response = await axios.get<Config>(`${API_BASE_URL}/config`);
   return response.data;
-};
+}; */
