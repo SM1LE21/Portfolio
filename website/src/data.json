@@ -177,11 +177,13 @@
           "title": "TK CHAT",
           "description": "AI-powered chat widget for websites, offering direct interaction with a customizable AI assistant.",
           "big_description": [
+            "---",
             "TK CHAT is an AI-powered chat widget designed to be easily integrated into websites. It enables user interaction with an AI assistant. The widget offers customization options, allowing it to be tailored to meet the unique needs of different websites and adapt to various screen sizes.",
             "I built the frontend with React and TypeScript. TK CHAT features a responsive design with smooth animations implemented with GSAP. It provides session persistence across page refreshes, along with feedback submission for continuous improvement.",
             "The backend is built with FastAPI and OpenAI’s API. Here I used SQLite for data storage and I follow the RESTful API design. It also employs session management, rate limiting, and secure CORS handling to offer both functionality and security.",
             "This project represents my approach to implement an AI enhanced chat functionality. I tried to use advanced frontend and backend technologies to create a smooth user experience. As I continue to implement TK CHAT on websites and expand its functionality, I plan to update this project with new (optional) features and improvements from time to time.",
-            "This implementation serves as a starting block for any AI chat functionality on websites. It is easily customizable and can be expanded to include additional features, such as website navigation by asking the AI assistant for help. An Example of this can be on this website, and a description can be found in the 'Portfolio Website' project."
+            "This implementation serves as a starting block for any AI chat functionality on websites. It is easily customizable and can be expanded to include additional features, such as website navigation by asking the AI assistant for help. An Example of this can be on this website, and a description can be found in the 'Portfolio Website' project.",
+            "---"
           ],
           "github_link": "github.com/SM1LE21/TK_CHAT/tree/main",
           "link": "",
@@ -189,7 +191,7 @@
           "image": "",
           "video": "/assets/TKCHAT_VIDEO.mp4",
           "showMainMedia": false,
-          "embedWebsite": true,
+          "embedWebsite": false,
           "embedLink": "",
           "skills": [ "React", "TypeScript", "GSAP", "Python", "FastAPI", "SQLite", "OpenAI API", "GPT"],
           "content": [
@@ -219,8 +221,8 @@
           "link_text": "",
           "image": "/assets/TK_Logo.png",
           "video": "",
-          "showMainMedia": true,
-          "embedWebsite": true,
+          "showMainMedia": false,
+          "embedWebsite": false,
           "embedLink": "",
           "skills": [
             "React",
@@ -231,7 +233,7 @@
           ],
           "content": [
             {   
-              "title": "Feel free to test TK CHAT to navigate this Website:",
+              "title": "Feel free to test TK CHAT:",
               "image": "/assets/TKCHAT.png"
             },
             {
@@ -241,7 +243,12 @@
               "video": "/assets/TKCHAT_VIDEO.mp4"
             },
             {
-              "title": "Planned Improvements",
+              "description": [ 
+                "---"
+              ]
+            },
+            {
+              "title": "Planned Improvements for the Portfolio Website:",
               "description": [
                 "1. **Database Integration**: Transition from using a central data.json file to a database solution for more scalable data management. This change will allow for dynamic content updates and more flexibility in displaying information.",
                 "2. **Improved Hosting**: Currently, the website is hosted on GitHub Pages, and the backend service for TK CHAT is hosted on a private server (an old PC). While this setup works well for now, it is not a long-term solution. I plan to migrate the backend to a cloud provider for better performance and reliability.",
