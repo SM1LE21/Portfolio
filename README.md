@@ -32,14 +32,32 @@ The entire website's content is driven by a single data.json file. This design c
 }
 ```
 
-## Current Status and Future Plans
-The project is still in development. Some features, such as mobile navigation, are not perfect yet, and not all of my projects are displayed. I have chosen not to include projects done for clients or employers to avoid detailing work that is not my intellectual property.
+## TK CHAT implementation
 
+I have successfully implemented **TK CHAT**, my AI-powered chatbot that assists with navigation and provides information about various sections of the portfolio website. You can check out the project on [GitHub](https://github.com/SM1LE21/TK_CHAT).
+
+### Features of TK CHAT
+
+- The chatbot utilizes OpenAI's function-calling capabilities to interpret user requests and navigate to relevant sections of the website.
+- It has access to all existing sections, allowing it to direct users to them. For instance, if you ask about "Tun's education," the chatbot will navigate you to the Education section and provide a brief summary of the content.
+- Currently, the chatbot can only navigate to general sections like "Projects", "Education", "About", etc. It is not able yet to navigate to individual project pages.
+
+### Limitations and Ongoing Improvements
+
+- The chat experience on mobile devices is not ideal yet. Mobile users are presented with a full-screen chat interface, making it difficult to notice when the website navigates in the background.
+- The navigation feature needs further refinement for a better user experience on mobile devices.
+- I am iterating on the navigation functionality while experimenting with additional use cases where the AI can autonomously make decisions and call other frontend functions.
+
+
+## Current Status and Future Plans
+
+The project is still in development. Some features, such as mobile navigation, are not perfect yet, and not all of my projects are displayed. I have chosen not to include projects done for clients or employers to avoid detailing work that is not my intellectual property.
 
 Future updates will include:
 
-- A detailed description of the website's development process
-- An AI chatbot to assist with navigation and answering questions about me
+- [ ] A detailed description of the website's development process
+- [x] An AI chatbot to assist with navigation and answering questions about me
+- [ ] New TK CHAT features and use cases.
 
 ## Contact
 For any feedback, ideas, questions, or inquiries, feel free to reach out to me via Email or connect with me on LinkedIn.

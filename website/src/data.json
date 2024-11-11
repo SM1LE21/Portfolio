@@ -107,7 +107,7 @@
         "description": "Advanced level in Economics and Mathematics"
       }
     ],
-    "projects": [
+    "projects": [   
         {
             "title": "CanvasCraft",
             "description": "AI image generation tool, with accurate color palette and style transfer.",
@@ -124,13 +124,45 @@
             "showMainMedia": false,
             "embedWebsite": true,
             "embedLink": "widgethoster.sytes.net/canvascraft/",
-            "skills": ["Python", "Flask", "OpenAI API", "React", "TailwindCSS"],
+            "skills": ["Python", "Flask", "React", "TailwindCSS", "OpenAI API", "GPT", "DALL-E 3"],
             "content": [
                 {   
                     "title": "Feel free to test the tool:"
                 }
             ]
-        },        
+        },
+        {
+          "title": "TK CHAT",
+          "description": "AI-powered chat widget for websites, offering direct interaction with a customizable AI assistant.",
+          "big_description": [
+            "TK CHAT is an AI-powered chat widget designed to be easily integrated into websites. It enables user interaction with an AI assistant. The widget offers customization options, allowing it to be tailored to meet the unique needs of different websites and adapt to various screen sizes.",
+            "I built the frontend with React and TypeScript. TK CHAT features a responsive design with smooth animations implemented with GSAP. It provides session persistence across page refreshes, along with feedback submission for continuous improvement.",
+            "The backend is built with FastAPI and OpenAI’s API. Here I used SQLite for data storage and I follow the RESTful API design. It also employs session management, rate limiting, and secure CORS handling to offer both functionality and security.",
+            "This project represents my approach to implement an AI enhanced chat functionality. I tried to use advanced frontend and backend technologies to create a smooth user experience. As I continue to implement TK CHAT on websites and expand its functionality, I plan to update this project with new (optional) features and improvements from time to time.",
+            "This implementation serves as a starting block for any AI chat functionality on websites. It is easily customizable and can be expanded to include additional features, such as website navigation by asking the AI assistant for help. An Example of this can be on this website, and a description can be found in the 'Portfolio Website' project."
+          ],
+          "github_link": "https://github.com/SM1LE21/TK_CHAT/tree/main",
+          "link": "",
+          "link_text": "",
+          "image": "",
+          "video": "/assets/TKCHAT_VIDEO.mp4",
+          "showMainMedia": false,
+          "embedWebsite": true,
+          "embedLink": "",
+          "skills": [ "React", "TypeScript", "GSAP", "Python", "FastAPI", "SQLite", "OpenAI API", "GPT"],
+          "content": [
+            {   
+                "title": "Feel free to test the tool on this website:",
+                "image": "/assets/TKCHAT.png"
+            },
+            {
+              "title": "Example Video of TK CHAT in Action",
+              "image": "",
+              "description": "",
+              "video": "/assets/TKCHAT_VIDEO.mp4"
+            }
+          ]
+        },     
         {
             "title": "Text2UML",
             "description": "A VS Code extension for automated generation of graphical representations from textual UML diagrams.",
