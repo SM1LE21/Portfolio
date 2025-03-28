@@ -531,4 +531,20 @@ footer {
   .project-item {
     width: 100%;
   }
+
+  .sidebar.hide-on-mobile {
+    display: none;
+  }
+
+  /* Adjust container layout when sidebar is hidden */
+  .sidebar.hide-on-mobile + main {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+
+  /* Adjust container on mobile for project pages */
+  .sidebar.hide-on-mobile ~ .container {
+    grid-template-columns: 1fr;
+    padding: 20px 0px;
+  }
 }

@@ -98,7 +98,7 @@ const ProjectInformation: React.FC = () => {
               className="main-media"
             ></iframe>
           ) : (
-            <video autoPlay loop muted className="main-media">
+            <video autoPlay loop muted playsInline className="main-media">
               <source src={project.video} type="video/mp4" />
               Your browser does not support the video tag.
             </video>

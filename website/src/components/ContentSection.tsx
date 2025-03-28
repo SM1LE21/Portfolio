@@ -20,7 +20,7 @@ const ContentSection: React.FC<ContentProps> = ({ title, image, description, vid
     <div className={`content-section ${noDescription ? 'no-description' : ''}`}>
       {title && <h3 className="content-title">{title}</h3>}
       {video ? (
-        <video autoPlay loop muted className="content-media">
+        <video autoPlay loop muted playsInline className="content-media">
           <source src={video} type="video/mp4" />
           Your browser does not support the video tag.
         </video>

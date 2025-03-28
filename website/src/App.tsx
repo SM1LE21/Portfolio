@@ -5,7 +5,7 @@
  */
 
 import React, { useRef, useState, useLayoutEffect, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import data from './data.json';
@@ -21,10 +21,13 @@ import { useGSAP } from '@gsap/react';
 // TK CHAT INTEGRATION
 import ChatInterface from './components/ChatInterface';
 
-const App: React.FC = () => {
+// Wrap the main app content to use useLocation
+const AppContent: React.FC = () => {
   const sidebarRef = useRef<HTMLDivElement | null>(null);
   const sectionsRef = useRef<HTMLDivElement | null>(null);
   const [isLightMode, setIsLightMode] = useState(false);
+  const location = useLocation();
+  const isProjectPage = location.pathname.startsWith('/project/');
 
   useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -85,51 +88,57 @@ const App: React.FC = () => {
   };
 
   return (
-    <Router>
-      <div className="wrapper">
-        <div className="container">
-          <aside className="sidebar" ref={sidebarRef}>
-            <Sidebar 
-              name={data.name} 
-              title={data.title} 
-              description={data.description} 
-              socialLinks={data.socialLinks} 
-              isLightMode={isLightMode} 
-              toggleLightMode={toggleLightMode} 
+    <div className="wrapper">
+      <div className="container">
+        <aside className={`sidebar ${isProjectPage ? 'hide-on-mobile' : ''}`} ref={sidebarRef}>
+          <Sidebar 
+            name={data.name} 
+            title={data.title} 
+            description={data.description} 
+            socialLinks={data.socialLinks} 
+            isLightMode={isLightMode} 
+            toggleLightMode={toggleLightMode} 
+          />
+        </aside>
+        <main ref={sectionsRef}>
+          <Routes>
+            <Route 
+              path="/" 
+              element={
+                <>
+                  <Section id="about" title="ABOUT">
+                    {data.about.map((paragraph, index) => (
+                      <p key={index}>{paragraph}</p>
+                    ))}
+                  </Section>
+                  <Spacer />
+                  <Projects projects={data.projects} />
+                  <Spacer />
+                  <Section id="experience" title="EXPERIENCE" timelineItems={data.experience} />
+                  <Spacer />
+                  <Section id="certificates" title="CERTIFICATES" timelineItems={data.certificates} />
+                  <Spacer />
+                  <Section id="education" title="EDUCATION" timelineItems={data.education} />
+                  <Spacer />
+                </>
+              } 
             />
-          </aside>
-          <main ref={sectionsRef}>
-            <Routes>
-              <Route 
-                path="/" 
-                element={
-                  <>
-                    <Section id="about" title="ABOUT">
-                      {data.about.map((paragraph, index) => (
-                        <p key={index}>{paragraph}</p>
-                      ))}
-                    </Section>
-                    <Spacer />
-                    <Projects projects={data.projects} />
-                    <Spacer />
-                    <Section id="experience" title="EXPERIENCE" timelineItems={data.experience} />
-                    <Spacer />
-                    <Section id="certificates" title="CERTIFICATES" timelineItems={data.certificates} />
-                    <Spacer />
-                    <Section id="education" title="EDUCATION" timelineItems={data.education} />
-                    <Spacer />
-                  </>
-                } 
-              />
-              <Route path="/project/:projectId" element={<ProjectInformation />} />
-            </Routes>
-          </main>
-        </div>
+            <Route path="/project/:projectId" element={<ProjectInformation />} />
+          </Routes>
+        </main>
       </div>
+    </div>
+  );
+};
+
+const App: React.FC = () => {
+  return (
+    <Router>
+      <AppContent />
       <ChatInterface /> {/* TK CHAT INTEGRATION */}
       <Footer />
     </Router>
-  );  
+  );
 };
 
 export default App;
