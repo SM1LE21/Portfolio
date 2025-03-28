@@ -1,10 +1,10 @@
 {
     "name": "Tun Keltesch",
-    "title": "Project Engineer | Software Engineer",
-    "description": "I build robust, user-friendly, and visually appealing web solutions, with a passion for continuous technical innovation.",
+    "title": "Project Engineer | Software Engineer",
+    "description": "I build robust, user-friendly, and visually appealing web and mobile solutions, with a passion for continuous technical innovation.",
     "about": [
-      "In the past 5 years, I embarked on my journey as a tech enthusiast, diving deep into the world of coding and web development. Fast-forward to today, and I've had the incredible opportunity to work on a wide range of projects, from building and maintaining websites to capturing stunning aerial footage with drone technology.",
-      "Currently, I am a Junior Project Engineer at Hexagon in Vienna, Austria, where I continue to tackle new challenges and expand my expertise. I am passionate about creating unique perspectives and combining my technical skills with creativity.",
+      "In the past 6 years, I embarked on my journey as a tech enthusiast, diving deep into the world of coding and web development. Fast-forward to today, and I've had the incredible opportunity to work on a wide range of projects, from backend to frontend development, building and maintaining websites to developing mobile applications.",
+      "Currently, I am a Project Engineer at Hexagon in Vienna, Austria, where I continue to tackle new challenges and expand my expertise. I am passionate about creating unique perspectives and combining my technical skills with creativity.",
       "I speak Luxemburgish, French, German, English, and some Portuguese, which helps me connect with a diverse range of clients and colleagues.",
       "Contact me, and let's see how we can create something amazing together!"
     ],
@@ -14,8 +14,8 @@
         "jobTitle": "Junior Project Engineer",
         "company": "Hexagon",
         "company_link": "https://www.hexagon.com",
-        "description": "As a Junior Project Engineer at Hexagon in Vienna, Austria, I support the planning, implementation, and management of engineering projects.",
-        "skills": ["SQL", "C#", "SQL Server", "RabbitMQ", "Azure DevOps", "VBA"]
+        "description": "As a Junior Project Engineer at Hexagon in Vienna, Austria, I support the planning, implementation, and management of engineering projects in the public safety sector.",
+        "skills": ["SQL", "C#", "SQL Server", "Azure DevOps", "VBA", "JavaScript", "RabbitMQ", "Microservices"]
       },
       {
         "date": "2023-02 — 2024-06",
