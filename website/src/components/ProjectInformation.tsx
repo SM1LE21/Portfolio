@@ -5,7 +5,7 @@
  * The component uses the data from the data.json file
  */
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import data from '../data.json';
 import ContentSection from './ContentSection';
@@ -38,6 +38,11 @@ interface Project {
 const ProjectInformation: React.FC = () => {
   const { projectId } = useParams<{ projectId: string }>();
   const project = data.projects.find(proj => proj.title.toLowerCase().replace(/\s+/g, '-') === projectId) as Project | undefined;
+
+  // Add useEffect to scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   if (!project) {
     return <div>Project not found</div>;
