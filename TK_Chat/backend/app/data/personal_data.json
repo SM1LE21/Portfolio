@@ -217,7 +217,7 @@
           "I have integrated **TK CHAT**, my AI-powered chatbot, to assist with navigation and provide information about various sections of the website. The chatbot uses OpenAI’s function-calling capabilities to interpret user requests and navigate directly to relevant sections, offering a more interactive user experience.",
           "This website not only showcases my portfolio but also serves as a reusable template for anyone looking to create a similar online presence. It includes a structured data management approach, making content updates straightforward and efficient."
         ],
-        "github_link": "github.com/SM1LE21/Portfolio",
+        "github_link": "https://github.com/SM1LE21/Portfolio",
         "link": "",
         "link_text": "",
         "image": "/assets/TK_Logo.png",
@@ -248,12 +248,9 @@
           },
           {
             "title": "Planned Improvements for the Portfolio Website:",
-            "description": [
-              "1. **Database Integration**: Transition from using a central data.json file to a database solution for more scalable data management. This change will allow for dynamic content updates and more flexibility in displaying information.",
-              "2. **Improved Hosting**: Currently, the website is hosted on GitHub Pages, and the backend service for TK CHAT is hosted on a private server (an old PC). While this setup works well for now, it is not a long-term solution. I plan to migrate the backend to a cloud provider for better performance and reliability.",
-              "3. **Enhanced TK CHAT Features**: I am continuously working on improving the features of TK CHAT. Currently, the chatbot can navigate to general sections of the website but struggles with navigating to specific project pages. Additionally, the mobile chat experience needs improvement, as users may not notice background navigation changes while the full-screen chat is open.",
-              "4. **Expanded AI Functionality**: Future updates will include more advanced function-calling capabilities in TK CHAT, allowing the AI to perform actions beyond navigation, such as providing detailed project explanations or answering specific questions about my skills and experience."
-            ]
+            "description": 
+              " 1. **Database Integration**: Transition from using a central data.json file to a database solution for more scalable data management. This change will allow for dynamic content updates and more flexibility in displaying information.2. **Improved Hosting**: Currently, the website is hosted on GitHub Pages, and the backend service for TK CHAT is hosted on a private server (an old PC). While this setup works well for now, it is not a long-term solution. I plan to migrate the backend to a cloud provider for better performance and reliability.3. **Enhanced TK CHAT Features**: I am continuously working on improving the features of TK CHAT. Currently, the chatbot can navigate to general sections of the website but struggles with navigating to specific project pages. Additionally, the mobile chat experience needs improvement, as users may not notice background navigation changes while the full-screen chat is open.4. **Expanded AI Functionality**: Future updates will include more advanced function-calling capabilities in TK CHAT, allowing the AI to perform actions beyond navigation, such as providing detailed project explanations or answering specific questions about my skills and experience."
+            
           }
         ]
       },           
@@ -266,7 +263,7 @@
           "The website is built with React and styled using TailwindCSS. We utilize Google Cloud to host our images and videos, ensuring high availability and performance.",
           "This project is a labor of love, reflecting our passion for drones and our commitment to excellence in aerial photography and videography."
         ],
-        "github_link": "github.com/SM1LE21/drone-services",
+        "github_link": "https://github.com/SM1LE21/drone-services",
         "link": "https://swiftdrones.net",
         "link_text": "swiftdrones.net",
         "image": "/assets/swiftdrones.png",
@@ -290,7 +287,7 @@
               "For the competition, we delivered a platform called LLInvoker that integrates the Gemini API to generate A1-level exercises in both German and French. Users can request customized exercises based on their language level and topics of interest. We also included a feature where Gemini corrects and verifies users' answers, offering a more interactive learning experience. Additionally, users can generate custom exercises through a chat feature, allowing them to select exercise types and incorporate images or descriptions to create personalized learning activities. While the platform is in its alpha stage and some features from our initial plans are still under development, we believe LLInvoker demonstrates significant potential.",
               "Looking forward, we plan to collaborate with educational institutions and introduce more advanced exercises, such as those initially planned with news articles, reading exercises, and conversational practice that offers pronunciation feedback. We're also considering a rework of the frontend to make it more playful and user-friendly, likely switching to React Native due to our team's experience with similar frameworks. To get a better idea of our project, you can check out the video we submitted for the competition."
           ],
-          "link": "ai.google.dev/",
+          "link": "https://ai.google.dev/",
           "link_text": "Checkout the Gemini API Developer Competition",
           "image": "/assets/gemini.jpg",
           "video": "https://www.youtube.com/watch?v=DG44aGDvXmo",
