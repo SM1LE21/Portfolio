@@ -123,7 +123,7 @@
           "video": "",
           "showMainMedia": false,
           "embedWebsite": true,
-          "embedLink": "widgethoster.sytes.net/canvascraft/",
+          "embedLink": "https://widgethoster.sytes.net/canvascraft/",
           "skills": ["Python", "Flask", "React", "TailwindCSS", "OpenAI API", "GPT", "DALL-E 3"],
           "content": [
               {   
@@ -146,6 +146,7 @@
         "image": "",
         "video": "/assets/text2uml.mp4",
         "showMainMedia": false,
+        "embedWebsite": false,
         "skills": ["Java", "TypeScript", "React", "D3.js", "ELKJS", "MontiCore", "LSP", "VS-Code Extension"],
         "content": [
             {   
@@ -185,7 +186,7 @@
           "This implementation serves as a starting block for any AI chat functionality on websites. It is easily customizable and can be expanded to include additional features, such as website navigation by asking the AI assistant for help. An Example of this can be on this website, and a description can be found in the 'Portfolio Website' project.",
           "---"
         ],
-        "github_link": "github.com/SM1LE21/TK_CHAT/tree/main",
+        "github_link": "https://github.com/SM1LE21/TK_CHAT/tree/main",
         "link": "",
         "link_text": "",
         "image": "",
@@ -243,9 +244,7 @@
             "video": "/assets/TKCHAT_VIDEO.mp4"
           },
           {
-            "description": [ 
-              "---"
-            ]
+            "description": "---"
           },
           {
             "title": "Planned Improvements for the Portfolio Website:",
@@ -268,13 +267,13 @@
           "This project is a labor of love, reflecting our passion for drones and our commitment to excellence in aerial photography and videography."
         ],
         "github_link": "github.com/SM1LE21/drone-services",
-        "link": "swiftdrones.net",
+        "link": "https://swiftdrones.net",
         "link_text": "swiftdrones.net",
         "image": "/assets/swiftdrones.png",
         "video": "",
         "showMainMedia": false,
         "embedWebsite": true,
-        "embedLink": "swiftdrones.net",
+        "embedLink": "https://swiftdrones.net",
         "skills": ["React", "JavaScript", "TailwindCSS", "Google Cloud"],
         "content": [
             {   
@@ -296,6 +295,7 @@
           "image": "/assets/gemini.jpg",
           "video": "https://www.youtube.com/watch?v=DG44aGDvXmo",
           "showMainMedia": true,
+          "embedWebsite": false,
           "skills": ["Dart", "Flutter", "Google Cloud", "Firebase", "Google Functions", "Python", "Gemini API"],
           "content": [
 
