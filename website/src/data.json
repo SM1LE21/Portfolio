@@ -52,6 +52,13 @@
     ],  
     "certificates": [
       {
+        "date": "2024-11-12",
+        "jobTitle": "Meta iOS Developer",
+        "title_link": "https://www.coursera.org/account/accomplishments/specialization/certificate/Q4TMPJLKM45H",
+        "company": "Meta",
+        "description": "Learned iOS application development fundamentals, including Swift programming, UI design principles, and application lifecycle management. Gained practical experience in React Native for cross-platform development, and created a portfolio of iOS applications where I learned about publishing and maintenance capabilities."
+      },
+      {
         "date": "2024-11-11",
         "jobTitle": "RabbitMQ and Messaging Concepts",
         "title_link": "https://www.udemy.com/certificate/UC-f22e44a7-f1ef-4540-8bb5-922972071b8c/",
@@ -180,7 +187,7 @@
             "---",
             "TK CHAT is an AI-powered chat widget designed to be easily integrated into websites. It enables user interaction with an AI assistant. The widget offers customization options, allowing it to be tailored to meet the unique needs of different websites and adapt to various screen sizes.",
             "I built the frontend with React and TypeScript. TK CHAT features a responsive design with smooth animations implemented with GSAP. It provides session persistence across page refreshes, along with feedback submission for continuous improvement.",
-            "The backend is built with FastAPI and OpenAI’s API. Here I used SQLite for data storage and I follow the RESTful API design. It also employs session management, rate limiting, and secure CORS handling to offer both functionality and security.",
+            "The backend is built with FastAPI and OpenAI's API. Here I used SQLite for data storage and I follow the RESTful API design. It also employs session management, rate limiting, and secure CORS handling to offer both functionality and security.",
             "This project represents my approach to implement an AI enhanced chat functionality. I tried to use advanced frontend and backend technologies to create a smooth user experience. As I continue to implement TK CHAT on websites and expand its functionality, I plan to update this project with new (optional) features and improvements from time to time.",
             "This implementation serves as a starting block for any AI chat functionality on websites. It is easily customizable and can be expanded to include additional features, such as website navigation by asking the AI assistant for help. An Example of this can be on this website, and a description can be found in the 'Portfolio Website' project.",
             "---"
@@ -213,7 +220,7 @@
           "big_description": [
             "This project is my personal portfolio website, designed to present an interactive and visually appealing overview of my professional journey, skills, and completed projects. The website features sections like About Me, Projects, and Contact, all managed via a central data.json file for easy content updates.",
             "The frontend is built with React and TypeScript, utilizing GSAP for smooth animations and enhanced user experience. The project is deployed on GitHub Pages, making it easily accessible and fast to load.",
-            "I have integrated **TK CHAT**, my AI-powered chatbot, to assist with navigation and provide information about various sections of the website. The chatbot uses OpenAI’s function-calling capabilities to interpret user requests and navigate directly to relevant sections, offering a more interactive user experience.",
+            "I have integrated **TK CHAT**, my AI-powered chatbot, to assist with navigation and provide information about various sections of the website. The chatbot uses OpenAI's function-calling capabilities to interpret user requests and navigate directly to relevant sections, offering a more interactive user experience.",
             "This website not only showcases my portfolio but also serves as a reusable template for anyone looking to create a similar online presence. It includes a structured data management approach, making content updates straightforward and efficient."
           ],
           "github_link": "github.com/SM1LE21/Portfolio",
