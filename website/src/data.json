@@ -3,10 +3,10 @@
     "title": "Project Engineer | Software Engineer",
     "description": "I build robust, user-friendly, and visually appealing web and mobile solutions, with a passion for continuous technical innovation.",
     "about": [
-      "In the past 6 years, I embarked on my journey as a tech enthusiast, diving deep into the world of coding and web development. Fast-forward to today, and I've had the incredible opportunity to work on a wide range of projects, from backend to frontend development, building and maintaining websites to developing mobile applications.",
-      "Currently, I am a Project Engineer at Hexagon in Vienna, Austria, where I continue to tackle new challenges and expand my expertise. I am passionate about creating unique perspectives and combining my technical skills with creativity.",
-      "I speak Luxemburgish, French, German, English, and some Portuguese, which helps me connect with a diverse range of clients and colleagues.",
-      "Contact me, and let's see how we can create something amazing together!"
+      "Over the past six years, I have immersed myself in the craft of creating digital solutions. My journey has taken me from mastering back-end systems and databases to crafting intuitive front-end experiences, from building responsive websites to developing native mobile applications. Currently, I am channeling all this expertise into ExpenseMate, a full-scale bill-splitting platform that combines all these skills into a practical, user-centric solution.",
+      "At Hexagon in Vienna, I currently operate as a Project Engineer, where I continue to tackle new challenges and further evolve my problem solving and creative instincts.",
+      "I speak Luxemburgish, French, German, English, and some Portuguese, opening doors to diverse partnerships and fresh perspectives.",
+      "Connect with me. Together we can build something extraordinary."
     ],
     "experience": [
       {
@@ -114,29 +114,89 @@
         "description": "Advanced level in Economics and Mathematics"
       }
     ],
-    "projects": [   
+    "projects": [
         {
-            "title": "CanvasCraft",
-            "description": "AI image generation tool, with accurate color palette and style transfer.",
-            "big_description": [
-                "CanvasCraft is an AI-powered image generation tool designed to create stunning visuals. By leveraging OpenAI's DALL-E 3, CanvasCraft transforms text prompts into detailed images, accurately replicating color palettes and applying various art styles.",
-                "Users start by entering simple information. Through the help of GPT, the system refines this initial input by internally communicating with itself, ensuring a highly precise and detailed prompt is constructed. This refined prompt is then sent to DALL-E 3 to generate the final image.",
-                "The backend, built with Python and Flask, implements OpenAI's API to ensure high-quality image outputs. Users can specify color palettes, themes, moods, and custom prompts to guide the image generation process.",
-                "On the frontend, CanvasCraft utilizes React and TailwindCSS to provide an intuitive user interface. The application offers a range of options for users to select their desired artistic elements and see their visions come to life."
-            ],
-            "link": "",
-            "link_text": "",
-            "image": "/assets/canvascraft.png",
-            "video": "",
-            "showMainMedia": false,
-            "embedWebsite": true,
-            "embedLink": "widgethoster.sytes.net/canvascraft/",
-            "skills": ["Python", "Flask", "React", "TailwindCSS", "OpenAI API", "GPT", "DALL-E 3"],
-            "content": [
-                {   
-                    "title": "Feel free to test the tool:"
-                }
-            ]
+          "title": "ExpenseMate",
+          "description": "A bill-splitting app that makes sharing expenses with friends and groups effortless.",
+          "big_description": [
+              "ExpenseMate is a comprehensive bill-splitting application designed to simplify the way people share and track expenses. The idea behind this app comes from personal experience with the complexities of group expenses. It aims to make financial management in groups straightforward and efficient.",
+              "The app's standout feature is its intelligent receipt scanning capability, which automatically extracts expense details and categorizes them. This, combined with real-time expense tracking and group management, makes ExpenseMate a great tool for anyone who frequently shares expenses with others.",
+              "I built ExpenseMate with a native iOS app using Swift and SwiftUI, focusing on creating a clean and intuitive interface. For the backend, we use FastAPI hosted on Google Cloud Run for scalability and reliability, with data stored securely in Google Cloud SQL. Firebase handles our authentication while push notifications are managed through our own Cloud Run service that communicates with Apple's APNs.",
+              "Currently available on iOS, with Android support planned for the near future, ExpenseMate represents my commitment to creating practical, user-friendly solutions to everyday problems."
+          ],
+          "link": "expensemate.app",
+          "link_text": "Visit ExpenseMate",
+          "image": "",
+          "video": "/assets/expensemate_demo.mov",
+          "showMainMedia": true,
+          "embedWebsite": false,
+          "embedLink": "",
+          "skills": [
+              "Swift",
+              "SwiftUI",
+              "Python",
+              "Gemini API",
+              "OpenAI API",
+              "Image Processing",
+              "OCR",
+              "FastAPI",
+              "Google Cloud Run",
+              "Google Cloud SQL",
+              "Firebase Authentication",
+              "Firebase Cloud Messaging",
+              "Docker",
+              "RESTful APIs",
+              "Push Notifications",
+              "Receipt Scanning",
+              "Real-time Data Sync",
+              "Cloud Infrastructure",
+              "CI/CD",
+              "TypeScript",
+              "Next.js",
+              "Tailwind CSS"
+          ],
+          "content": [
+              {
+                "title": "System Architecture",
+                "image": "/assets/expensemate_architecture.png"
+              },
+              {
+                "description": [
+                  "ExpenseMate follows a modern service-oriented architecture with five main components:",
+                  "1. **iOS App**: Built with Swift and SwiftUI. It serves as the primary user interface, handling receipt scans, expense tracking, and group management. It communicates with Firebase for authentication, the Backend API for data operations, and receives push notifications via APNs.",
+                  "2. **Backend API**: Developed with FastAPI and deployed on Google Cloud Run. It manages all business logic, receipt processing, data validation, and API requests from the iOS app. It validates Firebase tokens, sends push notifications via APNs, and interacts securely with the database.",
+                  "3. **Database**: A PostgreSQL instance hosted on Google Cloud SQL. It stores all core application data including users, groups, expenses, receipts, and device tokens. It is only accessed by the Backend.",
+                  "4. **Firebase**: Used for authentication and cloud messaging. It issues tokens to the iOS app, which the Backend validates. It also manages sessions and push notification tokens.",
+                  "5. **Marketing Website**: A standalone Next.js application hosted on Vercel. It serves marketing content, links to the App Store, and hosts documentation. It has no direct interaction with the other systems."
+                ]
+              },
+              {
+                "title": "Key Features",
+                "description": [
+                  "• **Smart Bill Splitting**: Automatically calculate each person's share based on custom rules and percentages.",
+                  "• **Receipt Scanning**: Snap a photo and let ExpenseMate extract items and calculate splits automatically.",
+                  "• **Group Management**: Create and organize multiple groups for different events or living situations.",
+                  "• **Expense Tracking**: Monitor all expenses and settlements with a clear transaction history.",
+                  "• **Real-time Updates**: Receive instant notifications when expenses are added or bills are settled.",
+                  "• **Debt Settlement**: Streamline repayments with automated calculations and payment tracking."
+                ]
+              },
+              {
+                "title": "Future Roadmap",
+                "image": "/assets/expensemate_roadmap.png"
+              },
+              {
+                "description": [
+                  "• **Android App**: Full-featured Android version launching August 2025 with parity to iOS.",
+                  "• **Web Dashboard**: Browser-based access for managing expenses, live by September 2025.",
+                  "• **PDF/CSV Export**: Generate downloadable reports for documentation and sharing (Q4 2025).",
+                  "• **Offline Mode**: Access and manage data without internet, ideal for travel (Q4 2025).",
+                  "• **Multi-language Support**: Support for German, French, Spanish, and Portuguese by end of 2025.",
+                  "• **Personal Space**: Track personal expenses separately with Excel import (Q1 2026).",
+                  "• **Work Space**: Manage business expenses with reporting and personal/business toggles (Q3 2026)."
+                ]
+              }              
+          ]
         },
         {
           "title": "Text2UML",
@@ -215,6 +275,29 @@
           ]
         },
         {
+          "title": "CanvasCraft",
+          "description": "AI image generation tool, with accurate color palette and style transfer.",
+          "big_description": [
+              "CanvasCraft is an AI-powered image generation tool designed to create stunning visuals. By leveraging OpenAI's DALL-E 3, CanvasCraft transforms text prompts into detailed images, accurately replicating color palettes and applying various art styles.",
+              "Users start by entering simple information. Through the help of GPT, the system refines this initial input by internally communicating with itself, ensuring a highly precise and detailed prompt is constructed. This refined prompt is then sent to DALL-E 3 to generate the final image.",
+              "The backend, built with Python and Flask, implements OpenAI's API to ensure high-quality image outputs. Users can specify color palettes, themes, moods, and custom prompts to guide the image generation process.",
+              "On the frontend, CanvasCraft utilizes React and TailwindCSS to provide an intuitive user interface. The application offers a range of options for users to select their desired artistic elements and see their visions come to life."
+          ],
+          "link": "",
+          "link_text": "",
+          "image": "/assets/canvascraft.png",
+          "video": "",
+          "showMainMedia": false,
+          "embedWebsite": true,
+          "embedLink": "widgethoster.sytes.net/canvascraft/",
+          "skills": ["Python", "Flask", "React", "TailwindCSS", "OpenAI API", "GPT", "DALL-E 3"],
+          "content": [
+              {   
+                  "title": "Feel free to test the tool:"
+              }
+          ]
+        },
+        {
           "title": "Portfolio Website",
           "description": "This portfolio website showcasing my work, skills, and projects.",
           "big_description": [
@@ -265,30 +348,6 @@
             }
           ]
         },           
-        {
-          "title": "SwiftDrones Website",
-          "description": "A website for a drone company.",
-          "big_description": [
-            "The SwiftDrones Website project involved creating a comprehensive online presence for SwiftDrones, a company specializing in drone technology and services.",
-            "Our team of drone enthusiasts, based in Luxembourg, is dedicated to providing clients with high-quality imagery for various applications. We leverage cutting-edge drone technology to deliver compelling visual content that meets the unique requirements of each client.",
-            "The website is built with React and styled using TailwindCSS. We utilize Google Cloud to host our images and videos, ensuring high availability and performance.",
-            "This project is a labor of love, reflecting our passion for drones and our commitment to excellence in aerial photography and videography."
-          ],
-          "github_link": "github.com/SM1LE21/drone-services",
-          "link": "swiftdrones.net",
-          "link_text": "swiftdrones.net",
-          "image": "/assets/swiftdrones.png",
-          "video": "",
-          "showMainMedia": false,
-          "embedWebsite": true,
-          "embedLink": "swiftdrones.net",
-          "skills": ["React", "JavaScript", "TailwindCSS", "Google Cloud"],
-          "content": [
-              {   
-                  "title": "Here an embedded version of the website:"
-              }
-          ]
-      },    
         {
             "title": "LLInvoker",
             "description": "Personalized language learning through news and generated exercises.",

@@ -1,0 +1,24 @@
+{
+  "title": "SwiftDrones Website",
+  "description": "A website for a drone company.",
+  "big_description": [
+    "The SwiftDrones Website project involved creating a comprehensive online presence for SwiftDrones, a company specializing in drone technology and services.",
+    "Our team of drone enthusiasts, based in Luxembourg, is dedicated to providing clients with high-quality imagery for various applications. We leverage cutting-edge drone technology to deliver compelling visual content that meets the unique requirements of each client.",
+    "The website is built with React and styled using TailwindCSS. We utilize Google Cloud to host our images and videos, ensuring high availability and performance.",
+    "This project is a labor of love, reflecting our passion for drones and our commitment to excellence in aerial photography and videography."
+  ],
+  "github_link": "github.com/SM1LE21/drone-services",
+  "link": "swiftdrones.net",
+  "link_text": "swiftdrones.net",
+  "image": "/assets/swiftdrones.png",
+  "video": "",
+  "showMainMedia": false,
+  "embedWebsite": true,
+  "embedLink": "swiftdrones.net",
+  "skills": ["React", "JavaScript", "TailwindCSS", "Google Cloud"],
+  "content": [
+    {   
+      "title": "Here an embedded version of the website:"
+    }
+  ]
+} 
