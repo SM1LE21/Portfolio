@@ -121,7 +121,7 @@
           "big_description": [
               "ExpenseMate is a comprehensive bill-splitting application designed to simplify the way people share and track expenses. The idea behind this app comes from personal experience with the complexities of group expenses. It aims to make financial management in groups straightforward and efficient.",
               "The app's standout feature is its intelligent receipt scanning capability, which automatically extracts expense details and categorizes them. This, combined with real-time expense tracking and group management, makes ExpenseMate a great tool for anyone who frequently shares expenses with others.",
-              "I built ExpenseMate with a native iOS app using Swift and SwiftUI, focusing on creating a clean and intuitive interface. For the backend, we use FastAPI hosted on Google Cloud Run for scalability and reliability, with data stored securely in Google Cloud SQL. Firebase handles our authentication while push notifications are managed through our own Cloud Run service that communicates with Apple's APNs.",
+              "I built ExpenseMate with as a native iOS app using Swift and SwiftUI, focusing on creating a clean and intuitive interface. For the backend, we use FastAPI hosted on Google Cloud Run for scalability and reliability, with data stored securely in Google Cloud SQL. Firebase handles our authentication while push notifications are managed through our own Cloud Run service that communicates with Apple's APNs.",
               "Currently available on iOS, with Android support planned for the near future, ExpenseMate represents my commitment to creating practical, user-friendly solutions to everyday problems."
           ],
           "link": "expensemate.app",
