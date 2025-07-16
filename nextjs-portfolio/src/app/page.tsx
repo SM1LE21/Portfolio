@@ -11,8 +11,6 @@ import Footer from '../components/Footer';
 import Spacer from '../components/Spacer';
 import { useGSAP } from '@gsap/react';
 
-// TK CHAT INTEGRATION
-import ChatInterface from '../components/ChatInterface';
 import { usePathname } from 'next/navigation';
 
 export default function HomePage() {
@@ -112,7 +110,6 @@ export default function HomePage() {
           </main>
         </div>
       </div>
-      <ChatInterface />
       <Footer />
     </>
   );

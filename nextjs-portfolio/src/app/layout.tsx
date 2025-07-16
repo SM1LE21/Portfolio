@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import './index.css'
+import ChatInterface from '../components/ChatInterface'
 
 export const metadata: Metadata = {
   title: 'Tun Keltesch - Portfolio',
@@ -33,6 +34,7 @@ export default function RootLayout({
       </head>
       <body>
         {children}
+        <ChatInterface />
       </body>
     </html>
   )

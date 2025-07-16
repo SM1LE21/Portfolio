@@ -9,8 +9,6 @@ import ProjectInformation from '../../../components/ProjectInformation';
 import Footer from '../../../components/Footer';
 import { useGSAP } from '@gsap/react';
 
-// TK CHAT INTEGRATION
-import ChatInterface from '../../../components/ChatInterface';
 import { usePathname } from 'next/navigation';
 
 export default function ProjectPage() {
@@ -82,7 +80,6 @@ export default function ProjectPage() {
           </main>
         </div>
       </div>
-      <ChatInterface />
       <Footer />
     </>
   );
