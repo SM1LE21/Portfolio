@@ -40,6 +40,9 @@ origins = [
     "http://localhost:3000",
     "https://sm1le21.github.io",
     "https://widgethoster.sytes.net",
+    "https://tunkeltesch.dev",
+    "https://www.tunkeltesch.dev",
+    ""
     # Add other origins if needed
     # TODO change this to the frontend URL - probably sm1le.github.io at the beginning
 ]
