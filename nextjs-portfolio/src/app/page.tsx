@@ -20,6 +20,16 @@ export default function HomePage() {
   const pathname = usePathname();
   const isProjectPage = pathname.startsWith('/project/');
 
+  // Load light mode preference from localStorage on mount
+  useEffect(() => {
+    const savedLightMode = localStorage.getItem('lightMode');
+    if (savedLightMode !== null) {
+      const lightModeValue = savedLightMode === 'true';
+      setIsLightMode(lightModeValue);
+      document.body.classList.toggle('light-mode', lightModeValue);
+    }
+  }, []);
+
   useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);
     if (sidebarRef.current) {
@@ -50,13 +60,13 @@ export default function HomePage() {
         gsap.from(item, {
           scrollTrigger: {
             trigger: item,
-            start: "top 80%",
+            start: "top 95%",
             end: "bottom 20%",
             toggleActions: "play none none reverse",
           },
           opacity: 0,
-          x: -50,
-          duration: 0.8,
+          x: -20,
+          duration: 0.4,
         });
       });
 
@@ -75,7 +85,9 @@ export default function HomePage() {
   }, [isLightMode]);
 
   const toggleLightMode = () => {
-    setIsLightMode(!isLightMode);
+    const newLightMode = !isLightMode;
+    setIsLightMode(newLightMode);
+    localStorage.setItem('lightMode', newLightMode.toString());
   };
 
   return (

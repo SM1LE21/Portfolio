@@ -73,16 +73,10 @@ const Sidebar: React.FC<SidebarProps> = ({ name, title, description, socialLinks
           </div>
           <button 
             onClick={toggleLightMode} 
-            style={{ 
-              background: 'none', 
-              border: 'none', 
-              cursor: 'pointer',
-              fontSize: '24px',
-              marginTop: '20px',
-              padding: '0',
-            }}
+            className="mode-toggle-sidebar"
+            title={isLightMode ? 'Switch to dark mode' : 'Switch to light mode'}
           >
-            {isLightMode ? '🌒' : '☀️'}
+            {isLightMode ? '🌙' : '☀️'}
           </button>
         </aside>
       );

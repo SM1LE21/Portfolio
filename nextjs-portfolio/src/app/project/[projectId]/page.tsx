@@ -18,6 +18,16 @@ export default function ProjectPage() {
   const pathname = usePathname();
   const isProjectPage = pathname.startsWith('/project/');
 
+  // Load light mode preference from localStorage on mount
+  useEffect(() => {
+    const savedLightMode = localStorage.getItem('lightMode');
+    if (savedLightMode !== null) {
+      const lightModeValue = savedLightMode === 'true';
+      setIsLightMode(lightModeValue);
+      document.body.classList.toggle('light-mode', lightModeValue);
+    }
+  }, []);
+
   useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);
     if (sidebarRef.current) {
@@ -58,7 +68,9 @@ export default function ProjectPage() {
   }, [isLightMode]);
 
   const toggleLightMode = () => {
-    setIsLightMode(!isLightMode);
+    const newLightMode = !isLightMode;
+    setIsLightMode(newLightMode);
+    localStorage.setItem('lightMode', newLightMode.toString());
   };
 
   return (
