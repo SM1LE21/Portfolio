@@ -1,4 +1,0 @@
-- iOS Dev Certificate
-    - Focus on React Native -> Expo here very cool
-- Price-Alert-App
-- ExpenseMate
