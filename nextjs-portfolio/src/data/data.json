@@ -301,7 +301,8 @@
           "description": "This portfolio website showcasing my work, skills, and projects.",
           "big_description": [
             "This project is my personal portfolio website, designed to present an interactive and visually appealing overview of my professional journey, skills, and completed projects. The website features sections like About Me, Projects, and Contact, all managed via a central data.json file for easy content updates.",
-            "The frontend is built with React and TypeScript, utilizing GSAP for smooth animations and enhanced user experience. The project is deployed on GitHub Pages, making it easily accessible and fast to load.",
+            "The current implementation is built with Next.js 15 and TypeScript, utilizing the App Router for modern React development patterns. The project leverages Tailwind CSS for styling and GSAP for smooth animations and enhanced user experience. It's deployed on Vercel, providing excellent performance, automatic deployments, and global CDN distribution.",
+            "This website evolved from its original React implementation that was hosted on GitHub Pages. The migration to Next.js brought significant improvements including server-side rendering, better SEO capabilities, improved performance through automatic code splitting, and enhanced developer experience with features like the App Router and built-in API routes.",
             "I have integrated **TK CHAT**, my AI-powered chatbot, to assist with navigation and provide information about various sections of the website. The chatbot uses OpenAI's function-calling capabilities to interpret user requests and navigate directly to relevant sections, offering a more interactive user experience.",
             "This website not only showcases my portfolio but also serves as a reusable template for anyone looking to create a similar online presence. It includes a structured data management approach, making content updates straightforward and efficient."
           ],
@@ -314,10 +315,14 @@
           "embedWebsite": false,
           "embedLink": "",
           "skills": [
+            "Next.js",
             "React",
             "TypeScript",
+            "Tailwind CSS",
             "GSAP",
-            "GitHub Pages",
+            "Vercel",
+            "App Router",
+            "Server-Side Rendering",
             "JSON Data Management"
           ],
           "content": [
@@ -340,9 +345,9 @@
               "title": "Planned Improvements for the Portfolio Website:",
               "description": [
                 "1. **Database Integration**: Transition from using a central data.json file to a database solution for more scalable data management. This change will allow for dynamic content updates and more flexibility in displaying information.",
-                "2. **Improved Hosting**: Currently, the website is hosted on GitHub Pages, and the backend service for TK CHAT is hosted on a private server (an old PC). While this setup works well for now, it is not a long-term solution. I plan to migrate the backend to a cloud provider for better performance and reliability.",
-                "3. **Enhanced TK CHAT Features**: I am continuously working on improving the features of TK CHAT. Currently, the chatbot can navigate to general sections of the website but struggles with navigating to specific project pages. Additionally, the mobile chat experience needs improvement, as users may not notice background navigation changes while the full-screen chat is open.",
-                "4. **Expanded AI Functionality**: Future updates will include more advanced function-calling capabilities in TK CHAT, allowing the AI to perform actions beyond navigation, such as providing detailed project explanations or answering specific questions about my skills and experience."
+                "2. **Enhanced TK CHAT Features**: I am continuously working on improving the features of TK CHAT. Currently, the chatbot can navigate to general sections of the website but struggles with navigating to specific project pages. Additionally, the mobile chat experience needs improvement, as users may not notice background navigation changes while the full-screen chat is open.",
+                "3. **Expanded AI Functionality**: Future updates will include more advanced function-calling capabilities in TK CHAT, allowing the AI to perform actions beyond navigation, such as providing detailed project explanations or answering specific questions about my skills and experience.",
+                "4. **Performance Optimizations**: Leverage Next.js 15's latest features including improved image optimization, better caching strategies, and enhanced loading performance for an even smoother user experience."
               ]
             }
           ]
