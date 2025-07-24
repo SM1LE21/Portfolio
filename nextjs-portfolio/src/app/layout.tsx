@@ -7,7 +7,12 @@ export const metadata: Metadata = {
   title: 'Tun Keltesch - Portfolio',
   description: 'Project Engineer | Software Engineer - I build robust, user-friendly, and visually appealing web and mobile solutions, with a passion for continuous technical innovation.',
   icons: {
-    icon: '/TK_Logo_alt.png',
+    icon: [
+      { url: '/TK_Logo_alt.png', sizes: '32x32', type: 'image/png' },
+      { url: '/TK_Logo_alt.png', sizes: '16x16', type: 'image/png' },
+    ],
+    apple: '/TK_Logo_alt.png',
+    shortcut: '/TK_Logo_alt.png',
   },
 }
 
