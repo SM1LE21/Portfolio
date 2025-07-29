@@ -52,11 +52,18 @@
     ],  
     "certificates": [
       {
+        "date": "2025-07-29",
+        "jobTitle": "Microsoft AI & ML Engineering",
+        "title_link": "https://coursera.org/share/7960094581bc3489586ed38bbdf9cb55",
+        "company": "Microsoft",
+        "description": "Completed specialization covering AI & ML infrastructure design, algorithms and techniques including supervised, unsupervised, reinforcement learning, and deep learning. Developed intelligent troubleshooting agents and mastered Microsoft Azure for AI & ML workflows. Gained expertise in prompt engineering, natural language processing, generative AI, and large language modeling. Approximately 6 months at 7 hours a week to complete."
+      },
+      {
         "date": "2025-04-06",
         "jobTitle": "Meta iOS Developer",
         "title_link": "https://www.coursera.org/account/accomplishments/specialization/certificate/Q4TMPJLKM45H",
         "company": "Meta",
-        "description": "Learned iOS application development fundamentals, including Swift programming, UI design principles, and application lifecycle management. Gained practical experience in React Native for cross-platform development, and created a portfolio of iOS applications where I learned about publishing and maintenance capabilities."
+        "description": "Learned iOS application development fundamentals, including Swift programming, UI design principles, and application lifecycle management. Gained practical experience in React Native for cross-platform development, and created a portfolio of iOS applications where I learned about publishing and maintenance capabilities. Approximately 8 months at 7 hours a week to complete."
       },
       {
         "date": "2024-11-11",
@@ -71,20 +78,6 @@
         "title_link": "https://www.udemy.com/certificate/UC-326c8ea5-bc10-4628-99d2-5c5d4860456c/",
         "company": "Udemy",
         "description": "Gained skills in working with classes, interfaces, and object-oriented programming principles with C#. Learned to utilize encapsulation, inheritance, and composition to enhance code robustness and reusability. Developed expertise in building extensible, loosely-coupled, and testable applications using polymorphism and interfaces."
-      },
-      {
-        "date": "2024-07-26",
-        "jobTitle": "C# Basics for Beginners: Learn C# Fundamentals by Coding",
-        "title_link": "https://www.udemy.com/certificate/UC-00433bd6-c8d0-4ffb-88fb-b33823ce0b22/",
-        "company": "Udemy",
-        "description": "Learned the fundamentals of C# and .NET Framework, working with primitive and non-primitive types, controlling program flow with conditional statements, using arrays and lists, and working with files, directories, text, and date and time. Also gained skills in debugging C# applications effectively."
-      },
-      {
-        "date": "2024-07-26",
-        "jobTitle": "The Complete SQL Bootcamp: Go from Zero to Hero",
-        "title_link": "https://www.udemy.com/certificate/UC-9f6b9847-ecdf-44af-89d3-7b6590eef0d8/",
-        "company": "Udemy",
-        "description": "Gained skills in reading and writing complex SQL queries, utilizing PostgreSQL, and applying these techniques across various major SQL databases. Learned to analyze data with aggregate functions, execute advanced queries, use logical operators, and manage databases efficiently."
       },
       {
         "date": "2022-11-22",
