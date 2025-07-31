@@ -2,7 +2,7 @@
  * Projects.tsx 
  * The component for displaying the projects on the landing page
  * It takes an array of projects and displays them in a grid
- * Each project has a title, description, and an image or video 
+ * Each project has a title, description, and an image or video  
  * The project title is used to generate a link to the project page
  */
 
