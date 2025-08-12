@@ -179,15 +179,26 @@
               },
               {
                 "description": [
-                  "• **Android App**: Full-featured Android version launching August 2025 with parity to iOS.",
-                  "• **Web Dashboard**: Browser-based access for managing expenses, live by September 2025.",
-                  "• **PDF/CSV Export**: Generate downloadable reports for documentation and sharing (Q4 2025).",
-                  "• **Offline Mode**: Access and manage data without internet, ideal for travel (Q4 2025).",
-                  "• **Multi-language Support**: Support for German, French, Spanish, and Portuguese by end of 2025.",
-                  "• **Personal Space**: Track personal expenses separately with Excel import (Q1 2026).",
-                  "• **Work Space**: Manage business expenses with reporting and personal/business toggles (Q3 2026)."
+                  "• Version 1.1 (Q2 2025): One‑tap sign‑in (Google & Apple), German/French, improved onboarding and UI/UX.",
+                  "• Android App v1.0 (Q3 2025): Full Android launch with iOS feature parity.",
+                  "• Version 1.2 (Sep 2025): Spanish & Portuguese, improved group creation/sharing, expense categories (iOS early Sep; Android late Sep).",
+                  "• Version 1.3 (Q4 2025): Offline mode, Excel import, PDF/CSV reports, automatic currency conversion.",
+                  "• ExpenseMate Web (Q4 2025): Desktop‑optimized web app with dashboards.",
+                  "• Personal Space (Q1 2026): Personal expense tracking, quick scan, unified view, Excel import.",
+                  "• Work Space (Q3 2026): Business‑trip tracker, company‑card vs personal toggle, one‑click reports; integrated with Personal Space."
                 ]
-              }              
+                },
+                {
+                  "title": "Motivation & Vision"
+                },
+                {
+                  "description": [
+                    "ExpenseMate is built to be the one home for all your spending—trips with friends, personal budgeting, and work reimbursements—captured, organized, and reconciled in one place.",
+                    "Our vision is a clear, actionable overview: see what your job owes you, what others owe you, what you owe, and what you truly spend. Generate tailored reports for work and personal use in seconds.",
+                    "Looking ahead to 2026, we aim to add Investment Portfolios so you can represent 100% of your finances in one dashboard—expenses, reimbursements, and investments—with full transparency.",
+                    "Behind the app: I'm Tun, building the expense tracker I've always wanted while growing as a developer—on a mission to make money management simple, complete, and trustworthy."
+                  ]
+                }              
           ]
         },
         {
