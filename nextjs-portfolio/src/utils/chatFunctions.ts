@@ -15,6 +15,7 @@ interface FunctionCallHelpers {
   // Add other helpers if needed
 }
 
+// FunctionCallHandler is a function that takes in arguments and helpers and returns a promise of messages
 type FunctionCallHandler = (
   args: any,
   helpers: FunctionCallHelpers
