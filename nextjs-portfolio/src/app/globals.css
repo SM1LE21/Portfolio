@@ -257,6 +257,31 @@ nav ul li a:hover {
   transform: translateX(4px);
 }
 
+.timeline-item.promotion-item {
+  margin-top: -20px;
+  padding-top: 20px;
+}
+
+.promotion-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--subtitle-color), var(--timeline-color));
+  color: var(--background-gradient-start);
+  font-size: 0.75em;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 12px;
+  margin-bottom: 8px;
+  margin-left: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.light-mode .promotion-badge {
+  color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
 .timeline-item::before {
   content: '';
   position: absolute;
@@ -277,6 +302,47 @@ nav ul li a:hover {
   margin-bottom: 8px;
   font-weight: 600;
   line-height: 1.4;
+}
+
+.job-title-container {
+  margin-bottom: 8px;
+}
+
+.job-title-date {
+  color: var(--link-color);
+  font-size: 0.9em;
+  font-weight: 500;
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
+
+.previous-roles {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  padding-left: 16px;
+  border-left: 2px solid var(--timeline-color);
+  opacity: 0.85;
+}
+
+.previous-role {
+  margin-bottom: 12px;
+}
+
+.previous-role:last-child {
+  margin-bottom: 0;
+}
+
+.previous-role-title {
+  font-size: 1.1em;
+  font-weight: 500;
+  color: var(--text-color);
+  margin-bottom: 4px;
+}
+
+.previous-role-date {
+  color: var(--link-color);
+  font-size: 0.85em;
+  font-weight: 500;
 }
 
 .company {

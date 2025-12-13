@@ -11,10 +11,17 @@
     "experience": [
       {
         "date": "2024-07 — Present",
-        "jobTitle": "Junior Project Engineer",
+        "jobTitle": "Project Engineer",
+        "jobTitleDate": "2025-12 — Present",
+        "previousRoles": [
+          {
+            "title": "Junior Project Engineer",
+            "date": "2024-07 — 2025-12"
+          }
+        ],
         "company": "Hexagon",
         "company_link": "https://www.hexagon.com",
-        "description": "As a Junior Project Engineer at Hexagon in Vienna, Austria, I support the planning, implementation, and management of engineering projects in the public safety sector.",
+        "description": "As a Project Engineer at Hexagon in Vienna, Austria, I support the planning, implementation, and management of engineering projects in the public safety sector.",
         "skills": ["SQL", "C#", "SQL Server", "Azure DevOps", "VBA", "JavaScript", "RabbitMQ", "Microservices"]
       },
       {
@@ -95,6 +102,12 @@
       }
     ],      
     "education": [
+      {
+        "date": "2025-09 — 2027-09",
+        "jobTitle": "Master of Science - MS, AI Engineering",
+        "company": "FH Technikum Wien",
+        "company_link": "https://www.technikum-wien.at/"
+      },
       {
         "jobTitle": "Bachelor of Science - Computer Science",
         "company": "RWTH Aachen University",
