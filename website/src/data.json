@@ -240,6 +240,107 @@
           ]
         },
         {
+          "title": "Tennis Coach AI",
+          "description": "RAG-powered AI tennis coaching system that answers questions using transcripts from real coaching sessions.",
+          "big_description": [
+            "Tennis Coach AI is a Retrieval-Augmented Generation (RAG) system designed to provide expert tennis coaching advice by leveraging transcripts from actual coaching sessions. The system transforms 33 coaching transcripts into 601 searchable chunks with vector embeddings, enabling intelligent question-answering with source citations.",
+            "The platform uses a sophisticated hybrid search approach that combines BM25 (keyword-based) and vector similarity (semantic) search to retrieve the most relevant coaching insights. This dual approach ensures that users get accurate answers whether they use specific tennis terminology or more general phrasing.",
+            "Built with FastAPI on the backend and Next.js 15 on the frontend, the system integrates PostgreSQL 15+ with the pgvector extension for efficient vector similarity search. OpenAI's API powers both the text embeddings (text-embedding-3-small) and the language model (gpt-4o-mini) for generating responses.",
+            "A standout feature is the multi-language support—users can ask questions in English or German, and the system automatically detects the language, translates queries for optimal search performance, and responds in the user's original language. Every answer includes citations to the source transcripts, ensuring transparency and credibility.",
+            "The system also supports conversation context, allowing users to ask follow-up questions naturally. The frontend sends the last 10 messages as context, enabling multi-turn conversations while maintaining cost efficiency at approximately $0.0003-$0.001 per query.",
+            "This project demonstrates a production-ready RAG implementation that combines advanced NLP techniques, efficient vector search, and thoughtful UX design to create a practical AI coaching assistant. With response times of 3-10 seconds and the capacity to scale to millions of chunks, it represents a robust solution for knowledge retrieval from specialized domain content."
+          ],
+          "link": "mtc-ai-chat.vercel.app",
+          "link_text": "Try Tennis Coach AI",
+          "image": "/assets/AI_Tennis_Project.png",
+          "video": "",
+          "showMainMedia": false,
+          "embedWebsite": true,
+          "embedLink": "mtc-ai-chat.vercel.app/",
+          "skills": [
+            "FastAPI",
+            "PostgreSQL",
+            "pgvector",
+            "OpenAI API",
+            "Next.js",
+            "TypeScript",
+            "Tailwind CSS",
+            "Python",
+            "RAG",
+            "Vector Embeddings",
+            "Hybrid Search",
+            "BM25",
+            "SQLAlchemy",
+            "Uvicorn",
+            "Multi-language Support",
+            "tiktoken"
+          ],
+          "content": [
+            {
+              "title": "System Architecture",
+              "description": [
+                "The Tennis Coach AI system follows a modern microservices architecture with clear separation of concerns:",
+                "",
+                "**Frontend (Next.js 15)**: Built with TypeScript and Tailwind CSS, the frontend provides an intuitive chat interface with real-time token usage tracking and citation display. It handles language detection on the client side and formats responses using React Markdown.",
+                "",
+                "**Backend (FastAPI)**: The Python-based backend manages the entire RAG pipeline. It receives queries via the `/api/v1/ask` endpoint, performs language detection using langdetect, translates German queries to English for optimal search, and orchestrates the retrieval and generation process.",
+                "",
+                "**Database (PostgreSQL + pgvector)**: A PostgreSQL 15+ instance with the pgvector extension stores 601 text chunks along with their vector embeddings. The database supports both traditional BM25 keyword search and vector similarity search, enabling the hybrid retrieval strategy.",
+                "",
+                "**OpenAI Integration**: The system uses OpenAI's `text-embedding-3-small` model for generating embeddings and `gpt-4o-mini` for generating answers. The LLM receives the top K retrieved chunks as context and generates responses with inline citations.",
+                "",
+                "**Data Flow**: Query → Language Detection → Translation (if needed) → Hybrid Search (BM25 + Vector) → Top K Retrieval → LLM Generation → Response with Citations"
+              ]
+            },
+            {
+              "title": "Key Features & Innovation",
+              "description": [
+                "• **Hybrid Search**: Combines BM25 keyword search with vector similarity for superior retrieval accuracy. BM25 catches exact terminology matches while vector search understands semantic meaning.",
+                "",
+                "• **Multi-language Support**: Automatically detects English or German queries, translates for optimal search, and responds in the user's original language. Seamless cross-language experience.",
+                "",
+                "• **Conversation Context**: Maintains the last 10 messages as context, enabling natural follow-up questions and multi-turn conversations without re-explaining context.",
+                "",
+                "• **Source Citations**: Every answer includes citations to specific transcript chunks, allowing users to verify information and explore the source material.",
+                "",
+                "• **Cost Efficiency**: Uses `gpt-4o-mini` and `text-embedding-3-small` models, keeping costs at $0.0003-$0.001 per query while maintaining high answer quality.",
+                "",
+                "• **Token Usage Tracking**: Real-time display of input and output tokens used, providing transparency on API costs and system efficiency.",
+                "",
+                "• **Production-Ready**: Deployed on Vercel with proper error handling, rate limiting considerations, and scalable architecture capable of handling millions of chunks.",
+                "",
+                "• **Fast Response Times**: Average response time of 3-10 seconds, with search latency of only 100-300ms thanks to efficient pgvector indexing."
+              ]
+            },
+            {
+              "title": "Technical Deep Dive",
+              "description": [
+                "**RAG Pipeline**: The system implements a sophisticated Retrieval-Augmented Generation pipeline that chunks 33 tennis coaching transcripts into 601 semantically meaningful segments. Each chunk is embedded using OpenAI's text-embedding-3-small model, creating 1536-dimensional vectors stored in PostgreSQL with pgvector.",
+                "",
+                "**Hybrid Search Strategy**: Rather than relying solely on semantic search, the system combines BM25 (term frequency-inverse document frequency) with vector similarity. This hybrid approach ensures that both exact terminology matches and conceptually similar content are retrieved, providing comprehensive context to the language model.",
+                "",
+                "**Context Window Management**: Using tiktoken for accurate token counting, the system dynamically manages context to stay within the model's limits while maximizing the information provided. The top K retrieval parameter is adjustable (3-8 chunks) based on query complexity.",
+                "",
+                "**Translation Strategy**: German queries are automatically translated to English before search, as the transcript embeddings are in English. This ensures optimal semantic matching across languages while still providing responses in the user's preferred language.",
+                "",
+                "**Database Design**: SQLAlchemy ORM manages the database layer with efficient indexing on both text (for BM25) and vector columns (for similarity search). The pgvector extension enables high-performance approximate nearest neighbor search at scale."
+              ]
+            },
+            {
+              "title": "Try It Out",
+              "description": [
+                "**Note**: This is the first version of the system. Context handling for long conversations doesn't work optimally yet. For best results, test with single questions and single answers.",
+                "",
+                "Example questions to try:",
+                "• How can I improve my serve?",
+                "• What is the proper backhand technique?",
+                "• Wie kann ich meinen Aufschlag verbessern? (German)",
+                "• What are the key elements of a good forehand?"
+              ]
+            }
+          ]
+        },
+        {
           "title": "TK CHAT",
           "description": "AI-powered chat widget for websites, offering direct interaction with a customizable AI assistant.",
           "big_description": [
