@@ -257,31 +257,6 @@ nav ul li a:hover {
   transform: translateX(4px);
 }
 
-.timeline-item.promotion-item {
-  margin-top: -20px;
-  padding-top: 20px;
-}
-
-.promotion-badge {
-  display: inline-block;
-  background: linear-gradient(135deg, var(--subtitle-color), var(--timeline-color));
-  color: var(--background-gradient-start);
-  font-size: 0.75em;
-  font-weight: 700;
-  padding: 4px 10px;
-  border-radius: 12px;
-  margin-bottom: 8px;
-  margin-left: 8px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.light-mode .promotion-badge {
-  color: #ffffff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-}
-
 .timeline-item::before {
   content: '';
   position: absolute;

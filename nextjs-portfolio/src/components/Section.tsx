@@ -38,17 +38,9 @@ const Section: React.FC<SectionProps> = ({ id, title, children, timelineItems })
       {children}
       {timelineItems && (
         <div className="timeline">
-          {timelineItems.map((item, index) => {
-            const isPromotion = index > 0 && 
-              timelineItems[index - 1]?.company === item.company && 
-              timelineItems[index - 1]?.company_link === item.company_link;
-            
-            return (
-            <div key={index} className={`timeline-item ${isPromotion ? 'promotion-item' : ''}`}>
+          {timelineItems.map((item, index) => (
+            <div key={index} className="timeline-item">
               {item.date && <div className="date">{item.date}</div>}
-              {isPromotion && (
-                <div className="promotion-badge">Promoted</div>
-              )}
               
               {/* Current Job Title with Date */}
               <div className="job-title-container">
@@ -96,7 +88,7 @@ const Section: React.FC<SectionProps> = ({ id, title, children, timelineItems })
                 </div>
               )}
             </div>
-          )})}
+          ))}
         </div>
       )}
     </section>
