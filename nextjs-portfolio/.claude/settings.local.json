@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(tree -L 3 -I 'node_modules|.next' /Users/tunkeltesch/Documents/Tk-Media\\\\ Development/portfolio/nextjs-portfolio/ 2>/dev/null || find /Users/tunkeltesch/Documents/Tk-Media\\\\ Development/portfolio/nextjs-portfolio -type d -not -path '*/node_modules/*' -not -path '*/.next/*' | head -50)"
+    ]
+  }
+}
