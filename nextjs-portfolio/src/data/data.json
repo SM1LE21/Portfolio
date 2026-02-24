@@ -1,512 +1,77 @@
 {
-    "name": "Tun Keltesch",
-    "title": "Project Engineer | Software Engineer",
-    "description": "I build robust, user-friendly, and visually appealing web and mobile solutions, with a passion for continuous technical innovation.",
-    "about": [
-      "Over the past six years, I have immersed myself in the craft of creating digital solutions. My journey has taken me from mastering back-end systems and databases to crafting intuitive front-end experiences, from building responsive websites to developing native mobile applications. Currently, I am channeling all this expertise into ExpenseMate, a full-scale bill-splitting platform that combines all these skills into a practical, user-centric solution.",
-      "At Hexagon in Vienna, I currently operate as a Project Engineer, where I continue to tackle new challenges and further evolve my problem solving and creative instincts.",
-      "I speak Luxemburgish, French, German, English, and some Portuguese, opening doors to diverse partnerships and fresh perspectives.",
-      "Connect with me. Together we can build something extraordinary."
-    ],
-    "experience": [
-      {
-        "date": "2024-07 — Present",
-        "jobTitle": "Project Engineer",
-        "jobTitleDate": "2025-12 — Present",
-        "previousRoles": [
-          {
-            "title": "Junior Project Engineer",
-            "date": "2024-07 — 2025-12"
-          }
-        ],
-        "company": "Hexagon",
-        "company_link": "https://www.hexagon.com",
-        "description": "As a Project Engineer at Hexagon in Vienna, Austria, I support the planning, implementation, and management of engineering projects in the public safety sector.",
-        "skills": ["SQL", "C#", "SQL Server", "Azure DevOps", "VBA", "JavaScript", "RabbitMQ", "Microservices"]
-      },
-      {
-        "date": "2023-02 — 2024-06",
-        "jobTitle": "Software Engineer (Working Student)",
-        "company": "dyve GMBH",
-        "company_link": "https://dyve.agency",
-        "description": "Developed and maintained a Shopify website and contributed to the new version of Dyve GmbH's website, working flexibly from 8 to 30 hours a week based on project needs.",
-        "skills": ["JavaScript", "TypeScript", "Tailwind CSS", "Next.js", "GSAP", "Liquid", "Storyblok", "Shopify"]
-      },
-      {
-        "date": "2023-09 — 2024-01",
-        "jobTitle": "Software Engineer",
-        "company": "Agile Data Innovation GmbH",
-        "company_link": "https://agiledatainnovation.de",
-        "description": "Developed an attack tree visualization tool for the Frauenhofer Institut using Angular, TypeScript, and D3.js. Built AI chatbots, improved websites, and handled frontend/backend tasks for multiple projects.",
-        "skills": ["Python", "TypeScript", "React", "Angular", "OpenAI API", "Figma", "D3.js"]
-      },
-      {
-        "date": "2023-04 — 2023-07",
-        "jobTitle": "Internship (System programming lab)",
-        "company": "Chair of Embedded Software at RWTH Aachen University",
-        "company_link": "https://www.rwth-aachen.de",
-        "description": "Implemented an OS for an ATmega 644 using C. Gained hands-on experience in low-level programming and embedded systems development.",
-        "skills": ["C", "Embedded Systems", "OS Development"]
-      },
-      {
-        "date": "2020-08 — 2023-09",
-        "jobTitle": "Customer Technical Support",
-        "company": "Luxembourg Online S.A.",
-        "company_link": "https://www.internet.lu",
-        "description": "Provided first-level support to private clients and extended support to business clients, handling internet connectivity issues. Tested and provided feedback on internal tools, enhancing knowledge of web technologies and frontend development.",
-        "skills": ["Technical Support", "Troubleshooting", "Customer Service", "Web Technologies", "Frontend Development"]
-      }
-    ],  
-    "certificates": [
-      {
-        "date": "2025-07-29",
-        "jobTitle": "Microsoft AI & ML Engineering",
-        "title_link": "https://coursera.org/share/7960094581bc3489586ed38bbdf9cb55",
-        "company": "Microsoft",
-        "description": "Completed specialization covering AI & ML infrastructure design, algorithms and techniques including supervised, unsupervised, reinforcement learning, and deep learning. Developed intelligent troubleshooting agents and mastered Microsoft Azure for AI & ML workflows. Gained expertise in prompt engineering, natural language processing, generative AI, and large language modeling. Approximately 6 months at 7 hours a week to complete."
-      },
-      {
-        "date": "2025-04-06",
-        "jobTitle": "Meta iOS Developer",
-        "title_link": "https://www.coursera.org/account/accomplishments/specialization/certificate/Q4TMPJLKM45H",
-        "company": "Meta",
-        "description": "Learned iOS application development fundamentals, including Swift programming, UI design principles, and application lifecycle management. Gained practical experience in React Native for cross-platform development, and created a portfolio of iOS applications where I learned about publishing and maintenance capabilities. Approximately 8 months at 7 hours a week to complete."
-      },
-      {
-        "date": "2024-11-11",
-        "jobTitle": "RabbitMQ and Messaging Concepts",
-        "title_link": "https://www.udemy.com/certificate/UC-f22e44a7-f1ef-4540-8bb5-922972071b8c/",
-        "company": "Udemy",
-        "description": "Learned the basics of messaging systems and RabbitMQ. Gained hands-on experience configuring RabbitMQ, using the management web interface, and integrating it with C# and Java client libraries to implement common messaging scenarios."
-      },
-      {
-        "date": "2024-07-26",
-        "jobTitle": "C# Intermediate: Classes, Interfaces and OOP",
-        "title_link": "https://www.udemy.com/certificate/UC-326c8ea5-bc10-4628-99d2-5c5d4860456c/",
-        "company": "Udemy",
-        "description": "Gained skills in working with classes, interfaces, and object-oriented programming principles with C#. Learned to utilize encapsulation, inheritance, and composition to enhance code robustness and reusability. Developed expertise in building extensible, loosely-coupled, and testable applications using polymorphism and interfaces."
-      },
-      {
-        "date": "2022-11-22",
-        "jobTitle": "Specialization Certificate - Google UX Design",
-        "title_link": "https://www.coursera.org/account/accomplishments/specialization/certificate/SQD9Z8VSSXN2",
-        "company": "Google",
-        "description": "Completed seven courses that cover the entire UX design process, including empathizing with users, defining pain points, ideating design solutions, creating wireframes and prototypes, and testing designs for feedback."
-      },
-      {
-        "date": "2022-09-11",
-        "jobTitle": "Specialization Certificate - Google IT Automation with Python",
-        "title_link": "https://www.coursera.org/account/accomplishments/specialization/certificate/CX4GYR2C4FPH",
-        "company": "Google",
-        "description": "Completed multiple courses including Crash Course on Python, Troubleshooting and Debugging Techniques, Introduction to Git and GitHub, Configuration Management and the Cloud. Gained skills in automating tasks with Python, using Git and GitHub for version control, managing IT resources at scale, and analyzing real-world IT problems to implement appropriate solutions."
-      }
-    ],      
-    "education": [
-      {
-        "date": "2025-09 — 2027-09",
-        "jobTitle": "Master of Science - MS, AI Engineering",
-        "company": "FH Technikum Wien",
-        "company_link": "https://www.technikum-wien.at/"
-      },
-      {
-        "jobTitle": "Bachelor of Science - Computer Science",
-        "company": "RWTH Aachen University",
-        "company_link": "https://www.rwth-aachen.de"
-      },
-      {
-        "jobTitle": "General Certificate of Secondary Education",
-        "company": "Lycée Classique de Diekirch",
-        "company_link": "https://www.lcd.lu/",
-        "description": "Advanced level in Economics and Mathematics"
-      }
-    ],
-    "projects": [
-        {
-          "title": "ExpenseMate",
-          "description": "A bill-splitting app that makes sharing expenses with friends and groups effortless.",
-          "big_description": [
-              "ExpenseMate is a comprehensive bill-splitting application designed to simplify the way people share and track expenses. The idea behind this app comes from personal experience with the complexities of group expenses. It aims to make financial management in groups straightforward and efficient.",
-              "The app's standout feature is its intelligent receipt scanning capability, which automatically extracts expense details and categorizes them. This, combined with real-time expense tracking and group management, makes ExpenseMate a great tool for anyone who frequently shares expenses with others.",
-              "I built ExpenseMate with as a native iOS app using Swift and SwiftUI, focusing on creating a clean and intuitive interface. For the backend, we use FastAPI hosted on Google Cloud Run for scalability and reliability, with data stored securely in Google Cloud SQL. Firebase handles our authentication while push notifications are managed through our own Cloud Run service that communicates with Apple's APNs.",
-              "Currently available on iOS, with Android support planned for the near future, ExpenseMate represents my commitment to creating practical, user-friendly solutions to everyday problems."
-          ],
-          "link": "expensemate.app",
-          "link_text": "Visit ExpenseMate",
-          "image": "",
-          "video": "/assets/expensemate_demo.mov",
-          "showMainMedia": true,
-          "embedWebsite": false,
-          "embedLink": "",
-          "skills": [
-              "Swift",
-              "SwiftUI",
-              "Python",
-              "Gemini API",
-              "OpenAI API",
-              "Image Processing",
-              "OCR",
-              "FastAPI",
-              "Google Cloud Run",
-              "Google Cloud SQL",
-              "Firebase Authentication",
-              "Firebase Cloud Messaging",
-              "Docker",
-              "RESTful APIs",
-              "Push Notifications",
-              "Receipt Scanning",
-              "Real-time Data Sync",
-              "Cloud Infrastructure",
-              "CI/CD",
-              "TypeScript",
-              "Next.js",
-              "Tailwind CSS"
-          ],
-          "content": [
-              {
-                "title": "System Architecture",
-                "image": "/assets/expensemate_architecture.png"
-              },
-              {
-                "description": [
-                  "ExpenseMate follows a modern service-oriented architecture with five main components:",
-                  "1. **iOS App**: Built with Swift and SwiftUI. It serves as the primary user interface, handling receipt scans, expense tracking, and group management. It communicates with Firebase for authentication, the Backend API for data operations, and receives push notifications via APNs.",
-                  "2. **Backend API**: Developed with FastAPI and deployed on Google Cloud Run. It manages all business logic, receipt processing, data validation, and API requests from the iOS app. It validates Firebase tokens, sends push notifications via APNs, and interacts securely with the database.",
-                  "3. **Database**: A PostgreSQL instance hosted on Google Cloud SQL. It stores all core application data including users, groups, expenses, receipts, and device tokens. It is only accessed by the Backend.",
-                  "4. **Firebase**: Used for authentication and cloud messaging. It issues tokens to the iOS app, which the Backend validates. It also manages sessions and push notification tokens.",
-                  "5. **Marketing Website**: A standalone Next.js application hosted on Vercel. It serves marketing content, links to the App Store, and hosts documentation. It has no direct interaction with the other systems."
-                ]
-              },
-              {
-                "title": "Key Features",
-                "description": [
-                  "• **Smart Bill Splitting**: Automatically calculate each person's share based on custom rules and percentages.",
-                  "• **Receipt Scanning**: Snap a photo and let ExpenseMate extract items and calculate splits automatically.",
-                  "• **Group Management**: Create and organize multiple groups for different events or living situations.",
-                  "• **Expense Tracking**: Monitor all expenses and settlements with a clear transaction history.",
-                  "• **Real-time Updates**: Receive instant notifications when expenses are added or bills are settled.",
-                  "• **Debt Settlement**: Streamline repayments with automated calculations and payment tracking."
-                ]
-              },
-              {
-                "title": "Future Roadmap"
-              },
-              {
-                "description": [
-                  "• Version 1.1 (Q2 2025): One‑tap sign‑in (Google & Apple), German/French, improved onboarding and UI/UX.",
-                  "• Android App v1.0 (Q3 2025): Full Android launch with iOS feature parity.",
-                  "• Version 1.2 (Sep 2025): Spanish & Portuguese, improved group creation/sharing, expense categories (iOS early Sep; Android late Sep).",
-                  "• Version 1.3 (Q4 2025): Offline mode, Excel import, PDF/CSV reports, automatic currency conversion.",
-                  "• ExpenseMate Web (Q4 2025): Desktop‑optimized web app with dashboards.",
-                  "• Personal Space (Q1 2026): Personal expense tracking, quick scan, unified view, Excel import.",
-                  "• Work Space (Q3 2026): Business‑trip tracker, company‑card vs personal toggle, one‑click reports; integrated with Personal Space."
-                ]
-                },
-                {
-                  "title": "Motivation & Vision"
-                },
-                {
-                  "description": [
-                    "ExpenseMate is built to be the one home for all your spending—trips with friends, personal budgeting, and work reimbursements. It captures, organizes, and reconciles all your spending in one place.",
-                    "Our vision is a clear, actionable overview: see what your job owes you, what others owe you, what you owe, and what you truly spend. Generate personalized reports for work and personal use in seconds.",
-                    "Looking ahead to 2026, we aim to add Investment Portfolios so you can represent 100% of your personal finances in one dashboard for expenses, reimbursements, and investments with full transparency.",
-                    "Behind the app: I'm Tun, building ExpenseMate, the expense-tracker I've always wanted. While I am still growing as a developer and entrepreneur, I am on a mission to make money management simple, complete, and trustworthy."
-                  ]
-                }              
-          ]
-        },
-        {
-          "title": "Text2UML",
-          "description": "A VS Code extension for automated generation of graphical representations from textual UML diagrams.",
-          "big_description": [
-              "I developed the Text2UML tool for my bachelor's thesis titled 'Generating Graphical Representations for UML Sequence and Activity Diagrams from Textual Variants'. This thesis presents a tool that automates the generation of graphical representations from textual variants of UML sequence diagrams (SDs) and activity diagrams (ADs), utilizing the MontiCore language workbench. Designed to enhance model-driven software engineering (MDSE) methodologies, this tool is integrated into the Visual Studio Code (VS Code) environment through an extension.",
-              "The tool employs the Language Server Protocol (LSP) to extract diagram data from MontiCore DSLs, enabling synchronized visualization alongside the textual model. A key feature of this tool is the bidirectional navigation between textual and visual representations, allowing users to transition from code to diagram and vice versa. This functionality improves the accessibility and utility of MDSE visualizations and facilitates a deeper understanding of UML diagrams.",
-              "The main goal of the tool is to provide direct visualization inside VS Code, allowing for a side-by-side view with the textual model on one side and the visualization on the other. The extension dynamically generates and updates visualizations based on any modifications within the text document.",
-              "The tool uses Java for the backend (LSP server) and TypeScript for the VS Code extension backend and frontend. React and D3.js are used for rendering the diagrams. The visualization process is separated into layout algorithms and rendering logic. We use ELKJS for the AD renderer and developed a custom layout algorithm for SDs.",
-              "This project not only showcases advanced integration techniques and synchronized data visualization but also contributes to the broader MDSE field by improving the interaction between textual and graphical models."
-          ],
-          "link": "",
-          "link_text": "",
-          "image": "",
-          "video": "/assets/text2uml.mp4",
-          "showMainMedia": false,
-          "skills": ["Java", "TypeScript", "React", "D3.js", "ELKJS", "MontiCore", "LSP", "VS-Code Extension"],
-          "content": [
-              {   
-                  "title": "Architectural Overview of Text2UML Tool Communication Flow",
-                  "image": "/assets/text2uml_frontendBackendCommunication.png",
-                  "description": "",
-                  "video": ""
-              },
-              {
-                  "title": "Visualization Workflow",
-                  "image": "/assets/text2uml_visualizationWorkflow.png",
-                  "description": "",
-                  "video": ""
-              },
-              {
-                  "title": "Example Videos of the Tool in Action",
-                  "image": "",
-                  "description": "",
-                  "video": "/assets/text2uml_AD.mov"
-              },
-              {
-                  "image": "",
-                  "description": "",
-                  "video": "/assets/text2uml_SD.mp4"
-              }
-          ]
-        },
-        {
-          "title": "Tennis Coach AI",
-          "description": "RAG-powered AI tennis coaching system that answers questions using transcripts from real coaching sessions.",
-          "big_description": [
-            "Tennis Coach AI is a Retrieval-Augmented Generation (RAG) system designed to provide expert tennis coaching advice by leveraging transcripts from actual coaching sessions. The system transforms 33 coaching transcripts into 601 searchable chunks with vector embeddings, enabling intelligent question-answering with source citations.",
-            "The platform uses a sophisticated hybrid search approach that combines BM25 (keyword-based) and vector similarity (semantic) search to retrieve the most relevant coaching insights. This dual approach ensures that users get accurate answers whether they use specific tennis terminology or more general phrasing.",
-            "Built with FastAPI on the backend and Next.js 15 on the frontend, the system integrates PostgreSQL 15+ with the pgvector extension for efficient vector similarity search. OpenAI's API powers both the text embeddings (text-embedding-3-small) and the language model (gpt-4o-mini) for generating responses.",
-            "A standout feature is the multi-language support—users can ask questions in English or German, and the system automatically detects the language, translates queries for optimal search performance, and responds in the user's original language. Every answer includes citations to the source transcripts, ensuring transparency and credibility.",
-            "The system also supports conversation context, allowing users to ask follow-up questions naturally. The frontend sends the last 10 messages as context, enabling multi-turn conversations while maintaining cost efficiency at approximately $0.0003-$0.001 per query.",
-            "This project demonstrates a production-ready RAG implementation that combines advanced NLP techniques, efficient vector search, and thoughtful UX design to create a practical AI coaching assistant. With response times of 3-10 seconds and the capacity to scale to millions of chunks, it represents a robust solution for knowledge retrieval from specialized domain content."
-          ],
-          "link": "mtc-ai-chat.vercel.app",
-          "link_text": "Try Tennis Coach AI",
-          "image": "/assets/AI_Tennis_Project.png",
-          "video": "",
-          "showMainMedia": false,
-          "embedWebsite": true,
-          "embedLink": "mtc-ai-chat.vercel.app/",
-          "skills": [
-            "FastAPI",
-            "PostgreSQL",
-            "pgvector",
-            "OpenAI API",
-            "Next.js",
-            "TypeScript",
-            "Tailwind CSS",
-            "Python",
-            "RAG",
-            "Vector Embeddings",
-            "Hybrid Search",
-            "BM25",
-            "SQLAlchemy",
-            "Uvicorn",
-            "Multi-language Support",
-            "tiktoken"
-          ],
-          "content": [
-            {
-              "title": "System Architecture",
-              "description": [
-                "The Tennis Coach AI system follows a modern microservices architecture with clear separation of concerns:",
-                "",
-                "**Frontend (Next.js 15)**: Built with TypeScript and Tailwind CSS, the frontend provides an intuitive chat interface with real-time token usage tracking and citation display. It handles language detection on the client side and formats responses using React Markdown.",
-                "",
-                "**Backend (FastAPI)**: The Python-based backend manages the entire RAG pipeline. It receives queries via the `/api/v1/ask` endpoint, performs language detection using langdetect, translates German queries to English for optimal search, and orchestrates the retrieval and generation process.",
-                "",
-                "**Database (PostgreSQL + pgvector)**: A PostgreSQL 15+ instance with the pgvector extension stores 601 text chunks along with their vector embeddings. The database supports both traditional BM25 keyword search and vector similarity search, enabling the hybrid retrieval strategy.",
-                "",
-                "**OpenAI Integration**: The system uses OpenAI's `text-embedding-3-small` model for generating embeddings and `gpt-4o-mini` for generating answers. The LLM receives the top K retrieved chunks as context and generates responses with inline citations.",
-                "",
-                "**Data Flow**: Query → Language Detection → Translation (if needed) → Hybrid Search (BM25 + Vector) → Top K Retrieval → LLM Generation → Response with Citations"
-              ]
-            },
-            {
-              "title": "Key Features & Innovation",
-              "description": [
-                "• **Hybrid Search**: Combines BM25 keyword search with vector similarity for superior retrieval accuracy. BM25 catches exact terminology matches while vector search understands semantic meaning.",
-                "",
-                "• **Multi-language Support**: Automatically detects English or German queries, translates for optimal search, and responds in the user's original language. Seamless cross-language experience.",
-                "",
-                "• **Conversation Context**: Maintains the last 10 messages as context, enabling natural follow-up questions and multi-turn conversations without re-explaining context.",
-                "",
-                "• **Source Citations**: Every answer includes citations to specific transcript chunks, allowing users to verify information and explore the source material.",
-                "",
-                "• **Cost Efficiency**: Uses `gpt-4o-mini` and `text-embedding-3-small` models, keeping costs at $0.0003-$0.001 per query while maintaining high answer quality.",
-                "",
-                "• **Token Usage Tracking**: Real-time display of input and output tokens used, providing transparency on API costs and system efficiency.",
-                "",
-                "• **Production-Ready**: Deployed on Vercel with proper error handling, rate limiting considerations, and scalable architecture capable of handling millions of chunks.",
-                "",
-                "• **Fast Response Times**: Average response time of 3-10 seconds, with search latency of only 100-300ms thanks to efficient pgvector indexing."
-              ]
-            },
-            {
-              "title": "Technical Deep Dive",
-              "description": [
-                "**RAG Pipeline**: The system implements a sophisticated Retrieval-Augmented Generation pipeline that chunks 33 tennis coaching transcripts into 601 semantically meaningful segments. Each chunk is embedded using OpenAI's text-embedding-3-small model, creating 1536-dimensional vectors stored in PostgreSQL with pgvector.",
-                "",
-                "**Hybrid Search Strategy**: Rather than relying solely on semantic search, the system combines BM25 (term frequency-inverse document frequency) with vector similarity. This hybrid approach ensures that both exact terminology matches and conceptually similar content are retrieved, providing comprehensive context to the language model.",
-                "",
-                "**Context Window Management**: Using tiktoken for accurate token counting, the system dynamically manages context to stay within the model's limits while maximizing the information provided. The top K retrieval parameter is adjustable (3-8 chunks) based on query complexity.",
-                "",
-                "**Translation Strategy**: German queries are automatically translated to English before search, as the transcript embeddings are in English. This ensures optimal semantic matching across languages while still providing responses in the user's preferred language.",
-                "",
-                "**Database Design**: SQLAlchemy ORM manages the database layer with efficient indexing on both text (for BM25) and vector columns (for similarity search). The pgvector extension enables high-performance approximate nearest neighbor search at scale."
-              ]
-            },
-            {
-              "title": "Try It Out",
-              "description": [
-                "**Note**: This is the first version of the system. Context handling for long conversations doesn't work optimally yet. For best results, test with single questions and single answers.",
-                "",
-                "Example questions to try:",
-                "• How can I improve my serve?",
-                "• What is the proper backhand technique?",
-                "• Wie kann ich meinen Aufschlag verbessern? (German)",
-                "• What are the key elements of a good forehand?"
-              ]
-            }
-          ]
-        },
-        {
-          "title": "TK CHAT",
-          "description": "AI-powered chat widget for websites, offering direct interaction with a customizable AI assistant.",
-          "big_description": [
-            "---",
-            "TK CHAT is an AI-powered chat widget designed to be easily integrated into websites. It enables user interaction with an AI assistant. The widget offers customization options, allowing it to be tailored to meet the unique needs of different websites and adapt to various screen sizes.",
-            "I built the frontend with React and TypeScript. TK CHAT features a responsive design with smooth animations implemented with GSAP. It provides session persistence across page refreshes, along with feedback submission for continuous improvement.",
-            "The backend is built with FastAPI and OpenAI's API. Here I used SQLite for data storage and I follow the RESTful API design. It also employs session management, rate limiting, and secure CORS handling to offer both functionality and security.",
-            "This project represents my approach to implement an AI enhanced chat functionality. I tried to use advanced frontend and backend technologies to create a smooth user experience. As I continue to implement TK CHAT on websites and expand its functionality, I plan to update this project with new (optional) features and improvements from time to time.",
-            "This implementation serves as a starting block for any AI chat functionality on websites. It is easily customizable and can be expanded to include additional features, such as website navigation by asking the AI assistant for help. An Example of this can be on this website, and a description can be found in the 'Portfolio Website' project.",
-            "---"
-          ],
-          "github_link": "github.com/SM1LE21/TK_CHAT/tree/main",
-          "link": "",
-          "link_text": "",
-          "image": "",
-          "video": "/assets/TKCHAT_VIDEO.mp4",
-          "showMainMedia": false,
-          "embedWebsite": false,
-          "embedLink": "",
-          "skills": [ "React", "TypeScript", "GSAP", "Python", "FastAPI", "SQLite", "OpenAI API", "GPT"],
-          "content": [
-            {   
-              "title": "Feel free to test the tool on this website:",
-              "image": "/assets/TKCHAT.png"
-            },
-            {
-              "title": "Example Video of TK CHAT in Action",
-              "image": "",
-              "description": "",
-              "video": "/assets/TKCHAT_VIDEO.mp4"
-            }
-          ]
-        },
-        {
-          "title": "CanvasCraft",
-          "description": "AI image generation tool, with accurate color palette and style transfer.",
-          "big_description": [
-              "CanvasCraft is an AI-powered image generation tool designed to create stunning visuals. By leveraging OpenAI's DALL-E 3, CanvasCraft transforms text prompts into detailed images, accurately replicating color palettes and applying various art styles.",
-              "Users start by entering simple information. Through the help of GPT, the system refines this initial input by internally communicating with itself, ensuring a highly precise and detailed prompt is constructed. This refined prompt is then sent to DALL-E 3 to generate the final image.",
-              "The backend, built with Python and Flask, implements OpenAI's API to ensure high-quality image outputs. Users can specify color palettes, themes, moods, and custom prompts to guide the image generation process.",
-              "On the frontend, CanvasCraft utilizes React and TailwindCSS to provide an intuitive user interface. The application offers a range of options for users to select their desired artistic elements and see their visions come to life."
-          ],
-          "link": "",
-          "link_text": "",
-          "image": "/assets/canvascraft.png",
-          "video": "",
-          "showMainMedia": false,
-          "embedWebsite": true,
-          "embedLink": "widgethoster.sytes.net/canvascraft/",
-          "skills": ["Python", "Flask", "React", "TailwindCSS", "OpenAI API", "GPT", "DALL-E 3"],
-          "content": [
-              {   
-                  "title": "Feel free to test the tool:"
-              }
-          ]
-        },
-        {
-          "title": "Portfolio Website",
-          "description": "This portfolio website showcasing my work, skills, and projects.",
-          "big_description": [
-            "This project is my personal portfolio website, designed to present an interactive and visually appealing overview of my professional journey, skills, and completed projects. The website features sections like About Me, Projects, and Contact, all managed via a central data.json file for easy content updates.",
-            "The current implementation is built with Next.js 15 and TypeScript, utilizing the App Router for modern React development patterns. The project leverages Tailwind CSS for styling and GSAP for smooth animations and enhanced user experience. It's deployed on Vercel, providing excellent performance, automatic deployments, and global CDN distribution.",
-            "This website evolved from its original React implementation that was hosted on GitHub Pages. The migration to Next.js brought significant improvements including server-side rendering, better SEO capabilities, improved performance through automatic code splitting, and enhanced developer experience with features like the App Router and built-in API routes.",
-            "I have integrated **TK CHAT**, my AI-powered chatbot, to assist with navigation and provide information about various sections of the website. The chatbot uses OpenAI's function-calling capabilities to interpret user requests and navigate directly to relevant sections, offering a more interactive user experience.",
-            "This website not only showcases my portfolio but also serves as a reusable template for anyone looking to create a similar online presence. It includes a structured data management approach, making content updates straightforward and efficient."
-          ],
-          "github_link": "github.com/SM1LE21/Portfolio",
-          "link": "",
-          "link_text": "",
-          "image": "/assets/TK_Logo.png",
-          "video": "",
-          "showMainMedia": false,
-          "embedWebsite": false,
-          "embedLink": "",
-          "skills": [
-            "Next.js",
-            "React",
-            "TypeScript",
-            "Tailwind CSS",
-            "GSAP",
-            "Vercel",
-            "App Router",
-            "Server-Side Rendering",
-            "JSON Data Management"
-          ],
-          "content": [
-            {   
-              "title": "Feel free to test TK CHAT:",
-              "image": "/assets/TKCHAT.png"
-            },
-            {
-              "title": "Example Video of TK CHAT in Action",
-              "image": "",
-              "description": "",
-              "video": "/assets/TKCHAT_VIDEO.mp4"
-            },
-            {
-              "description": [ 
-                "---"
-              ]
-            },
-            {
-              "title": "Planned Improvements for the Portfolio Website:",
-              "description": [
-                "1. **Database Integration**: Transition from using a central data.json file to a database solution for more scalable data management. This change will allow for dynamic content updates and more flexibility in displaying information.",
-                "2. **Enhanced TK CHAT Features**: I am continuously working on improving the features of TK CHAT. Currently, the chatbot can navigate to general sections of the website but struggles with navigating to specific project pages. Additionally, the mobile chat experience needs improvement, as users may not notice background navigation changes while the full-screen chat is open.",
-                "3. **Expanded AI Functionality**: Future updates will include more advanced function-calling capabilities in TK CHAT, allowing the AI to perform actions beyond navigation, such as providing detailed project explanations or answering specific questions about my skills and experience.",
-                "4. **Performance Optimizations**: Leverage Next.js 15's latest features including improved image optimization, better caching strategies, and enhanced loading performance for an even smoother user experience."
-              ]
-            }
-          ]
-        },           
-        {
-            "title": "LLInvoker",
-            "description": "Personalized language learning through news and generated exercises.",
-            "big_description": [
-                "The project we're presenting, LLInvoker, is a language learning platform that uses the power of AI to offer personalized and dynamic language exercises. Our goal is to make language learning accessible, engaging, and flexible for modern learners by leveraging advanced natural language processing.",
-                "Initially, our ideas focused on using news articles and generated exercises to help users improve their language skills. The platform was designed to allow users to select their target language and proficiency level, after which it would provide relevant news articles in the target language. Exercises based on these articles, such as vocabulary quizzes, grammar exercises, and comprehension questions, were also part of the plan. We intended to continue developing the platform beyond the competition deadline of August 12, 2024.",
-                "For the competition, we delivered a platform called LLInvoker that integrates the Gemini API to generate A1-level exercises in both German and French. Users can request customized exercises based on their language level and topics of interest. We also included a feature where Gemini corrects and verifies users' answers, offering a more interactive learning experience. Additionally, users can generate custom exercises through a chat feature, allowing them to select exercise types and incorporate images or descriptions to create personalized learning activities. While the platform is in its alpha stage and some features from our initial plans are still under development, we believe LLInvoker demonstrates significant potential.",
-                "Looking forward, we plan to collaborate with educational institutions and introduce more advanced exercises, such as those initially planned with news articles, reading exercises, and conversational practice that offers pronunciation feedback. We're also considering a rework of the frontend to make it more playful and user-friendly, likely switching to React Native due to our team's experience with similar frameworks. To get a better idea of our project, you can check out the video we submitted for the competition."
-            ],
-            "link": "ai.google.dev/",
-            "link_text": "Checkout the Gemini API Developer Competition",
-            "image": "/assets/gemini.jpg",
-            "video": "https://www.youtube.com/watch?v=DG44aGDvXmo",
-            "showMainMedia": true,
-            "skills": ["Dart", "Flutter", "Google Cloud", "Firebase", "Google Functions", "Python", "Gemini API"],
-            "content": [
-  
-            ]
-        }
-    ],
-      
-    "socialLinks": [
-        {
-            "title": "GitHub",
-            "url": "https://github.com/SM1LE21",
-            "icon": "/icons/github.svg"
-        },
-        {
-            "title": "Email",
-            "url": "mailto:tun.keltesch@gmail.com",
-            "icon": "/icons/email.svg"
-        },
-        {
-          "title": "LinkedIn",
-          "url": "https://www.linkedin.com/in/tun-keltesch-830294250/",
-          "icon": "/icons/linkedin.svg"
-        }
-      ]      
-  }
-  
+  "name": "Tun Keltesch",
+  "tagline": "Building AI tools for negotiation, shared expenses, and visual understanding.",
+  "about": {
+    "paragraphs": [
+      { "text": "I'm Tun — AI engineer, builder, and the kind of person who reads *Never Split the Difference* and *Zero to One* back to back and immediately applies it to whatever I'm working on." },
+      { "text": "I run TK MEDIA, a software studio based in Luxembourg. We build for clients who need things done right and fast — web, AI, automation — and we ship our own products on the side. Sharp team, no bloat, high standards." },
+      { "text": "I care deeply about problems that affect people daily but still have terrible solutions. That's what drives what I build." },
+      { "text": "Luxembourgish by origin, which means English, French, German, and Luxembourgish are all just... normal. Building across borders comes with the passport." },
+      { "text": "Something bigger is in the works. More soon." }
+    ]
+  },
+  "tkMedia": {
+    "title": "TK MEDIA",
+    "subtitle": "My Software Studio",
+    "description": "TK MEDIA is a small software studio I started to build and ship products fast. We focus on web apps and AI automation, and we build and own our own products — ExpenseMate and NegotiationEdge.",
+    "link": "https://www.tkmedia.lu/",
+    "linkText": "Visit TK MEDIA"
+  },
+  "products": [
+    {
+      "name": "ExpenseMate",
+      "tag": "Product · TK MEDIA",
+      "tagline": "Smart receipt scanning and bill-splitting app that turns messy group expenses into clean, fair splits.",
+      "bullets": [
+        "Scan any receipt — AI extracts items, prices, and tax automatically",
+        "Split with friends, travel groups, or housemates in seconds",
+        "Track who owes what across multiple events and settle up easily"
+      ],
+      "link": "https://expensemate.app",
+      "linkText": "View ExpenseMate",
+      "status": "live",
+      "image": "/assets/expensemate_demo.mov"
+    },
+    {
+      "name": "NegotiationEdge",
+      "tag": "Product · TK MEDIA",
+      "tagline": "AI negotiation coach that lets you practice high-stakes conversations in realistic simulations.",
+      "bullets": [
+        "Practice salary talks, vendor deals, or investor pitches against AI",
+        "Get real-time feedback on your strategy, tone, and leverage",
+        "Built because I wanted to get better at negotiation — so I built the tool I wanted"
+      ],
+      "link": "https://negotiationedge.app",
+      "linkText": "Join the Waitlist",
+      "status": "coming-soon"
+    }
+  ],
+  "experiments": [
+    {
+      "name": "Text2UML",
+      "tagline": "Turn natural language into UML diagrams for faster system thinking.",
+      "description": "A VS Code extension that automatically generates graphical UML representations from textual diagram descriptions. Built as my Bachelor's thesis at RWTH Aachen — combines a Java-based Language Server Protocol backend with a React + D3.js visualization frontend.",
+      "tech": ["Java", "TypeScript", "React", "D3.js", "MontiCore"],
+      "link": "/text2uml",
+      "linkType": "internal"
+    },
+    {
+      "name": "Tennis Coach AI",
+      "tagline": "RAG-powered tennis coaching from 33 real coaching transcripts.",
+      "description": "A retrieval-augmented generation system trained on 601 chunks from real tennis coaching sessions. Uses hybrid search (BM25 + vector similarity) to find relevant coaching advice, supports English and German with auto-detection, and cites its sources.",
+      "tech": ["FastAPI", "PostgreSQL", "pgvector", "OpenAI API", "Next.js", "Python"],
+      "link": "https://mtc-ai-chat.vercel.app",
+      "linkType": "live"
+    }
+  ],
+  "nowAndNext": [
+    "Evolving ExpenseMate from social bill-splitting into a broader money management companion.",
+    "Preparing NegotiationEdge for broader early-adopter testing.",
+    "Co-founding a company in vision AI — applying computer vision and video analysis to racket sports."
+  ],
+  "socialLinks": [
+    { "title": "GitHub", "url": "https://github.com/SM1LE21", "icon": "/icons/github.svg" },
+    { "title": "Email", "url": "mailto:tun.keltesch@gmail.com", "icon": "/icons/email.svg" },
+    { "title": "LinkedIn", "url": "https://www.linkedin.com/in/tun-keltesch-830294250/", "icon": "/icons/linkedin.svg" }
+  ]
+}

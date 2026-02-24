@@ -1,11 +1,22 @@
 import type { Metadata } from 'next'
+import { Inter, Space_Grotesk } from 'next/font/google'
 import './globals.css'
-import './index.css'
-import ChatInterface from '../components/ChatInterface'
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+})
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  variable: '--font-space-grotesk',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
-  title: 'Tun Keltesch - Portfolio',
-  description: 'Project Engineer | Software Engineer - I build robust, user-friendly, and visually appealing web and mobile solutions, with a passion for continuous technical innovation.',
+  title: 'Tun Keltesch',
+  description: 'Entrepreneur-focused AI engineer building products around negotiation, money, and visual AI through TK MEDIA.',
   icons: {
     icon: [
       { url: '/TK_Logo_alt.png', sizes: '32x32', type: 'image/png' },
@@ -22,9 +33,14 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
       <head>
-        {/* Google Analytics */}
+        {/* Prevent dark mode flash: set body class before React hydrates */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{if(localStorage.getItem('lightMode')==='true'){document.documentElement.dataset.theme='light'}}catch(e){}})()`,
+          }}
+        />
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-VGZ0RYLC5K"></script>
         <script
           dangerouslySetInnerHTML={{
@@ -39,7 +55,6 @@ export default function RootLayout({
       </head>
       <body>
         {children}
-        <ChatInterface />
       </body>
     </html>
   )

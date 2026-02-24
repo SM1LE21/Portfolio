@@ -1,7 +1,17 @@
 {
   "permissions": {
     "allow": [
-      "Bash(tree -L 3 -I 'node_modules|.next' /Users/tunkeltesch/Documents/Tk-Media\\\\ Development/portfolio/nextjs-portfolio/ 2>/dev/null || find /Users/tunkeltesch/Documents/Tk-Media\\\\ Development/portfolio/nextjs-portfolio -type d -not -path '*/node_modules/*' -not -path '*/.next/*' | head -50)"
+      "Bash(tree -L 3 -I 'node_modules|.next' /Users/tunkeltesch/Documents/Tk-Media\\\\ Development/portfolio/nextjs-portfolio/ 2>/dev/null || find /Users/tunkeltesch/Documents/Tk-Media\\\\ Development/portfolio/nextjs-portfolio -type d -not -path '*/node_modules/*' -not -path '*/.next/*' | head -50)",
+      "Bash(cd \"/Users/tunkeltesch/Documents/Tk-Media Development/portfolio/nextjs-portfolio\" && npm uninstall axios dompurify react-syntax-highlighter @types/react-syntax-highlighter marked rehype-raw rehype-sanitize @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome 2>&1)",
+      "Bash(cd \"/Users/tunkeltesch/Documents/Tk-Media Development/portfolio/nextjs-portfolio\" && npm uninstall react-markdown remark-gfm 2>&1)",
+      "Bash(cd \"/Users/tunkeltesch/Documents/Tk-Media Development/portfolio/nextjs-portfolio\" && npm uninstall gsap @gsap/react 2>&1)",
+      "Bash(cd \"/Users/tunkeltesch/Documents/Tk-Media Development/portfolio/nextjs-portfolio\" && npm run build 2>&1)",
+      "Bash(cd \"/Users/tunkeltesch/Documents/Tk-Media Development/portfolio/nextjs-portfolio\" && npm run lint 2>&1)",
+      "Bash(find /Users/tunkeltesch/Documents/Tk-Media\\\\ Development/portfolio/nextjs-portfolio -name \"*[Tt]ext*[Uu]ml*\" -o -name \"*[Uu]ml*\" 2>/dev/null | head -20)",
+      "Bash(git -C /Users/tunkeltesch/Documents/Tk-Media\\\\ Development/portfolio/nextjs-portfolio log --all --full-history --diff-filter=D --summary | grep -i \"text2uml\\\\|text.*uml\\\\|uml\" | head -50)",
+      "Bash(git -C /Users/tunkeltesch/Documents/Tk-Media\\\\ Development/portfolio/nextjs-portfolio log --all --full-history -S \"text2uml\" --oneline | head -20)",
+      "Bash(git -C /Users/tunkeltesch/Documents/Tk-Media\\\\ Development/portfolio/nextjs-portfolio log --all --full-history --name-status --oneline | grep -i \"text2uml\\\\|uml\" | head -30)",
+      "Bash(git -C /Users/tunkeltesch/Documents/Tk-Media\\\\ Development/portfolio/nextjs-portfolio log --oneline | head -20)"
     ]
   }
 }
