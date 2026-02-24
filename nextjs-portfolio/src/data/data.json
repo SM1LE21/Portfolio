@@ -3,8 +3,8 @@
   "tagline": "Building AI tools for negotiation, shared expenses, and visual understanding.",
   "about": {
     "paragraphs": [
-      { "text": "I'm Tun — AI engineer, builder, and the kind of person who reads *Never Split the Difference* and *Zero to One* back to back and immediately applies it to whatever I'm working on." },
-      { "text": "I run TK MEDIA, a software studio based in Luxembourg. We build for clients who need things done right and fast — web, AI, automation — and we ship our own products on the side. Sharp team, no bloat, high standards." },
+      { "text": "I'm Tun. AI engineer, builder, and the kind of person who reads *Never Split the Difference* and *Zero to One* back to back and immediately applies it to whatever I'm working on." },
+      { "text": "I run TK MEDIA, a software studio based in Luxembourg. We build for clients who need things done right and fast: web, AI, automation. We also ship our own products on the side. Sharp team, no bloat, high standards." },
       { "text": "I care deeply about problems that affect people daily but still have terrible solutions. That's what drives what I build." },
       { "text": "Luxembourgish by origin, which means English, French, German, and Luxembourgish are all just... normal. Building across borders comes with the passport." },
       { "text": "Something bigger is in the works. More soon." }
@@ -13,7 +13,7 @@
   "tkMedia": {
     "title": "TK MEDIA",
     "subtitle": "My Software Studio",
-    "description": "TK MEDIA is a small software studio I started to build and ship products fast. We focus on web apps and AI automation, and we build and own our own products — ExpenseMate and NegotiationEdge.",
+    "description": "TK MEDIA is a small software studio I started to build and ship products fast. We focus on web apps and AI automation, and we build and own our own products, including ExpenseMate and NegotiationEdge.",
     "link": "https://www.tkmedia.lu/",
     "linkText": "Visit TK MEDIA"
   },
@@ -23,7 +23,7 @@
       "tag": "Product · TK MEDIA",
       "tagline": "Smart receipt scanning and bill-splitting app that turns messy group expenses into clean, fair splits.",
       "bullets": [
-        "Scan any receipt — AI extracts items, prices, and tax automatically",
+        "Scan any receipt and let AI extract items, prices, and tax automatically",
         "Split with friends, travel groups, or housemates in seconds",
         "Track who owes what across multiple events and settle up easily"
       ],
@@ -39,7 +39,7 @@
       "bullets": [
         "Practice salary talks, vendor deals, or investor pitches against AI",
         "Get real-time feedback on your strategy, tone, and leverage",
-        "Built because I wanted to get better at negotiation — so I built the tool I wanted"
+        "Built because I wanted to get better at negotiation, so I built the tool I wanted"
       ],
       "link": "https://negotiationedge.app",
       "linkText": "Join the Waitlist",
@@ -50,7 +50,7 @@
     {
       "name": "Text2UML",
       "tagline": "Turn natural language into UML diagrams for faster system thinking.",
-      "description": "A VS Code extension that automatically generates graphical UML representations from textual diagram descriptions. Built as my Bachelor's thesis at RWTH Aachen — combines a Java-based Language Server Protocol backend with a React + D3.js visualization frontend.",
+      "description": "A VS Code extension that automatically generates graphical UML representations from textual diagram descriptions. Built as my Bachelor's thesis at RWTH Aachen, it combines a Java-based Language Server Protocol backend with a React + D3.js visualization frontend.",
       "tech": ["Java", "TypeScript", "React", "D3.js", "MontiCore"],
       "link": "/text2uml",
       "linkType": "internal"
@@ -67,7 +67,7 @@
   "nowAndNext": [
     "Evolving ExpenseMate from social bill-splitting into a broader money management companion.",
     "Preparing NegotiationEdge for broader early-adopter testing.",
-    "Co-founding a company in vision AI — applying computer vision and video analysis to racket sports."
+    "Co-founding a company in vision AI, applying computer vision and video analysis to racket sports."
   ],
   "socialLinks": [
     { "title": "GitHub", "url": "https://github.com/SM1LE21", "icon": "/icons/github.svg" },

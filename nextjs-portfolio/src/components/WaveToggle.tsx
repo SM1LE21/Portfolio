@@ -50,7 +50,7 @@ const WaveToggle: React.FC = () => {
       (el as HTMLElement).style.setProperty('--ripple-delay', `${delay}ms`);
     });
 
-    // Flip the theme — CSS variable transitions fire at staggered delays
+    // Flip the theme. CSS variable transitions fire at staggered delays
     if (newMode) {
       document.documentElement.dataset.theme = 'light';
     } else {

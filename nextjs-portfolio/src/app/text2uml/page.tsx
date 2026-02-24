@@ -16,7 +16,7 @@ export default function Text2UMLPage() {
         <p className="subpage-label">Experiment &middot; Bachelor&apos;s Thesis</p>
         <h1>Text2UML</h1>
         <p className="subpage-tagline">
-          A VS Code extension that turns natural language into UML diagrams — built as my Bachelor&apos;s thesis at RWTH Aachen University.
+          A VS Code extension that turns natural language into UML diagrams. Built as my Bachelor&apos;s thesis at RWTH Aachen University.
         </p>
       </header>
 
@@ -24,7 +24,7 @@ export default function Text2UMLPage() {
         <h2>What it does</h2>
         <p>
           Text2UML automatically generates graphical UML representations from textual diagram descriptions.
-          You write a diagram in a structured textual format, and the extension renders it live inside VS Code — no dragging boxes around, no switching tools.
+          You write a diagram in a structured textual format, and the extension renders it live inside VS Code. No dragging boxes around, no switching tools.
         </p>
       </section>
 

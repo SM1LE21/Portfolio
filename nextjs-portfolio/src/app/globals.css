@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /* ============================================
-   DESIGN SYSTEM — tun.keltesch.dev
+   DESIGN SYSTEM | tun.keltesch.dev
    Dark-first, clean, text-led, generous spacing
    Full-viewport scroll-snap sections
    ============================================ */
@@ -148,7 +148,7 @@ a:hover {
   width: 100%;
 }
 
-/* Remove generic section padding — snap-section handles vertical rhythm */
+/* Remove generic section padding. snap-section handles vertical rhythm */
 .snap-section section {
   padding: 0;
 }
@@ -633,7 +633,7 @@ footer {
 }
 
 /* ============================================
-   SUBPAGE — Text2UML detail page
+   SUBPAGE | Text2UML detail page
    ============================================ */
 
 .subpage {

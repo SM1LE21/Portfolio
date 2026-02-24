@@ -1,6 +1,6 @@
 # Agent Instructions
 
-Personal founder site for Tun Keltesch — entrepreneur-focused AI engineer. Built to show who he is and what he's building, not where he works.
+Personal founder site for Tun Keltesch, an entrepreneur-focused AI engineer. Built to show who he is and what he's building, not where he works.
 
 ## Stack
 
@@ -28,7 +28,7 @@ src/
     Contact.tsx          # Social links
     Footer.tsx           # Copyright
     WaveToggle.tsx       # Dark/light mode toggle with wave animation
-  data/data.json   # All site content — update this file to change content
+  data/data.json   # All site content. Update this file to change content
 public/
   assets/          # Project media
   icons/           # SVG social icons
@@ -38,8 +38,8 @@ public/
 
 - All source files are TypeScript (`.tsx` / `.ts`)
 - Import paths use the `@/*` alias (maps to `src/*`)
-- Single-page site — no routing beyond the home page
-- Content is driven by `src/data/data.json` — update this file to change content, not the components
+- Single-page site with no routing beyond the home page
+- Content is driven by `src/data/data.json`. Update this file to change content, not the components
 - Styling: CSS variables in `globals.css` define the full design system. Dark mode is default, light mode via `.light-mode` class on body.
 - Fonts: Space Grotesk for headings, Inter for body (loaded via `next/font/google`)
 - Minimal animations: scroll fade-in via IntersectionObserver, wave toggle via CSS clip-path

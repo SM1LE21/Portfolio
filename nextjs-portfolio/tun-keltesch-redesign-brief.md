@@ -37,7 +37,7 @@
 **Goal:** Immediately frame Tun as founder + studio owner + product builder.
 
 - **Title (H1)**  
-  "Tun Keltesch — Founder-Engineer Building AI-Native Products in Europe"
+  "Tun Keltesch | Founder-Engineer Building AI-Native Products in Europe"
 
 - **Subline (2–3 lines)**  
   Example direction (tweak wording as needed):  
@@ -78,7 +78,7 @@ Content blocks (short, sharp):
 
 **Goal:** Make it clear that Tun operates through a studio, without turning this into a sales page.
 
-- **Section title**: "TK MEDIA — My Software Studio"
+- **Section title**: "TK MEDIA | My Software Studio"
 
 - **Short copy (2–3 sentences)**  
   Example direction:  
