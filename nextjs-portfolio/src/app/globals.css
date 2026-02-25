@@ -611,6 +611,10 @@ footer {
     top: 20px;
     right: 20px;
     font-size: 0.65rem;
+    background: var(--bg);
+    padding: 6px 12px;
+    border-radius: 99px;
+    box-shadow: 0 0 0 1px var(--border);
   }
 }
 
