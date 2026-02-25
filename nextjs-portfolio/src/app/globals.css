@@ -580,11 +580,12 @@ footer {
 /* --- Responsive --- */
 @media (max-width: 768px) {
   html {
-    scroll-snap-type: y proximity;
+    scroll-snap-type: none;
   }
 
   .snap-section {
     min-height: auto;
+    scroll-snap-align: none;
     padding: clamp(48px, 6vh, 80px) 0;
   }
 
