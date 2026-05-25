@@ -5,7 +5,7 @@ import data from '../data/data.json';
 import Hero from '../components/Hero';
 import About from '../components/About';
 import TkMedia from '../components/TkMedia';
-import ProductCard from '../components/ProductCard';
+// import ProductCard from '../components/ProductCard'; // 2026-05-25: Products section hidden — visible on TK MEDIA site instead
 import ExperimentSection from '../components/ExperimentSection';
 import NowAndNext from '../components/NowAndNext';
 import Contact from '../components/Contact';
@@ -108,7 +108,8 @@ export default function HomePage() {
           />
         </div>
 
-        {/* PRODUCTS */}
+        {/* PRODUCTS — hidden 2026-05-25: shown on TK MEDIA site instead. Re-enable by uncommenting this block and the ProductCard import above. */}
+        {/*
         <div className="snap-section fade-in" id="products">
           <div className="snap-section-inner">
             <h2 data-parallax>Products</h2>
@@ -119,6 +120,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
+        */}
 
         {/* EXPERIMENTS */}
         <div className="snap-section fade-in" id="experiments">
