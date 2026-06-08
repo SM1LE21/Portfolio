@@ -4,7 +4,7 @@
   "about": {
     "paragraphs": [
       { "text": "I'm Tun. AI engineer, builder, and the kind of person who reads *Never Split the Difference* and *Zero to One* back to back and immediately applies it to whatever I'm working on." },
-      { "text": "I build software end to end, and the companies around it: from the first line of code to the product in someone's hands. Full stack, no handoffs." },
+      { "text": "I build software end to end, and the companies around it: from the first line of code to the product in someone's hands." },
       { "text": "I care deeply about problems that affect people daily but still have terrible solutions. That's what drives what I build." },
       { "text": "Luxembourgish by origin, which means English, French, German, and Luxembourgish are all just... normal. Building across borders comes with the passport." },
       { "text": "These days that's two things: Founta, where I'm technical co-founder, and TK MEDIA, my software studio." }
@@ -14,7 +14,12 @@
     "title": "Founta",
     "subtitle": "Technical Co-Founder",
     "description": "I'm the technical co-founder of Founta, where we're building the future of racket sports with AI. I own the engineering end to end: the mobile apps, the backend, the ML pipeline, and the infrastructure behind it.",
-    "proof": "🥈 2nd of ~90 teams · founder hackathon, Hamburg 2026.",
+    "proof": {
+      "prefix": "🥈 2nd at ",
+      "linkText": "AI Beavers",
+      "link": "https://ai-beavers.com/events/founder-hackathon",
+      "suffix": " founders hackathon, Hamburg."
+    },
     "linkText": "Website coming soon"
   },
   "tkMedia": {
