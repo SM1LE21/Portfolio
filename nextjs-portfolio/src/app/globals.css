@@ -266,6 +266,19 @@ a:hover {
   gap: 10px;
 }
 
+/* --- Founta --- */
+.founta-proof {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--accent);
+  margin-bottom: 28px;
+}
+
+.founta-soon {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
 /* --- Products --- */
 .products-grid {
   display: grid;

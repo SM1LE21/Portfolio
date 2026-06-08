@@ -1,14 +1,21 @@
 {
   "name": "Tun Keltesch",
-  "tagline": "Building AI tools for negotiation, shared expenses, and visual understanding.",
+  "tagline": "AI engineer and builder. Technical co-founder of Founta.",
   "about": {
     "paragraphs": [
       { "text": "I'm Tun. AI engineer, builder, and the kind of person who reads *Never Split the Difference* and *Zero to One* back to back and immediately applies it to whatever I'm working on." },
-      { "text": "I run TK MEDIA, a software studio based in Luxembourg. We build for clients who need things done right and fast: web, AI, automation. We also ship our own products on the side. Sharp team, no bloat, high standards." },
+      { "text": "I build software end to end, and the companies around it: from the first line of code to the product in someone's hands. Full stack, no handoffs." },
       { "text": "I care deeply about problems that affect people daily but still have terrible solutions. That's what drives what I build." },
       { "text": "Luxembourgish by origin, which means English, French, German, and Luxembourgish are all just... normal. Building across borders comes with the passport." },
-      { "text": "Something bigger is in the works. More soon." }
+      { "text": "These days that's two things: Founta, where I'm technical co-founder, and TK MEDIA, my software studio." }
     ]
+  },
+  "founta": {
+    "title": "Founta",
+    "subtitle": "Technical Co-Founder",
+    "description": "I'm the technical co-founder of Founta, where we're building the future of racket sports with AI. I own the engineering end to end: the mobile apps, the backend, the ML pipeline, and the infrastructure behind it.",
+    "proof": "🥈 2nd of ~90 teams · founder hackathon, Hamburg 2026.",
+    "linkText": "Website coming soon"
   },
   "tkMedia": {
     "title": "TK MEDIA",
@@ -58,16 +65,16 @@
     {
       "name": "Tennis Coach AI",
       "tagline": "RAG-powered tennis coaching from 33 real coaching transcripts.",
-      "description": "A retrieval-augmented generation system trained on 601 chunks from real tennis coaching sessions. Uses hybrid search (BM25 + vector similarity) to find relevant coaching advice, supports English and German with auto-detection, and cites its sources.",
+      "description": "A retrieval-augmented generation system trained on 601 chunks from real tennis coaching sessions. Uses hybrid search (BM25 + vector similarity) to find relevant coaching advice, supports English and German with auto-detection, and cites its sources. The prototype that started the thinking behind Founta.",
       "tech": ["FastAPI", "PostgreSQL", "pgvector", "OpenAI API", "Next.js", "Python"],
       "link": "https://mtc-ai-chat.vercel.app",
       "linkType": "live"
     }
   ],
   "nowAndNext": [
-    "Evolving ExpenseMate from social bill-splitting into a broader money management companion.",
-    "Preparing NegotiationEdge for broader early-adopter testing.",
-    "Co-founding a company in vision AI, applying computer vision and video analysis to racket sports."
+    "Building Founta: AI for racket sports, turning a phone camera into a coach.",
+    "Evolving ExpenseMate from bill-splitting into a broader money companion.",
+    "Preparing NegotiationEdge for wider early-adopter testing."
   ],
   "socialLinks": [
     { "title": "GitHub", "url": "https://github.com/SM1LE21", "icon": "/icons/github.svg" },

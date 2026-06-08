@@ -4,10 +4,11 @@ import React, { useEffect, useRef, useCallback } from 'react';
 import data from '../data/data.json';
 import Hero from '../components/Hero';
 import About from '../components/About';
+import Founta from '../components/Founta';
 import TkMedia from '../components/TkMedia';
 // import ProductCard from '../components/ProductCard'; // 2026-05-25: Products section hidden — visible on TK MEDIA site instead
 import ExperimentSection from '../components/ExperimentSection';
-import NowAndNext from '../components/NowAndNext';
+// import NowAndNext from '../components/NowAndNext'; // 2026-06-08: Now & Next section removed (re-enable with the block below)
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import WaveToggle from '../components/WaveToggle';
@@ -97,6 +98,17 @@ export default function HomePage() {
           <About paragraphs={data.about.paragraphs} />
         </div>
 
+        {/* FOUNTA */}
+        <div className="snap-section fade-in">
+          <Founta
+            title={data.founta.title}
+            subtitle={data.founta.subtitle}
+            description={data.founta.description}
+            proof={data.founta.proof}
+            linkText={data.founta.linkText}
+          />
+        </div>
+
         {/* TK MEDIA */}
         <div className="snap-section fade-in">
           <TkMedia
@@ -135,11 +147,13 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* NOW & NEXT + CONTACT + FOOTER */}
+        {/* CONTACT + FOOTER */}
         <div className="snap-section snap-section-end fade-in">
           <div className="snap-section-inner">
+            {/* NOW & NEXT removed 2026-06-08 — re-enable by uncommenting this block and the NowAndNext import above.
             <NowAndNext items={data.nowAndNext} />
             <div className="closing-spacer" />
+            */}
             <Contact socialLinks={data.socialLinks} />
           </div>
           <Footer />
