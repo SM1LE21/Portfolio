@@ -16,15 +16,17 @@ Personal founder site for Tun Keltesch, an entrepreneur-focused AI engineer. Bui
 src/
   app/
     layout.tsx       # Root layout, fonts (Inter + Space Grotesk), metadata, GA
-    page.tsx         # Single-page site: Hero → About → TK MEDIA → Products → Experiments → Now & Next → Contact
+    page.tsx         # Single-page site: Hero → About → Founta → TK MEDIA → Experiments → Contact
     globals.css      # Full design system (CSS variables, dark/light themes, all component styles)
+    text2uml/page.tsx # Text2UML project detail page (only route beyond home)
   components/
     Hero.tsx             # Name + tagline
     About.tsx            # Founder story + background paragraph
+    Founta.tsx           # Founta technical co-founder section
     TkMedia.tsx          # Software studio section
-    ProductCard.tsx      # Product card (ExpenseMate, NegotiationEdge)
+    ProductCard.tsx      # Product card (ExpenseMate, NegotiationEdge) — section commented out in page.tsx, shown on TK MEDIA site instead
     ExperimentSection.tsx # Experiment detail (Text2UML, Tennis Coach AI)
-    NowAndNext.tsx       # Current directions
+    NowAndNext.tsx       # Current directions — section commented out in page.tsx
     Contact.tsx          # Social links
     Footer.tsx           # Copyright
     WaveToggle.tsx       # Dark/light mode toggle with wave animation
