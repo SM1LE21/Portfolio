@@ -1,5 +1,7 @@
 # tun.keltesch.dev – Redesign Content & UX Brief
 
+> **Status: historical artifact (superseded).** This brief drove the original founder-portfolio redesign. It is not current spec. Notably, the stealth rule below no longer applies: Founta is public and featured as its own section on the live site. For current conventions see `AGENTS.md`; for current content see `src/data/data.json`.
+
 ## 1. Purpose & Goals
 
 **Primary goals (next 60 days)**  
