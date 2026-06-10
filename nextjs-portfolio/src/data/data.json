@@ -61,6 +61,7 @@
   "experiments": [
     {
       "name": "Text2UML",
+      "year": "2023",
       "tagline": "Turn natural language into UML diagrams for faster system thinking.",
       "description": "A VS Code extension that automatically generates graphical UML representations from textual diagram descriptions. Built as my Bachelor's thesis at RWTH Aachen, it combines a Java-based Language Server Protocol backend with a React + D3.js visualization frontend.",
       "tech": ["Java", "TypeScript", "React", "D3.js", "MontiCore"],
@@ -69,6 +70,7 @@
     },
     {
       "name": "Tennis Coach AI",
+      "year": "2025",
       "tagline": "RAG-powered tennis coaching from 33 real coaching transcripts.",
       "description": "A retrieval-augmented generation system trained on 601 chunks from real tennis coaching sessions. Uses hybrid search (BM25 + vector similarity) to find relevant coaching advice, supports English and German with auto-detection, and cites its sources. The prototype that started the thinking behind Founta.",
       "tech": ["FastAPI", "PostgreSQL", "pgvector", "OpenAI API", "Next.js", "Python"],

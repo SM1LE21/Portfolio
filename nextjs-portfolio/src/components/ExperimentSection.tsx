@@ -2,6 +2,7 @@ import React from 'react';
 
 interface Experiment {
   name: string;
+  year: string;
   tagline: string;
   description: string;
   tech: string[];
@@ -25,6 +26,7 @@ const ExperimentSection: React.FC<ExperimentSectionProps> = ({ experiment }) => 
     <div className="experiment-item">
       <div className="experiment-header">
         <h3 className="experiment-name">{experiment.name}</h3>
+        <span className="experiment-year">{experiment.year}</span>
       </div>
       <p className="experiment-tagline">{experiment.tagline}</p>
       <p className="experiment-description">{experiment.description}</p>
