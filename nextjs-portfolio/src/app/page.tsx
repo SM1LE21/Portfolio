@@ -105,6 +105,7 @@ export default function HomePage() {
             subtitle={data.founta.subtitle}
             description={data.founta.description}
             proof={data.founta.proof}
+            link={data.founta.link}
             linkText={data.founta.linkText}
           />
         </div>
