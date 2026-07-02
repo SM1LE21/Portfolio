@@ -2,7 +2,9 @@
 
 ## 2026-07-03
 
-- Founta section now links to the live site: `link: "https://founta.de/"` with `linkText: "Visit Founta"` in `data.json`, replacing the "Website coming soon" placeholder. The section renders the standard arrow-link (matching TK MEDIA) instead of the muted `founta-soon` text.
+- Founta section now links to the live site: `link: "https://founta.de/"` with `linkText: "Visit Founta"` in `data.json`, replacing the "Website coming soon" placeholder.
+- Fix: `page.tsx` was not passing `link` into `<Founta>`, so "Visit Founta" rendered as muted `founta-soon` text instead of a clickable link. Now passed through, so the section renders the standard arrow-link (matching TK MEDIA).
+- Point the AI Beavers proof link to the hackathon repo (`github.com/SM1LE21/AI-Beavers-Hackathon-Elevenlabs`) instead of the ai-beavers.com event page.
 
 ## 2026-06-10
 
