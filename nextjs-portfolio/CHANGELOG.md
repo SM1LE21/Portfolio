@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-07-03
+
+- Founta section now links to the live site: `link: "https://founta.de/"` with `linkText: "Visit Founta"` in `data.json`, replacing the "Website coming soon" placeholder. The section renders the standard arrow-link (matching TK MEDIA) instead of the muted `founta-soon` text.
+
 ## 2026-06-10
 
 - Date the experiments: new `year` field in `data.json` rendered as a muted tag in the experiment header (Text2UML: 2023, Tennis Coach AI: 2025).
